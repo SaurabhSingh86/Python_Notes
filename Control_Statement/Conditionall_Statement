@@ -1,0 +1,34 @@
+Conditional Statement in programming languages describes the direction of flow of program execution.
+Types:
+    1. if statement
+    2. if-else statement
+    3. elif statement
+    4. Nested if-else statement
+
+1. if statement:
+    syntax:     if condition:
+                    statement 1
+                    statement 2
+                    ------------
+                    ------------
+                    statement n
+    e.g.
+        a=3
+        if a>2:
+            print("Entered the block")
+
+2. if-else condition:
+    syntax:     if condition:
+                    ## True block ##
+                else:
+                    ## False block ##
+    e.g.
+        a = input("Enter a number: "
+        if a != 9:
+            print("Not equal")
+        else:
+            print("equal")
+
+3.
+4.
+
