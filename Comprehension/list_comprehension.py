@@ -234,14 +234,14 @@ num = 20
 
 """find prime no from the given list"""
 
-l =[2, 4, 11, 15, 86, 98, 99]
-
-for num in l:
-    if num > 1:
-        for i in range(2, num):
-            if num % i == 0:
-                break
-        else:
-            print(num, end=" ")
+# l =[2, 4, 11, 15, 86, 98, 99]
+#
+# for num in l:
+#     if num > 1:
+#         for i in range(2, num):
+#             if num % i == 0:
+#                 break
+#         else:
+#             print(num, end=" ")
 
 
