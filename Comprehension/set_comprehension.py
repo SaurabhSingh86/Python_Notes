@@ -52,7 +52,7 @@ set_ = {"python", 10, 3.2, "selenium", "Java"}
 
 """"WA set comprehension to create a set of tuples of items & their length"""
 
-list_ = ["python", "selenium", "Node JS", "Java", "SQL"]
-
-res = {(element, len(element)) for element in list_}
-print(res)
+# list_ = ["python", "selenium", "Node JS", "Java", "SQL"]
+#
+# res = {(element, len(element)) for element in list_}
+# print(res)
