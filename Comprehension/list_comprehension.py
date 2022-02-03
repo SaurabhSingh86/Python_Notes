@@ -60,7 +60,7 @@
 # enum = [n for n in range(0, 11, 2)]
 # print(enum)
 
-"""WAP to print even & odd number seperately between 0 to 10"""
+"""WAP to print even & odd number separately between 0 to 10"""
 
 # even_num = []
 # odd_num = []
