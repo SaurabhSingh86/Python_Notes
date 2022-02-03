@@ -1,3 +1,34 @@
+
+# s = "sky is no limit"
+
+# list_ = s.split()
+# # Normal method
+# res
+# # for char in list_:
+# #
+# # #by using comprehension
+# #
+# # dict_ = {word: len(word) for word in list_}
+# # print(dict_)
+#
+#
+#
+string = "hello world"
+d = {}
+#
+# for char in string:
+#     if char not in d:
+#         d[char] = 1
+#     else:
+#         d[char] += 1
+# print(d)
+#
+# # comprehension
+from collections import defaultdict
+# dd = defaultdict(int)
+d = {item : string.count(item) for item in string}
+print(d)
+
 # """wap """"
 
 # s = "python is a language, python programming is easy"
