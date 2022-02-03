@@ -13,8 +13,8 @@
 #
 #
 #
-string = "hello world"
-d = {}
+# string = "hello world"
+# d = {}
 #
 # for char in string:
 #     if char not in d:
@@ -26,8 +26,8 @@ d = {}
 # # comprehension
 from collections import defaultdict
 # dd = defaultdict(int)
-d = {item : string.count(item) for item in string}
-print(d)
+# d = {item : string.count(item) for item in string}
+# print(d)
 
 # """wap """"
 

@@ -143,6 +143,9 @@
 #
 # list_ = [l[index]for index in range(len(l)) if index % 2 == 0]
 # print(list_)
+#
+# l1 = [l[index] for index, item in enumerate(l) if index % 2 == 0]
+# print(l1)
 
 """ print integers in a list """
 
@@ -157,6 +160,7 @@
 #
 # list_ = [element for element in l if isinstance(element, (int, float, complex))]
 # print(list_)
+
 """ print length of each string in the list """
 
 # l = ["python", "Node JS", "selenium", "Java"]
