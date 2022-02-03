@@ -18,7 +18,7 @@ set_ = {"python", 10, 3.2, "selenium", "Java"}
 
 """WA set comprehension traversing through a list in reversed order """
 
-l = ["python", 10, 3.2, "selenium", "Java"]
+# l = ["python", 10, 3.2, "selenium", "Java"]
 
 # it'll also not work because item that is present inside the set in random or shuffle manner.
 
@@ -34,19 +34,25 @@ l = ["python", 10, 3.2, "selenium", "Java"]
 
 # by using enumerate()
 
-# res = {for }
+# res = {item for index, item in enumerate(list_) if index % 2 == 0 }
+# print(res)
 
 """"WA set comprehension to create a set of tuples of index & items"""
 
 # list_ = ["java", "python", True, 10, 1.4, "c++"]
 #
+# by using range()
 # # res = {i, list_[i] for i in range(len(list_))}
 # # print(res)
 #
+# by using enumerate()
 # res = { item for item in enumerate(list_)}
 # print(res)
 
-# list_ = ["python", "selenium", "Node JS", "Java", "SQL"]
-#
-# res = {(element, len(element)) for element in list_}
-# print(res)
+
+""""WA set comprehension to create a set of tuples of items & their length"""
+
+list_ = ["python", "selenium", "Node JS", "Java", "SQL"]
+
+res = {(element, len(element)) for element in list_}
+print(res)
