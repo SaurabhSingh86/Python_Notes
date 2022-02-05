@@ -16,7 +16,7 @@
 
 """WAP to create a list of tuples which is having index & the corresponding items"""
 
-# l = ["python", 10, 3.2, "selenium", "Java"]
+l = ["python", 10, 3.2, "selenium", "Java"]
 #
 # #by using normal method
 #
@@ -123,10 +123,10 @@
 
 """ traversing through a list in reversed order """
 
-# l = ["python", 10, 3.2, "selenium", "Java"]
-# # # by using range()
-# # res = [l[item] for item in range(len(l)-1, -1, -1)]
-# # print(res)
+l = ["python", 10, 3.2, "selenium", "Java"]
+# # by using range()
+# res = [l[index] for index in range(len(l)-1, -1, -1)]
+# print(res)
 #
 # # # by using reversed class
 #
