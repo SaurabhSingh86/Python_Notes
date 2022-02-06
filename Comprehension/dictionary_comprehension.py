@@ -9,34 +9,19 @@
 """WAP to create a dictionary with words & its length pair"""
 # s = "sky is no limit"
 
-# list_ = s.split()
-# # Normal method
-# res
-# # for char in list_:
-# #
-# # #by using comprehension
-# #
 # # dict_ = {word: len(word) for word in list_}
 # # print(dict_)
 #
 """ WAP to create a dictionary with character & its count pair """
 #
 # string = "hello world"
-# # d = {}
-#
-# for char in string:
-#     if char not in d:
-#         d[char] = 1
-#     else:
-#         d[char] += 1
-# print(d)
-#
+
 # # comprehension
 
 # d = {item: string.count(item) for item in string}
 # print(d)
 
-# """WAP to create a dictionary of words & its count pair only if the words in of even length """"
+"""WAP to create a dictionary of words & its count pair only if the words in of even length """
 
 # s = "python is a language, python programming is easy"
 

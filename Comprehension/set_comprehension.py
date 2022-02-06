@@ -12,7 +12,7 @@
 # print(res)
 
 """WA set comprehension traversing through a set in reversed order """
-set_ = {"python", 10, 3.2, "selenium", "Java"}
+# set_ = {"python", 10, 3.2, "selenium", "Java"}
 
 # it'll not work because item that is present inside the set in random or shuffle manner.
 
@@ -39,8 +39,8 @@ set_ = {"python", 10, 3.2, "selenium", "Java"}
 
 """"WA set comprehension to create a set of tuples of index & items"""
 
-list_ = ["java", "python", True, 10, 1.4, "c++"]
-
+# list_ = ["java", "python", True, 10, 1.4, "c++"]
+#
 # # by using range()
 # res = {(i, list_[i]) for i in range(len(list_))}
 # print(res)
