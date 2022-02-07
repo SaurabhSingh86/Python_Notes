@@ -47,8 +47,8 @@
 #     print(item, end=" ")
 #
 # print()
-#
-# # Method 2: by using enumerate() class
+# #
+# # # Method 2: by using enumerate() class
 # for index, item in enumerate(d):
 #     print((index, item), end=" ")
 #

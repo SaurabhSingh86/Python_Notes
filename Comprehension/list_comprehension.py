@@ -16,7 +16,7 @@
 
 """WAP to create a list of tuples which is having index & the corresponding items"""
 
-l = ["python", 10, 3.2, "selenium", "Java"]
+# l = ["python", 10, 3.2, "selenium", "Java"]
 #
 # #by using normal method
 #
@@ -123,7 +123,7 @@ l = ["python", 10, 3.2, "selenium", "Java"]
 
 """ traversing through a list in reversed order """
 
-l = ["python", 10, 3.2, "selenium", "Java"]
+# l = ["python", 10, 3.2, "selenium", "Java"]
 # # by using range()
 # res = [l[index] for index in range(len(l)-1, -1, -1)]
 # print(res)
@@ -144,6 +144,9 @@ l = ["python", 10, 3.2, "selenium", "Java"]
 # list_ = [l[index]for index in range(len(l)) if index % 2 == 0]
 # print(list_)
 #
+#
+# print([l[index] for index in range(0, len(l), 2)])
+# #
 # l1 = [l[index] for index, item in enumerate(l) if index % 2 == 0]
 # print(l1)
 
@@ -201,7 +204,7 @@ l = ["python", 10, 3.2, "selenium", "Java"]
 
 """ print all the extensions in the following list """
 
-files = ["youtube.txt", "amazon.pdf", "apple.xls", "flipkart.in"]
+# files = ["youtube.txt", "amazon.pdf", "apple.xls", "flipkart.in"]
 
 
 # l = [char.split(".")[-1] for char in files]
@@ -218,8 +221,8 @@ files = ["youtube.txt", "amazon.pdf", "apple.xls", "flipkart.in"]
 ###############################################################################
 # """ index of first occurrence of the given element in the list"""
 #
-numbers = [10, 40, 20, 80, 20, 40, 30, 20]
-num = 20
+# numbers = [10, 40, 20, 80, 20, 40, 30, 20]
+# num = 20
 # not possible through comprehension
 
 
