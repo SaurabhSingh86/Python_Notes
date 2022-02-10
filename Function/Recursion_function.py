@@ -69,7 +69,7 @@
 
 # def sum_digit(num, total=0):
 #     if num > 0:
-#         total += num % 10
+#         total += num
 #         return sum_digit(num - 1, total)
 #
 #     return total
@@ -93,6 +93,89 @@
 
 """ WA Recursive program to count the number of digit in a number """
 
+
+# def count_digit(num, count=0):
+#     if num > 0:
+#         last = num
+#         count += 1
+#         return count_digit(num//10, count)
+#     return count
+#
+#
+# print(count_digit(6149867))
+
+
 """ WA Recursive program to reverse a string """
 
 
+# def rev_string(string, i=0, res=""):
+#     if i < len(string):
+#         res = string[i] + res
+#         return rev_string(string, i+1, res)
+#     return res
+#
+#
+# print(rev_string("VS Code"))
+
+
+""" 1 WARF to print fibonacci series in the user-defined range """
+
+
+# def fibo(num, step=1, a=0, b=1):
+#     if step <= num:
+#         print(a, end=" ")
+#         c = a + b
+#         step += 1
+#         return fibo(num, step, a=b, b=c)
+#
+#
+# fibo(10)                          # 0 1 1 2 3 5 8 13 21 34
+
+"""2 WARF that returns fibonacci series upto the number specified """
+
+# def fibo(num, a=0, b=1):
+#     if a <= num:
+#         print(a, end=" ")
+#         c = a + b
+#         return fibo(num, a=b, b=c)
+#
+#
+# fibo(10)                          # 0 1 1 2 3 5 8
+
+# or
+
+# def fibo(num, a=0, b=1):
+#     if a <= num:
+#         print(a, end=" ")
+#         c = a + b
+#         a = b
+#         b = c
+#         return fibo(num, a, b)
+#
+#
+# fibo(10)                          # 0 1 1 2 3 5 8
+
+
+""" WARF to returns nth fibonacci number  """
+
+
+# def fibo(num, step=1, a=0, b=1):
+#     if step < num:
+#         c = a + b
+#         step += 1
+#         return fibo(num, step, a=b, b=c)
+#     return a
+#
+#
+# print(fibo(1))                  # 8
+
+
+
+
+""" Prime or not """
+
+""" Prime factor of a given number """
+
+""" String is palindrome or not """
+
+""" Number is palindrome or not """

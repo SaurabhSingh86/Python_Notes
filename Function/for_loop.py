@@ -100,7 +100,7 @@
 """ WAF to print index & the element in a string """
 # string = "Million dollar smile"
 
-def func(sequence):
+# def func(sequence):
 
 # s = "aesthetic"
 
