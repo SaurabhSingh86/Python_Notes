@@ -50,10 +50,10 @@
 # print(list(output))                 # [True, False, False, False, True]
 
 
-""" WAP to add the followinng list elements simultaneously """
+""" WAP to add the following list elements simultaneously """
 
-# a = [1, 2, 3, 4]
-# b = [5, 6, 7, 8]
+a = [1, 2, 3, 4]
+b = [5, 6, 7, 8]
 #
 #
 # def add_(item1, item2):
@@ -63,3 +63,8 @@
 # res = map(add_, a, b)
 # print(list(res))
 
+
+# Method 2: by using list comprehension
+
+l = [i+j for i, j in zip(a, b)]
+print(l)

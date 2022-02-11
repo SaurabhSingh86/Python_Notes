@@ -108,17 +108,30 @@
 """ WA Recursive program to reverse a string """
 
 
-# def rev_string(string, i=0, res=""):
-#     if i < len(string):
-#         res = string[i] + res
-#         return rev_string(string, i+1, res)
-#     return res
-#
-#
-# print(rev_string("VS Code"))
+def rev_string(string, i=0, res=""):
+    if i < len(string):
+        res = string[i] + res
+        return rev_string(string, i+1, res)
+    return res
 
 
-""" 1 WARF to print fibonacci series in the user-defined range """
+print(rev_string("VS Code"))
+
+# Method 2: ???????????????????????????????????????????????? is it correct ?
+
+
+def reverse_(s, res=""):
+    if s:
+        res = s[0] + res
+        return reverse_(s[1:], res)
+    return res
+
+
+string = "Python World"
+print(reverse_(string))
+
+
+""" 1 WARP to print fibonacci series in the user-defined range """
 
 
 # def fibo(num, step=1, a=0, b=1):
@@ -170,6 +183,26 @@
 # print(fibo(1))                  # 8
 
 
+""" WARP to check weather a given number is Armstrong Number or not """
+# Armstrong Number: It is a number which is equal to the sum of cube of its digits.
+# e.g. 153 = 1^3 + 5^3 + 3^3 = 153 i.e. 153 is Armstrong number
+# similarly 370
+
+
+# def armstrong_no(num, total=0):
+#     if num > 0:
+#         last = num % 10
+#         total += last**3
+#         return armstrong_no(num//10, total)
+#     return total
+#
+#
+# num = 153
+# a = num
+# if armstrong_no(num) == a:
+#     print(f'{a} is a Armstrong number')
+# else:
+#     print(f'{a} is not a Armstrong number')
 
 
 """ Prime or not """
