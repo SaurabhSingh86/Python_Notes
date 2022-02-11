@@ -49,7 +49,7 @@ l = [1, 2, 2, 3, 4, 4, 5, 5, 5, 6, 7, 7, 8, 8, 8, 88, 99, 100]
 # d = {i: j for i, j in zip(a, list_)}
 # print(d)
 
-# Method 2:
+# Method 2: not working
 e_index = {"even": l[index] for index in range(0, len(l), 2)}
 o_index = {"odd": l[index] for index in range(0, len(l), 2)}
 
