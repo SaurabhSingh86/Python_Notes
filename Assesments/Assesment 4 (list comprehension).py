@@ -57,8 +57,21 @@ n = 3
 
 
 """ 8. WAP to check if the elements in the second list is series of continuation of the items in the first list """
-# a = [10, 12, 14, 16, 18]
-# b = [20, 22, 24, 26, 28]
+a = [10, 12, 14, 16, 18]
+b = [20, 22, 24, 26, 28]
+c = [*a, *b]
+
+def series(c):
+    dif = c[1] - c[0]
+    for i in range(len(c)-1):
+        if c[i+1] - c[i] == dif:
+            continue
+        else:
+            return "not a series of first list"
+    return 'is a series'
+
+
+print(series(c))
 
 
 """ 9. Find all max numbers from the below list """
@@ -78,5 +91,5 @@ n = 3
 
 """ 10. WA list comprehension to get a list of even numbers from 1-50 """
 
-even_list = [num for num in range(1, 51) if num % 2 == 0]
-print(even_list)
+# even_list = [num for num in range(1, 51) if num % 2 == 0]
+# print(even_list)

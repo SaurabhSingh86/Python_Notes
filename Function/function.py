@@ -149,7 +149,7 @@
 # Assignment 2
 """ WAF that returns nth fibonacci number"""
 
-# def fibo(nth_term):
+0# def fibo(nth_term):
 #     a = 0
 #     b = 1
 #     i = 0

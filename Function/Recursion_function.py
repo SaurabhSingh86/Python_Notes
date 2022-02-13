@@ -1,3 +1,40 @@
+# ~~~~~~~~~~~~~~~~~~~~>> Recursion <<~~~~~~~~~~~~~~~~~~~~~~~
+# Function calling itself until the condition is being satisfied.
+# used to avoid loops in some cases
+# by using getrecursionlimit() => we find the recursion limit
+
+# There are two methods to check recursion limit
+# Method 1:
+# import sys
+# sys.getrecursionlimit()                     # nothing to display
+# print(sys.getrecursionlimit())              # 1000
+
+# Method 2:
+from sys import getrecursionlimit
+# getrecursionlimit()                           # nothing to display
+# print(getrecursionlimit())                    # 1000
+
+
+# by using setrecursionlimit()  => We can change the recursion limit
+# Method 1:
+import sys
+# sys.setrecursionlimit(2000)                     # Nothing to display
+# print(sys.setrecursionlimit(2000))              # None
+# getrecursionlimit()                             # Nothing to display
+# print(getrecursionlimit())                      # 2000
+
+# sys.setrecursionlimit(500)
+# print(sys.setrecursionlimit())                  # Type Error
+
+# sys.setrecursionlimit(10)
+# print(sys.getrecursionlimit())                  # 10
+
+# Method 2
+from sys import setrecursionlimit
+# setrecursionlimit(1500)                         # nothing to display
+# print(getrecursionlimit())                      # 1500
+
+
 """WA Recursive program to print number from 1 to 10 """
 # Method 1:
 
@@ -108,27 +145,27 @@
 """ WA Recursive program to reverse a string """
 
 
-def rev_string(string, i=0, res=""):
-    if i < len(string):
-        res = string[i] + res
-        return rev_string(string, i+1, res)
-    return res
-
-
-print(rev_string("VS Code"))
+# def rev_string(string, i=0, res=""):
+#     if i < len(string):
+#         res = string[i] + res
+#         return rev_string(string, i+1, res)
+#     return res
+#
+#
+# print(rev_string("VS Code"))
 
 # Method 2: ???????????????????????????????????????????????? is it correct ?
 
 
-def reverse_(s, res=""):
-    if s:
-        res = s[0] + res
-        return reverse_(s[1:], res)
-    return res
-
-
-string = "Python World"
-print(reverse_(string))
+# def reverse_(s, res=""):
+#     if s:
+#         res = s[0] + res
+#         return reverse_(s[1:], res)
+#     return res
+#
+#
+# string = "Python World"
+# print(reverse_(string))
 
 
 """ 1 WARP to print fibonacci series in the user-defined range """
@@ -138,8 +175,8 @@ print(reverse_(string))
 #     if step <= num:
 #         print(a, end=" ")
 #         c = a + b
-#         step += 1
-#         return fibo(num, step, a=b, b=c)
+#         # step += 1
+#         return fibo(num, step+1, a=b, b=c)
 #
 #
 # fibo(10)                          # 0 1 1 2 3 5 8 13 21 34
@@ -180,7 +217,7 @@ print(reverse_(string))
 #     return a
 #
 #
-# print(fibo(1))                  # 8
+# print(fibo(10))                  # 8
 
 
 """ WARP to check weather a given number is Armstrong Number or not """
@@ -212,3 +249,14 @@ print(reverse_(string))
 """ String is palindrome or not """
 
 """ Number is palindrome or not """
+
+
+""" What is the output of the following code ?"""
+
+
+# def recursive_func(string):
+#     print(string)
+#     return recursive_func(string[1::])
+# 
+#
+# recursive_func("hai")               # Recursion Error: Maximum recursion depth exceeded while calling a python object

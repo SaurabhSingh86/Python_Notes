@@ -49,12 +49,12 @@ l = [1, 2, 2, 3, 4, 4, 5, 5, 5, 6, 7, 7, 8, 8, 8, 88, 99, 100]
 # d = {i: j for i, j in zip(a, list_)}
 # print(d)
 
-# Method 2: not working
-e_index = {"even": l[index] for index in range(0, len(l), 2)}
-o_index = {"odd": l[index] for index in range(0, len(l), 2)}
-
-dd = {i: e_index[i] if i == "even" else o_index[j] for i, j in zip(e_index, o_index)}
-print(dd)
+# Method 2: not working ?????????????????????
+# e_index = {"even": l[index] for index in range(0, len(l), 2)}
+# o_index = {"odd": l[index] for index in range(0, len(l), 2)}
+#
+# dd = {i: e_index[i] if i == "even" else o_index[j] for i, j in zip(e_index, o_index)}
+# print(dd)
 
 """ 7. Grouping both of the dictionary items in a single dictionary using comprehension """
 # D = {"names": "apple", "ID": 152778}
