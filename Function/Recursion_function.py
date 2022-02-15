@@ -130,10 +130,9 @@ from sys import setrecursionlimit
 
 """ WA Recursive program to count the number of digit in a number """
 
-
+# Method 1:
 # def count_digit(num, count=0):
 #     if num > 0:
-#         last = num
 #         count += 1
 #         return count_digit(num//10, count)
 #     return count
@@ -142,7 +141,33 @@ from sys import setrecursionlimit
 # print(count_digit(6149867))
 
 
+# Method 2:
+# def n_digit(num, count=0):
+#     if num > 0:
+#         last = num % 10
+#         count += 1
+#         return n_digit(num//10, count)
+#     return count
+#
+#
+# print(n_digit(1234506789))
+
+
 """ WA Recursive program to reverse a string """
+
+# Method 1:
+
+
+# def reverse_(string, res=""):
+#     if len(string) > 0:
+#         res = string[0] + res
+#         return reverse_(string[1::], res)
+#     return res
+#
+#
+# print(reverse_("VS Code"))
+
+# Method 2:
 
 
 # def rev_string(string, i=0, res=""):
@@ -241,6 +266,23 @@ from sys import setrecursionlimit
 # else:
 #     print(f'{a} is not a Armstrong number')
 
+
+"""Armstrong numbers """   #????????? is it right way or not
+
+
+# def armstrong(num, total=0):
+#     if num > 0:
+#         last = num % 10
+#         total += last**3
+#         return armstrong(num//10, total)
+#     if total == a:
+#         return f'{a} is a armstrong number'
+#     else:
+#         return f'{a} is not a armstrong number'
+#
+#
+# a = 153
+# print(armstrong(a))
 
 """ Prime or not """
 

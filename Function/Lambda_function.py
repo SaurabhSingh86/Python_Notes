@@ -1,3 +1,5 @@
+# <<<<<~~~~~~~~~~~~~~~~~~~~~~~~~~~ Lambda function / Anonymous function  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>>>>>
+
 # A Anonymous function is a function that is defined without a name.
 # While normal functions are defined using the def keyword in python, anonymous function is defined using the lambda keyword
 # syntax:          lambda arg1, arg2, arg3: Expression
