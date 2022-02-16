@@ -231,7 +231,7 @@ from sys import setrecursionlimit
 # fibo(10)                          # 0 1 1 2 3 5 8
 
 
-""" WARF to returns nth fibonacci number  """
+""" 3. WARF to returns nth fibonacci number  """
 
 
 # def fibo(num, step=1, a=0, b=1):
@@ -243,6 +243,22 @@ from sys import setrecursionlimit
 #
 #
 # print(fibo(10))                  # 8
+
+
+""" 4. WARF that checks if the given number is fibonacci or not """
+
+
+# def fibo(num, a=0, b=1):
+#     if a <= num:
+#         if a == num:
+#             return f'{num} is a fibonacci number'
+#         else:
+#             c = a + b
+#             return fibo(num, a=b, b=c)
+#     return f'{num} is not a fibonacci number'
+#
+#
+# print(fibo(10))
 
 
 """ WARP to check weather a given number is Armstrong Number or not """
@@ -286,6 +302,10 @@ from sys import setrecursionlimit
 
 """ Prime or not """
 
+
+# def prime(num, start=2):
+#     if start <
+
 """ Prime factor of a given number """
 
 """ String is palindrome or not """
@@ -302,3 +322,5 @@ from sys import setrecursionlimit
 # 
 #
 # recursive_func("hai")               # Recursion Error: Maximum recursion depth exceeded while calling a python object
+
+""" WAP to check"""
