@@ -290,15 +290,29 @@ import time
 """ WADP to return the length of the given iterable """
 
 
-def count_(func):
-    def wrapper(*args, **kwargs):
-        func(*args, **kwargs)
-        return f'Total no of length of the given iterable: {len(args) + len(kwargs)}'
-    return wrapper
+# def count_(func):
+#     def wrapper(*args, **kwargs):
+#         func(*args, **kwargs)
+#         return f'Total no of length of the given iterable: {len(args) + len(kwargs)}'
+#     return wrapper
+#
+#
+# def spam(iterable):
+#     return iterable
+#
+#
+# print(spam([1, 2, 3, 4, 5, 6]))
 
 
-def spam(iterable):
-    return iterable
+# def spam(func):
+#     def wrapper(a, b):
+#         return func(a, b)
+#     return wrapper
+#
+# @spam
+# def func(a, b):
+#     return a+b
+#
+# print(func(1, 3))
 
 
-print(spam([1, 2, 3, 4, 5, 6]))

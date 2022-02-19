@@ -44,7 +44,7 @@ path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\file1'
 #     for line in file:
 #         for word in line.split():
 #             count += 1
-#     print(count)
+#     print(count)                                  # 34
 
 # Method 2:
 
@@ -79,7 +79,7 @@ path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\file1'
 #         for char in line:
 #             if char == " ":             ## don't use char.isspace() because it count next line as a single space
 #                 count += 1
-#     print(count)
+#     print(count)                          # 27
 
 # Method 2: by using buil-in-method
 # with open(path) as file:
@@ -99,7 +99,7 @@ path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\file1'
 #             if word[0] in "aeiouAEIOU":
 #                 count += 1
 #
-#     print(count)
+#     print(count)                              # 7
 
 
 """ WAP to create a dictionary of word & its count pair in the given file """
@@ -115,6 +115,7 @@ path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\file1'
 #             else:
 #                 d[word] += 1
 #     print(d)
+# {'hello': 8, 'world': 6, 'universe': 2, 'welcome': 2, 'to': 2, 'python': 5, 'programming': 1, 'in': 1, 'is': 3, 'fun': 2, 'java': 1, 'easy': 1}
 
 
 # Method 2: by using defaultdict()
