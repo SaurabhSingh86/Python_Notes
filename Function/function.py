@@ -1,3 +1,5 @@
+# <<<<<<<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Function  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>>>>>>>
+
 # A function is block of code which only runs when it is called
 # Basically, we are using function for code redundancy or avoids repetition & makes the code.
 # Types of function:-

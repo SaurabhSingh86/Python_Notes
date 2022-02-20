@@ -163,7 +163,7 @@ s = "precious"
 """WAP to print odd index character in a sting"""
 
 """WAP to print the digit present inside the string"""
-# string = "1v2ydi99"
+# string = "s1v2y3d7zi99n"
 
 # for char in string:
 #     if char.isdigit():

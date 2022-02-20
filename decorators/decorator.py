@@ -1,4 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~>>>> Decorators  <<<<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 # A Decorator takes in a function, add some functionality & returns it.
 # This is also called metaprogramming because a part of the program tries to modify another part of the program -
 # - at compile time.
@@ -107,6 +108,10 @@
 # print(spam("VS Code"))
 
 
+""" WAD which takes a list of string & reverse it """
+
+sequence = ["hai", 73, "hello", 86, "Python", 99]
+
 """WADF to execute a function for 3 times """
 
 # def repeat_(func):
@@ -153,28 +158,31 @@
 
 """ WADF which inputs a delay of n seconds """
 
-import time
-
+# import time
+#
+#
 # def p_outer(n):
 #     def delay(func):
 #         def wrapper(*args, **kwargs):
-#             time.sleep(3)
+#             time.sleep(n)
 #             func(*args, **kwargs)
+#
 #         return wrapper
+#
 #     return delay
+#
 #
 # @p_outer(3)
 # def mult(a, b):
 #     print(f'Product of both number: {a * b}')
 #
 #
-# mult(7, 3)
-#
 # @p_outer(2)
 # def div(a, b):
 #     print(f'Output of division: {a / b}')
 #
 #
+# mult(7, 3)
 # div(20, 2)
 
 
@@ -245,8 +253,24 @@ import time
 # print(c_arg(1, 2, 3, d=5))
 
 
-""" WADF to print "hello world" message if the user has not given input """
+# Method 3:
 
+# def count_(func):
+#     def wrapper(*args, **kwargs):
+#         print(f"Total no of arguments is : {len(args) + len(kwargs)}")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# @count_
+# def add(a, b, c):
+#     return f'sum of numbers are: {a + b + c}'
+#
+#
+# print(add(1, b=2, c=3))
+
+
+""" WADF to print "hello world" message if the user has not given input """
 
 # def p_outer(s='hello world'):
 #     def outer(func):
@@ -258,37 +282,80 @@ import time
 #
 #
 # @p_outer('Python')
-# def display(msg="hello world"):
+# def display(msg="Python world"):
 #     return msg
 #
 #
-# display()
+# @p_outer()
+# def display1(msg="Python world"):
+#     return msg
+#
+#
+# display()                   # Python
+# print(display())            # Python,  # Python world
+#
+#
+# display1()                  # hello world
+# print(display())            # Python,   # Python world
+
 
 
 """ returns only positive values after subtraction"""
 
-
-
-# def outer(func):
+# # Method 1:
+# def positive_result(func):
 #     def wrapper(*args, **kwargs):
-#         func(*args, **kwargs)
-#
+#         res = func(*args, **kwargs)
+#         return abs(res)
 #     return wrapper
 #
-# @outer
-# def sub(a, b):
-#     c = a - b
-#     res = str(c)
-#     if "0" <= res <= "9":
-#         return c
-#     else:
-#         return "none"
 #
-# print(sub(12, 3))
+# @positive_result
+# def sub(a, b):
+#     return a - b
+#
+#
+# print(sub(73, 86))
+#
+#
+# # Method 2:
+#
+# def positive_result(func):
+#     def wrapper(*args, **kwargs):
+#         res = func(*args, **kwargs)
+#         if isinstance(res, (int, complex)):
+#             return abs(res)
+#         return res
+#     return wrapper
+#
+#
+# @positive_result
+# def sub(a, b):
+#     return a - b
+#
+#
+# @positive_result
+# def mul(a, b, c, d):
+#     return a * b * c * d
+#
+#
+# @positive_result
+# def greet():
+#     return "Hello Everyone"
+#
+#
+# @positive_result
+# def greeting(name):
+#     return f'Hey {name}!! \n Welcome to Python world.'
+#
+#
+# print(sub(73, 86))                  # 13
+# print(mul(-1, -2, -3, d=4))         # 24
+# print(greet())                      # Hello Everyone
+# print(greeting("Senorita"))         # Hey Senorita!!  #  Welcome to Python world.
 
 
 """ WADP to return the length of the given iterable """
-
 
 # def count_(func):
 #     def wrapper(*args, **kwargs):
@@ -305,14 +372,14 @@ import time
 
 
 # def spam(func):
-#     def wrapper(a, b):
-#         return func(a, b)
+#     def wrapper(a, b, c):
+#         return func(a, b, c)      # to avoid this we use variable no of arguments i.e. *args & **kwargs
 #     return wrapper
 #
-# @spam
-# def func(a, b):
-#     return a+b
 #
-# print(func(1, 3))
-
-
+# @spam
+# def func(a, b, c):
+#     return a+b+c
+#
+#
+# print(func(1, 3, 5))

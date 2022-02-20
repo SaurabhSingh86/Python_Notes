@@ -163,11 +163,12 @@ list_ = [10, 20, 30, 40, 50]
 
 
 """WAP to count number of characters present in the given string without using built-in-function"""
-# s = "hello v"
+# s = "hello virtual people"
 # count = 0
 # for _ in s:
 #     count += 1
 # print(count)
+
 
 """WAP to print even index character in a sting"""
 s = "precious"
@@ -177,6 +178,7 @@ s = "precious"
 #Method 2 by using slicing
 # for item in s[::2]:
 #     print(item, end=" ")
+
 
 """WAP to print odd index character in a sting"""
 
