@@ -388,38 +388,38 @@ from collections import defaultdict
 
 
 """ validate """
+# Method 1:
 
-
-def validate(*expected_types):
-    def _validate(func):
-        def wrapper(*args, **kwargs):
-            for expected_type, actual_value in zip(expected_types, args):
-                if not isinstance(actual_value, expected_type):
-                    raise ValueError()
-            return func(*args, **kwargs)
-        return wrapper
-    return _validate
-
-
-@validate(float, float)
-def sub(a, b):
-    return a - b
-
-
-@validate(int, float)
-def mul(a, b):
-    return a * b
-
-
-@validate(str)
-def greet(name):
-    return f"Welcome {name} to Python World"
-
-
-@validate(float, int)
-def div(a, b):
-    return f'Output of division { a / b}'
-
+# def validate(*expected_types):
+#     def _validate(func):
+#         def wrapper(*args, **kwargs):
+#             for expected_type, actual_value in zip(expected_types, args):
+#                 if not isinstance(actual_value, expected_type):
+#                     raise ValueError()
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return _validate
+#
+#
+# @validate(float, float)
+# def sub(a, b):
+#     return a - b
+#
+#
+# @validate(int, float)
+# def mul(a, b):
+#     return a * b
+#
+#
+# @validate(str)
+# def greet(name):
+#     return f"Welcome {name} to Python World"
+#
+#
+# @validate(float, int)
+# def div(a, b):
+#     return f'Output of division { a / b}'
+#
 
 # print(sub(10.5, 20.5))
 # print(sub(20, 20.5))
@@ -427,15 +427,14 @@ def div(a, b):
 # print(mul(2.5, 2))
 # print(mul(2, 5.5))
 
-print(greet(5))
-print(greet())
+# print(greet(5))
+# print(greet())
 
 
+# Method 2:
 
 
-
-# def validate_types
-# (expected_types, actual_values):
+# def validate_types(expected_types, actual_values):
 #     for expected_type, actual_value in zip(expected_types, actual_values):
 #         if not isinstance(actual_value, expected_type):
 #             raise TypeError()
@@ -465,4 +464,14 @@ print(greet())
 #     return "Welcome to Python World"
 #
 #
-# @
+# @validate(int, int)
+# def add(a, b):
+#     return a + b
+#
+#
+# print(add(2, 3))
+# print(add(3.5, 5))
+
+
+""" Callable & Closures """
+

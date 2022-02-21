@@ -407,3 +407,59 @@
 #
 #
 # print(func(1, 3, 5))
+
+
+# -----------------------------------------------------------------------------------------------------------------
+
+""" Apply multiple decorator on a single function """
+
+
+# def add_deco(func):
+#     def wrapper(*args, **kwargs):
+#         print("Hello Everyone!!")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# def decorate_intro(func):
+#     def wrapper(*args, **kwargs):
+#         print("Welcome to Python World")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# @add_deco
+# @decorate_intro
+# def intro():
+#     print("Python is very simple programming language")
+#
+#
+# intro()
+
+
+# ------------------------------------------------------------------------------------------------------------------
+""" WAP to decorate a decorator function """
+
+
+# def add_deco(func):
+#     def wrapper(*args, **kwargs):
+#         print("Hello Everyone!!")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# def decorate_intro(func):
+#     # @add_deco
+#     def wrapper(*args, **kwargs):
+#         print("Welcome to Python World")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# @add_deco
+# @decorate_intro
+# def intro():
+#     print("Python is very simple programming language")
+#
+#
+# intro()
