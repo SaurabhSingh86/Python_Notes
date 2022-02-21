@@ -100,14 +100,14 @@ from collections import defaultdict
 #     return c
 #
 #
-# # print(add_(7, 3))                     # 10
+# # print(add_(7, 3))                        # 10
 #
 # @positive
 # def sub_(a, b, c):
 #     return a - b - c
 #
 #
-# # print(sub_(5, -3, 2))                   # 6
+# # print(sub_(5, -3, 2))                    # 6
 #
 #
 # @positive
@@ -231,7 +231,7 @@ from collections import defaultdict
 """ Max calls decorator """
 
 # def max_calls(func):
-#     func.count = 0
+#     func.count = 0                # *************** func.count = 0 not using func_count = 0
 #
 #     def wrapper(*args, **kwargs):
 #         func.count += 1
@@ -314,7 +314,11 @@ from collections import defaultdict
 # add(1, 3)
 
 
-""" Cache Decorator: count no of execution  """
+""" Cache Decorator: 
+  Caches the argument & its result in a dict.
+  if the function is called with the same argument, decorator will re-execute__________________
+  it looks up for the result in dictionary & returns the result
+  """
 
 
 # def cache(func):
@@ -386,16 +390,52 @@ from collections import defaultdict
 """ validate """
 
 
-# def validate(*expected_types):
-#     def _validate(func):
-#         def wrapper(*args, **kwargs):
-#             for expected_type, actual_value in zip(expected_types, actual_values):
+def validate(*expected_types):
+    def _validate(func):
+        def wrapper(*args, **kwargs):
+            for expected_type, actual_value in zip(expected_types, args):
+                if not isinstance(actual_value, expected_type):
+                    raise ValueError()
+            return func(*args, **kwargs)
+        return wrapper
+    return _validate
+
+
+@validate(float, float)
+def sub(a, b):
+    return a - b
+
+
+@validate(int, float)
+def mul(a, b):
+    return a * b
+
+
+@validate(str)
+def greet(name):
+    return f"Welcome {name} to Python World"
+
+
+@validate(float, int)
+def div(a, b):
+    return f'Output of division { a / b}'
+
+
+# print(sub(10.5, 20.5))
+# print(sub(20, 20.5))
+
+# print(mul(2.5, 2))
+# print(mul(2, 5.5))
+
+print(greet(5))
+print(greet())
 
 
 
 
 
-# def validate_types(expected_types, actual_values):
+# def validate_types
+# (expected_types, actual_values):
 #     for expected_type, actual_value in zip(expected_types, actual_values):
 #         if not isinstance(actual_value, expected_type):
 #             raise TypeError()

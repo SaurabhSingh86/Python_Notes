@@ -94,11 +94,13 @@
 
 """ WAD which takes a string & reverse it """
 
+
 # def reverse_(func):
 #     def wrapper(*args, **kwargs):
 #         res = func(*args, **kwargs)                 # or return func((*args, **kwargs)[::-1]
 #         return res[::-1]
 #     return wrapper
+#
 #
 # @reverse_           # spam = reverse_(spam)
 # def spam(string):
@@ -110,7 +112,29 @@
 
 """ WAD which takes a list of string & reverse it """
 
-sequence = ["hai", 73, "hello", 86, "Python", 99]
+# list_ = ["hai", 73, "hello", 86, "Python", 99]
+#
+#
+# def reverse_(func):
+#     def wrapper(*args, **kwargs):
+#         l = []
+#         res = args[0]
+#         for i in res:
+#             if isinstance(i, str):
+#                 l.append(i[::-1])
+#             else:
+#                 l.append(i)
+#         return l
+#     return wrapper
+#
+#
+# @reverse_
+# def demo(sequence):
+#     return sequence
+#
+#
+# print(demo(list_))
+
 
 """WADF to execute a function for 3 times """
 
@@ -296,7 +320,7 @@ sequence = ["hai", 73, "hello", 86, "Python", 99]
 #
 #
 # display1()                  # hello world
-# print(display())            # Python,   # Python world
+# print(display1())            # hello world,   # Python world
 
 
 

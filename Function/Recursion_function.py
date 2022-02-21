@@ -171,14 +171,14 @@ from sys import setrecursionlimit
 # Method 2:
 
 
-# def rev_string(string, i=0, res=""):
-#     if i < len(string):
-#         res = string[i] + res
-#         return rev_string(string, i+1, res)
-#     return res
-#
-#
-# print(rev_string("VS Code"))
+def rev_string(string, i=0, res=""):
+    if i < len(string):
+        res = string[i] + res
+        return rev_string(string, i+1, res)
+    return res
+
+
+print(rev_string("VS Code"))
 
 # Method 2: ???????????????????????????????????????????????? is it correct ?
 
