@@ -463,3 +463,44 @@
 #
 #
 # intro()
+
+# --------------------------------------------------------------------------------------------------------------------
+
+
+def install_decorator1(func):
+    def wrapper(*args, **kwargs):
+        print("Please accept Terms & Condition")
+        return func(*args, **kwargs)
+    return wrapper
+
+
+def install_decorator2(func):
+    def wrapper(*args, **kwargs):
+        print("Kindly enter correct licence key")
+        return func(*args, **kwargs)
+    return wrapper
+
+
+def install_decorator3(func):
+    def wrapper(*args, **kwargs):
+        print("Please choose the drive")
+        return func(*args, **kwargs)
+    return wrapper
+
+
+@install_decorator1
+@install_decorator2
+@install_decorator3
+def install_window():
+    print('Window installation has started')
+
+
+install_window()
+
+# output
+"""
+Please accept Terms & Condition
+Kindly enter correct licence key
+Please choose the drive
+Window installation has started
+"""

@@ -206,14 +206,14 @@ p2 = Point()
 
 # ------------------------------------------------------------------------------------------------------------------
 
-class Users:
-    def __init__(self, users=None):
-        self._users = []
-        if users:
-            for user in users:
-                self._users.append(user)
-
-    def append(self, username):
-        self._users.append(username)
+# class Users:
+#     def __init__(self, users=None):
+#         self._users = []
+#         if users:
+#             for user in users:
+#                 self._users.append(user)
+#
+#     def append(self, username):
+#         self._users.append(username)
 
 
