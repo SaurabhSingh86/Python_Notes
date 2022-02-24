@@ -1,7 +1,17 @@
 """ 1. WAP to print the number of occurrence of characters in a string without using built-in-functions """
 # s = "helloworld"
+
+# Method 1: by using dict comprehension
 # d = {char: s.count(char) for char in s}
 # print(d)
+
+# Method 2: by using default dict
+# from collections import defaultdict
+# dd = defaultdict(int)
+# for char in s:
+#     dd[char] += 1
+#
+# print(dd)
 
 
 """ 2. WAP to get the indexes of each item in the below list """
@@ -127,6 +137,7 @@
 # population = ['38,001,000', '25,703,168', '23,740,778', '21,066,245', '21,042,538']
 #
 # print({city: populations for city, populations in zip(cities, population)})
+
 
 """ 10. WAP to flip keys & values """
 # d = {"a": 1, "b": 2, "c": 3, "d": 4}
