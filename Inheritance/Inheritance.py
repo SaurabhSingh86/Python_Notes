@@ -146,40 +146,40 @@
 # # (<class '__main__.Child3'>, <class '__main__.Child1'>, <class '__main__.Child2'>, <class '__main__.Parent'>,
 # <class 'object'>)
 
-
-class Parent:
-    def demo(self):
-        print("Class Parent Demo")
-
-
-class Demo(Parent):
-    def demo(self):
-        print("Class Demo demo")
-        super().demo()
-
-
-class Spam(Parent):
-    def demo(self):
-        print("Class Spam demo")
-        super().demo()
-
-
-class Child1(Spam, Demo):        # order matters
-    pass
-
-
-c1 = Child1()
-c1.demo()           # Class Spam demo   # Class Demo demo   # Class Parent Demo
-print(Child1.__mro__)
-# (<class '__main__.Child1'>, <class '__main__.Spam'>, <class '__main__.Demo'>, <class '__main__.Parent'>,
-# <class 'object'>)
-
-
-class Child2(Demo, Spam):
-    pass
-
-
-c2 = Child2()
+#
+# class Parent:
+#     def demo(self):
+#         print("Class Parent Demo")
+#
+#
+# class Demo(Parent):
+#     def demo(self):
+#         print("Class Demo demo")
+#         super().demo()
+#
+#
+# class Spam(Parent):
+#     def demo(self):
+#         print("Class Spam demo")
+#         super().demo()
+#
+#
+# class Child1(Spam, Demo):        # order matters
+#     pass
+#
+#
+# c1 = Child1()
+# c1.demo()           # Class Spam demo   # Class Demo demo   # Class Parent Demo
+# print(Child1.__mro__)
+# # (<class '__main__.Child1'>, <class '__main__.Spam'>, <class '__main__.Demo'>, <class '__main__.Parent'>,
+# # <class 'object'>)
+#
+#
+# class Child2(Demo, Spam):
+#     pass
+#
+#
+# c2 = Child2()
 # c2.demo()           # Class Demo demo   # Class Spam demo   # Class Parent Demo
 # print(c2.__class__.__mro__)
 # (<class '__main__.Child2'>, <class '__main__.Demo'>, <class '__main__.Spam'>, <class '__main__.Parent'>,

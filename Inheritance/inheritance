@@ -1,0 +1,196 @@
+$$~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>>   Inheritance     <<<<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$$
+
+What ever variables, methods and constructors available in the parent class by default available to the child classes &
+we are not required to rewrite.
+
+Hence, the main advantage of inheritance is code re-usability & we can extend existing functionality with some more
+extra functionality.
+
+#__________Advantages_of_inheritance______________:
+    1.  Code re-usability
+    2.  Code extensibility
+
+#________________Types_of_Inheritance______________:
+    1.  Single inheritance
+    2.  Multi-level inheritance
+    3.  Hierarchical inheritance
+    4.  Multiple inheritance
+    5.  Hybrid inheritance
+    6.  Cyclic inheritance
+
+1. Single inheritance =>
+    The concept of inheriting the properties from one class to another class is known as single inheritance.
+    e.g.
+    class Parent:
+        def spam(self):
+            print("Parent Spam Method")
+
+    class Child(Parent):
+        def demo(self):
+            print("Child Demo Method")
+
+
+    c = Child()
+    c.spam()                # Parent Spam Method
+    c.demo()                # Child Demo Method
+
+
+2. Multi-level inheritance =>
+    The concept of inheriting the properties from multiple classes to single class with the concept of one after another
+    is known as multi-level inheritance.
+    e.g.
+    class Parent:
+        def spam(self):
+            print("Parent Spam Method")
+
+    class Child(Parent):
+        def demo(self):
+        print("Child Demo Method")
+
+    class Grand_Child(Child):
+        def new(self):
+        print("Grand-Child New Method")
+
+    g = Grand_Child()
+    g.spam()                    #   Parent Spam Method
+    g.demo()                    #   Child Demo Method
+    g.new()                     #   Grand-Child New Method
+
+
+3. Hierarchical inheritance =>
+    The concept of inheriting properties from one class into multiple classes which are present at same level is know
+    as hierarchical inheritance.
+    e.g.
+    class Parent:
+        def spam(self):
+            print("Parent Spam Method")
+
+    class Child1(Parent):
+        def demo1(self):
+            print("Child1 demo1 method")
+
+    class Child2(Parent):
+        def demo2(self):
+            print("Child2 demo2 method")
+
+
+    c1 = Child1()
+    c2 = Child2()
+    c1.demo1()              #   Child1 demo1 method
+    c1.spam()               #   Parent Spam Method
+    c1.demo2()              #   AttributeError: 'Child1' object has no attribute 'demo2'
+    c2.demo2()              #   Child2 demo2 method
+    c2.spam()               #   Parent Spam Method
+    c2.demo1()              #   AttributeError: 'Child2' object has no attribute 'demo1'
+
+
+4. Multiple inheritance =>
+    The concept of inheriting the properties from multiple classes into a single class at a time, is know as multiple
+    inheritance.
+    e.g.
+    class Dad:
+        def spam(self):
+            print("Dad Method")
+
+    class Mom:
+        def demo(self):
+            print("Mom Method")
+
+    class Child(Dad, Mom):
+        def new_method(self):
+            print("Child Method")
+
+    c = Child()
+    c.new_method()          #   Child Method
+    c.demo()                #   Mom Method
+    c.spam()                #   Dad Method
+
+    Case 1:
+    class Dad:
+        def spam(self):
+            print("Dad Method")
+
+    class Mom:
+        def spam(self):
+            print("Mom Method")
+
+    class Child(Dad, Mom):
+        def new_method(self):
+            print("Child Method")
+
+    c = Child()
+    c.new_method()          #   Child Method
+    c.spam()                #   Dad Method
+    c.spam()                #   Dad Method
+
+    Case 2:
+    class Dad:
+        def spam(self):
+            print("Dad Method")
+
+    class Mom:
+        def spam(self):
+            print("Mom Method")
+
+    class Child(Mom, Dad):
+        def new_method(self):
+            print("Child Method")
+
+    c = Child()
+    c.new_method()          #   Child Method
+    c.spam()                #   Mom Method
+    c.spam()                #   Mom Method
+
+Note => If the same method is inherited from both parent classes, then python will always consider the order of parent
+        classes in the declaration of the child class.
+        class Child(Dad, Mom)       --->    Dad method will be considered
+        class Child(Mom, Dad)       --->    Mom method will be considered
+
+
+     Case 3:
+    class Parent:
+        def demo(self):
+            print("Class Parent Demo")
+
+
+    class Demo(Parent):
+        def demo(self):
+            print("Class Demo demo")
+            super().demo()
+
+
+    class Spam(Parent):
+        def demo(self):
+            print("Class Spam demo")
+            super().demo()
+
+
+    class Child1(Spam, Demo):        # order matters
+        pass
+
+
+    c1 = Child1()
+    c1.demo()           # Class Spam demo   # Class Demo demo   # Class Parent Demo
+    print(Child1.__mro__)
+    # (<class '__main__.Child1'>, <class '__main__.Spam'>, <class '__main__.Demo'>, <class '__main__.Parent'>,
+    # <class 'object'>)
+
+
+    class Child2(Demo, Spam):
+        pass
+
+
+    c2 = Child2()
+    c2.demo()           # Class Demo demo   # Class Spam demo   # Class Parent Demo
+    print(c2.__class__.__mro__)
+    (<class '__main__.Child2'>, <class '__main__.Demo'>, <class '__main__.Spam'>, <class '__main__.Parent'>,
+    <class 'object'>)
+
+
+5. Hybrid inheritance:
+    Combination of Single, Multiple, Multi-level & Hierarchical inheritance is known as Hybrid inheritance.
+
+
+6. Cyclic inheritance:
+    The concept of inheriting properties from one class to another class in cyclic way, is called cyclic inheritance.
+    Python as well as Java won't support cyclic inheritance.

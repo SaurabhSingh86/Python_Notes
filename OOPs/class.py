@@ -177,14 +177,14 @@
 
 # -------------------------------------------------------------------------------------------------------------------
 # by default value
-class Point:
-    def __init__(self, a=0, b=0):
-        self.a = a
-        self.b = b
-
-
-p1 = Point()
-p2 = Point()
+# class Point:
+#     def __init__(self, a=0, b=0):
+#         self.a = a
+#         self.b = b
+#
+#
+# p1 = Point()
+# p2 = Point()
 
 
 # -------------------------------------------------------------------------------------------------------------------
@@ -215,5 +215,4 @@ p2 = Point()
 #
 #     def append(self, username):
 #         self._users.append(username)
-
 

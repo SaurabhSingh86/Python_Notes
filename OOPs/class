@@ -1,0 +1,31 @@
+<<<<<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   OOPs   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>>>
+    =>  OOPs stands for Object-Oriented Programming.
+    =>  An in-built data type that we have is not sufficient enough to deal with the real-world entity/object,
+        to deal with a real-world entity we need a user-defined data type that is nothing but its class.
+
+==>> class: Class is a plan/blueprint/design/idea/template to create an object.
+
+==>> object: Physical Existence or Instance of a class in nothing but Object.
+
+==>> Reference Variable: is a variable with the help of this we can access the properties/behaviors of an Object.
+
+
+	The relationship between Class and Object is One to Many.
+	from per Class we can create n number of Objects.
+	from per Object we have n number of reference variable.
+
+==>> self: Self is a reference variable that is used to create & access the instance variable inside the class.
+
+==>> Constructor:
+    1.	Constructor is also known as the special method,
+    2.	Name of the constructor is always fixed i.e. __init__
+    3.	Constructor gets executed automatically whenever we create an object.
+    4.	Constructor is used to create an instance variable
+    5.	Constructor is optional in nature, if we are not providing constructor then Python virtual machine is going to
+        provide by default constructor.
+        e.g
+        class Demo:
+            def sample(self):
+                print("Python World")
+        s=Demo()
+        s.sample()          # Python World
