@@ -4,6 +4,7 @@
  names = ['apple', 'google', 'apple', 'yahoo', 'facebook', 'apple', 'gmail', 'gmail', 'gmail', 'gmail']
  """
 # by using dictionary comprehension
+d = {}
 
 # by using default dict
 
