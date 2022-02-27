@@ -1,27 +1,57 @@
-"""
-1. WAP to get all the duplicate items & the no of times the is repeated in the list using both comprehension &
- default dict
- names = ['apple', 'google', 'apple', 'yahoo', 'facebook', 'apple', 'gmail', 'gmail', 'gmail', 'gmail']
- """
+""" 1. WAP to get all the duplicate items & the no of times the item is repeated in the list using both comprehension &
+ default dict """
+# names = ['apple', 'google', 'apple', 'yahoo', 'facebook', 'apple', 'gmail', 'gmail', 'gmail', 'gmail']
+
 # by using dictionary comprehension
-d = {}
+# d = {item: names.count(item) for item in names if names.count(item) > 1}
+# print(d)
 
 # by using default dict
+# from collections import defaultdict
+# dd = defaultdict(int)
+# for item in names:
+#     if names.count(item) > 1:
+#         # dd[item] = names.count(item)
+#         dd[item] += 1
+# print(dd)
 
 
 """ 2. WAP to extract both alpha numeric value from the string, without using in-built-function """
 
 # s = "sony123@pv#td948"
+# res = ""
+# for char in s:
+#     if 'a' <= char <= 'z' or 'A' <= char <= 'Z' or '0' <= char <= '9':
+#         res += char
+# print(res)
+
+""" 3. WAF to print a particular word in a string along with its number of occurrences """
 
 
-""" 3. WAF to print a particular word in a string along with its number of occurences """
+# def occurrence(l, word):
+#     for item in l:
+#         if item == word:
+#             print(item, l.count(item))
+#             break
+#
+#
+# s = "Johny Johny yes papa"
+# a = s.split()
+# b = "Johny"
+# occurrence(a, b)
+
 
 """ 4. WAP to print longest non-repeated word in the sentence """
 
 # s = "See and saw went to see a sea"
+# l1 = s.split()
+# l = [word for word in l1 if l1.count(word) == 1]
+# res = sorted(l, key=len)
+# print(f'Longest non-repeated word is: {res[-1]}')
+
 
 """ 5. Sort the dictionary based on the last character of the key """
-# prices = {"ACME": 45.23, "AAPL": 612.78, "IBM": 205.55, "HPQ": 37.20, "FB": 10.25}
+prices = {"ACME": 45.23, "AAPL": 612.78, "IBM": 205.55, "HPQ": 37.20, "FB": 10.25}
 
 
 """ 6. Build a list with only even with even length string using filter"""
