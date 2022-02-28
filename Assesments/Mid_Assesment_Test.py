@@ -63,23 +63,70 @@
 # print(list(res))
 
 """ 7. WAP to return a list of elements raised to the power of their indices """
-numbers = [32, 65, 39, 8, 1]
+# numbers = [32, 65, 39, 8, 1]
+#
+# l = [num ** index for index, num in enumerate(numbers)]
+# print(l)
 
+""" 8. WAP to count the no of occurrences of word in the string without using in-built-method """
 
+# sentence = "hello world welcome to python hello hi hello hello hi"
 
-""" 8. WAP to count the no of occurences of word in the string without using in-built-method """
-
-# sentence = "hello world welcome to python hello hi hello hello"
-
+# # Method 1
+# l = sentence.split()
+# d = {}
+# for word in l:
+#     if word not in d:
+#         d[word] = 1
+#
+#     else:
+#         d[word] += 1
+#
+# print(d)
+#
+# # Method 2:
+# from collections import defaultdict
+# dd = defaultdict(int)
+# for word in l:
+#     dd[word] += 1
+#
+# print(dd)
 
 """ 9. WA Python program to sum the square of first 20 natural numbers """
+# n = 20
+# sum_ = 0
+# for num in range(n+1):
+#     sum_ += num ** 2
+#
+# print(sum_)
 
 """10. WA Dictionary comprehension to create a dictionary with word as its key and if the word is of numeric type 
 reverse it else add the word as it is """
 
-# sentence = "12 plus 18 equals to 30"
+sentence = "12 plus 18 equals to 30"
+l = sentence.split()
+d_ = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in l}
+print(d_)
+# {'12': '12', 'plus': 'plus', '18': '18', 'equals': 'equals', 'to': 'to', '30': '30'}
+# we are split the string and the output of split is also string so that we get above output
+
+sentence = [12, "plus", 18, "equals", "to", 30]
+d = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in sentence}
+print(d)
+
 
 """ 11. WAF that accepts two strings & returns True if the two strings are Anagrams of each other """
+
+
+# def anagram(string1, string2):
+#     if sorted(string1) == sorted(string2):
+#         return True
+#     else:
+#         return False
+#
+# s1 = input("Enter your first string")
+# s2 = input("Enter your second string")
+# print(anagram())
 
 """ 12. 
 list_ = [2, 3, 9, 5, 8, 2, 3, 0, 4, 5, 3, 7, 1, 3, 8] 
