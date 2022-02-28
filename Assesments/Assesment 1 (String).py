@@ -36,6 +36,8 @@
 
 # string = "VS PytHon"
 # res = ""
+
+# Method 1
 # for char in string:
 #     if 'a' <= char <= 'z':
 #         res += chr(ord(char)-32)
@@ -46,6 +48,17 @@
 #
 # print(res)
 
+# (Method 2: by using built-in method)
+
+# for char in string:
+#     if char.islower():
+#         res += char.upper()
+#     elif char.isupper():
+#         res += char.lower()
+#     else:
+#         res += char
+#
+# print(res)
 
 """ 4. WAP to create a string with only consonants presents in the string """
 
@@ -76,7 +89,7 @@
 #     if char == find_:
 #         # print(char, s.index(char))
 #         print(f'{char} is present at index {s.index(char)}')
-#         break                                                   ## we use break keyword because we need only first occurrence
+#         break                                         ## we use break keyword because we need only first occurrence
 #
 # # Method 2: by using range()
 # for index in range(len(s)):

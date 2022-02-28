@@ -81,26 +81,61 @@
 #     def mul(self):
 #         return self.a * self.b
 
-from time import sleep
+# from time import sleep
+#
+#
+# class Decorate:
+#     def __init__(self, func):
+#         self.func = func
+#         self.delay = 5
+#
+#     def __call__(self,*args, **kwargs):
+#         # self.func = args
+#         sleep(5)
+#         res = self.func(*args,**kwargs)
+#         return res
+#         # return self.__init__.func(*args, **kwargs)
+#
+#
+# @Decorate
+# class Display:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def display(g):
+#         print(g)
+#
+#
+# # d = Display("SS")
+# # d.display()
+#
+# d = Display.__call__([1, 2, 3])
+# print(d)
+# print(d.__dict__)
 
-class Decorate:
+
+import time
+
+
+class Delay:
     def __init__(self, func):
         self.func = func
-        self.delay = 5
+        self.delay = 2
 
-    def __call__(*args, **kwargs):
-        # self.func = func
-        sleep(5)
-
-        return func(*args, **kwargs)
+    def __call__(self, *args, **kwargs):
+        time.sleep(self.delay)
+        return self.func(*args, **kwargs)
 
 
-@Decorate
-class Display:
-    def __init__(self, name):
-        self.name = name
+@Delay
+class Addition:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-    def display(self):
-        print(self.name)
+    def add(self):
+        return self.a + self.b
 
 
+a = Addition("S", "s")
+print(a.add())

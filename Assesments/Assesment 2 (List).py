@@ -147,7 +147,7 @@
 # words = ["hi", "hello", "pytho"]
 # # output = ['nohtyp', 'olleh', 'ih']
 #
-# # Method 1: by using enumerate()
+# # Method 1: by using reversed()
 # print([word[::-1] for word in reversed(words)])
 #
 # # Method 2: by using range()

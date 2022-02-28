@@ -51,16 +51,21 @@
 
 
 """ 5. Sort the dictionary based on the last character of the key """
-prices = {"ACME": 45.23, "AAPL": 612.78, "IBM": 205.55, "HPQ": 37.20, "FB": 10.25}
+# prices = {"ACME": 45.23, "AAPL": 612.78, "IBM": 205.55, "HPQ": 37.20, "FB": 10.25}
 
+# print(dict(sorted(prices.items(), key=lambda item: item[0][-1])))
 
 """ 6. Build a list with only even with even length string using filter"""
 
 # names = ['apple', 'google', 'yahoo', 'facebook', 'yelp', 'flipkart', 'gmail', 'instagram', 'microsoft']
 
+# res = filter(lambda item: item[0] % 2 == 0 and len(item[-1]) % 2 == 0, enumerate(names))
+# print(list(res))
 
 """ 7. WAP to return a list of elements raised to the power of their indices """
-# numbers = [32, 65, 39, 8, 1]
+numbers = [32, 65, 39, 8, 1]
+
+
 
 """ 8. WAP to count the no of occurences of word in the string without using in-built-method """
 

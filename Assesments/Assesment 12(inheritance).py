@@ -42,7 +42,7 @@ class Delay:
 
     def __call__(self, *args, **kwargs):
         sleep(self.delay)
-        return self.func
+        return self.func(*args, **kwargs)
 
 
 @Delay
@@ -61,3 +61,33 @@ class Arithmetic:
 a = Arithmetic(7, 3)
 a.add()
 a.sub()
+
+
+
+# Methodd 2:
+
+# import time
+#
+#
+# class Delay:
+#     def __init__(self, func):
+#         self.func = func
+#         self.delay = 2
+#
+#     def __call__(self, *args, **kwargs):
+#         time.sleep(self.delay)
+#         return self.func(*args, **kwargs)
+#
+#
+# @Delay
+# class Addition:
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+#
+#     def add(self):
+#         return self.a + self.b
+#
+#
+# a = Addition("S", "s")
+# print(a.add())

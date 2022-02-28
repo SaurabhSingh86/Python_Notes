@@ -8,11 +8,12 @@
 """ 2. WA List comprehension to filter-out those names which are less than 6 characters """
 # names = ["apple", "google", "yahoo", "gmail", "flipkart", "instagram", "microsoft"]
 #
-# l = [name for name in names if len(name) <= 6]
+# l = [name for name in names if len(name) < 6]
 # print(l)
 
 
-""" 3. WA list comprehension to reverse the item of a list if the item is of odd length string otherwise keep the item as it is """
+""" 3. WA list comprehension to reverse the item of a list if the item is of odd length string otherwise keep the item
+ as it is """
 # names = ["apple", "google", "yahoo", "facebook", "yelp", "flipkart", "gmail", "instagram", "microsoft"]
 #
 # l1 = [item[::-1] if len(item) % 2 != 0 else item for item in names]

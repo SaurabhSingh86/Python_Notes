@@ -1,7 +1,7 @@
 """ 1. WAP to print the number of occurrence of characters in a string without using built-in-functions """
 # s = "helloworld"
 
-# Method 1: by using dict comprehension
+# Method 1: by using dict comprehension (with built-in-function)
 # d = {char: s.count(char) for char in s}
 # print(d)
 
@@ -36,7 +36,8 @@
 #     l = element.split(".")
 #     dd[l[-1]] += [element]
 #
-# print(dd)       # {'txt': ['apple.txt', 'google.txt', 'facebook.txt'], 'pdf': ['yahoo.pdf', 'gmail.pdf', 'amazon.pdf', 'flipkart.pdf']})
+# print(dd)
+# {'txt': ['apple.txt', 'google.txt', 'facebook.txt'], 'pdf': ['yahoo.pdf', 'gmail.pdf', 'amazon.pdf', 'flipkart.pdf']})
 #
 # d = defaultdict(list)
 # for item in files:
@@ -53,7 +54,7 @@
 #     if element not in d1:
 #         d1[l[-1]] = [l[0]]
 #     else:
-#         d1[l[-1]].append(l[0])
+#         d1[l[-1]] += [l[0]]
 #
 # print(d1)
 
@@ -108,7 +109,6 @@
 #     dd[l[-1]] += [l[0]]
 #
 # print(dd)
-
 
 
 """ 8. Grouping even & odd numbers """
