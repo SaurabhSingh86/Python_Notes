@@ -100,19 +100,20 @@
 #
 # print(sum_)
 
+
 """10. WA Dictionary comprehension to create a dictionary with word as its key and if the word is of numeric type 
 reverse it else add the word as it is """
 
-sentence = "12 plus 18 equals to 30"
-l = sentence.split()
-d_ = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in l}
-print(d_)
-# {'12': '12', 'plus': 'plus', '18': '18', 'equals': 'equals', 'to': 'to', '30': '30'}
-# we are split the string and the output of split is also string so that we get above output
-
-sentence = [12, "plus", 18, "equals", "to", 30]
-d = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in sentence}
-print(d)
+# sentence = "12 plus 18 equals to 30"
+# l = sentence.split()
+# d_ = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in l}
+# print(d_)
+# # {'12': '12', 'plus': 'plus', '18': '18', 'equals': 'equals', 'to': 'to', '30': '30'}
+# # we are split the string and the output of split is also string so that we get above output
+#
+# sentence = [12, "plus", 18, "equals", "to", 30]
+# d = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in sentence}
+# print(d)
 
 
 """ 11. WAF that accepts two strings & returns True if the two strings are Anagrams of each other """
@@ -124,14 +125,18 @@ print(d)
 #     else:
 #         return False
 #
-# s1 = input("Enter your first string")
-# s2 = input("Enter your second string")
-# print(anagram())
+#
+# s1 = input("Enter your first string: ")
+# s2 = input("Enter your second string: ")
+# print(anagram(s1, s2))
+
 
 """ 12. 
 list_ = [2, 3, 9, 5, 8, 2, 3, 0, 4, 5, 3, 7, 1, 3, 8] 
 key = 3
 output = [11, 2, 12, 9] """
+
+
 
 """" 13. WAP to get the following output 
 input: s = 'AABBCCCDAACD'
@@ -144,4 +149,13 @@ output should be:
 {'apple': [0, 2], 'google':[1,5], 'yahoo':[3, 4], 'gmail':[6, 7, 8] }"""
 
 """ 15. Find all maximum numbers from the below list """
-# numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
+numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
+
+# Method 1:
+# max_ = max(numbers)
+# for num in numbers:
+#     if num == max_:
+#         print(num, end=" ")
+
+# Method 2:
+
