@@ -113,8 +113,8 @@
 """ WAD which takes a list of string & reverse it """
 
 # list_ = ["hai", 73, "hello", 86, "Python", 99]
-#
-#
+
+
 # def reverse_(func):
 #     def wrapper(*args, **kwargs):
 #         l = []
@@ -211,26 +211,28 @@
 
 
 """ WADF that calculates time of execution of a function """
-# import time
-#
-# def p_outer(n):
-#     def delay(func):
-#         def wrapper(*args, **kwargs):
-#             start = time.time()
-#             func(*args, **kwargs)
-#             end = time.time()
-#             print(f'Time of execution is: {end - start}')
-#         return wrapper
-#     return delay
-#
-#
-#
-# @p_outer(2)
-# def sub(a, b):
-#     print(f'Output of a-b is {a - b}')
-#
-#
-# sub(10, 20)
+
+import time
+
+
+def p_outer(n):
+    def delay(func):
+        def wrapper(*args, **kwargs):
+            start = time.time()
+            time.sleep(n)                       # here I'm taking just 2 seconds delay so that we'll get execution time
+            func(*args, **kwargs)               # it is normal program that's why execution time is zero
+            end = time.time()
+            print(f'Time of execution is: {end - start}')
+        return wrapper
+    return delay
+
+
+@p_outer(2)
+def sub(a, b):
+    print(f'Output of a-b is {a - b}')
+
+
+sub(10, 20)
 
 
 # ~~~~~~~~~~ Assignment  ====>>>
@@ -323,7 +325,6 @@
 # print(display1())            # hello world,   # Python world
 
 
-
 """ returns only positive values after subtraction"""
 
 # # Method 1:
@@ -347,7 +348,7 @@
 # def positive_result(func):
 #     def wrapper(*args, **kwargs):
 #         res = func(*args, **kwargs)
-#         if isinstance(res, (int, complex)):
+#         if isinstance(res, (int, float)):
 #             return abs(res)
 #         return res
 #     return wrapper
@@ -449,7 +450,7 @@
 #
 #
 # def decorate_intro(func):
-#     # @add_deco
+#     # @add_deco                           # this is not right way
 #     def wrapper(*args, **kwargs):
 #         print("Welcome to Python World")
 #         return func(*args, **kwargs)
@@ -467,35 +468,35 @@
 # --------------------------------------------------------------------------------------------------------------------
 
 
-def install_decorator1(func):
-    def wrapper(*args, **kwargs):
-        print("Please accept Terms & Condition")
-        return func(*args, **kwargs)
-    return wrapper
-
-
-def install_decorator2(func):
-    def wrapper(*args, **kwargs):
-        print("Kindly enter correct licence key")
-        return func(*args, **kwargs)
-    return wrapper
-
-
-def install_decorator3(func):
-    def wrapper(*args, **kwargs):
-        print("Please choose the drive")
-        return func(*args, **kwargs)
-    return wrapper
-
-
-@install_decorator1
-@install_decorator2
-@install_decorator3
-def install_window():
-    print('Window installation has started')
-
-
-install_window()
+# def install_decorator1(func):
+#     def wrapper(*args, **kwargs):
+#         print("Please accept Terms & Condition")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# def install_decorator2(func):
+#     def wrapper(*args, **kwargs):
+#         print("Kindly enter correct licence key")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# def install_decorator3(func):
+#     def wrapper(*args, **kwargs):
+#         print("Please choose the drive")
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# @install_decorator1
+# @install_decorator2
+# @install_decorator3
+# def install_window():
+#     print('Window installation has started')
+#
+#
+# install_window()
 
 # output
 """
