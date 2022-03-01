@@ -148,3 +148,51 @@ list has even number of characters by using dictionary comprehension """
 
 """ 13. WADF to delay the execution of a function for n seconds """
 
+# import time
+#
+# def p_outer(n):
+#     def outer(func):
+#         def wrapper(*args, **kwargs):
+#             time.sleep(n)
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return outer
+#
+#
+# @p_outer(5)
+# def display():
+#     print("Hello VS")
+#
+#
+# display()
+
+
+""" 14. WAF to rotate character in a string """
+
+# rotate_string("helloworld", 1) ===> dhelloworld
+
+# string_ = "helloworld"
+# res = " "
+# n = int(input("Enter a number of rotation: "))
+# i = 1
+# while i <= n:
+#     r = string_[-1]
+#     res = r + string_[:len(string_)-1:]
+#     string_ = res
+#     i += 1
+#
+# print(res)
+
+
+""" 15. WAF which retun indexes of each item in the form of dictionary in the below list """
+
+# names = ["apple", "google", "apple", "yahoo", "yahoo", "google", 'gmail', 'gmail', 'gmail']
+# # # output  = {'apple': [0, 2], 'google': [1, 5], 'yahoo': [3, 4], 'gmail': [6, 7, 8]}
+#
+# from collections import defaultdict
+# dd = defaultdict(list)
+#
+# for index, item in enumerate(names):
+#     dd[item] += [index]
+#
+# print(dd)
