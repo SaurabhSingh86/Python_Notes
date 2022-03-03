@@ -1,0 +1,27 @@
+ <<<<<<<<<<~~~~~~~~~~~~~~~~~~~~~~~~~~~   Generators   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>>>>>>
+
+Overview:-
+    =>  Python generator is used to create python iterators.
+    =>  This is done by defining a function but instead of the return statement returning from the funciton, use the
+        "yield" keyword.
+    =>  A generator is similar to a function returning an array.
+
+Features of generators:-
+    =>  A generator is a function that returns an iterator. It generates values using the 'yield' keyword.
+    =>  They don't take memory of a list.They are LAZY iterables. Generators are used for saving memory.
+    =>  When called on next() function a raises Stop-iteration exception when there are no more values to generate.
+    =>  'yield' keyword suspends or pauses the execution of the function but 'return' statement ends the function.
+
+ Difference between return vs yield:-
+
+                    return                      |                     yield
+----------------------------------------------------------------------------------------------------------------------
+    =>      stop the execution                  |       Pause the execution
+    =>      can't return to the function block  |       can return to the function block
+    =>      Multiple return statements, can't   |       Multiple yield keywords can be written in a function
+            written in a function               |
+    =>      Can return multiple elements        |       can return multiple elements
+            (inside the tuple)
+----------------------------------------------------------------------------------------------------------------------
+
+e.g. """ WAP to print square all the elements present inside the below list """
