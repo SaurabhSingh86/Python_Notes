@@ -30,3 +30,6 @@
                 print("Python World")
         s=Demo()
         s.sample()          # Python World
+
+
+class method is used for validate the data

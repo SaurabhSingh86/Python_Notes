@@ -138,10 +138,13 @@ output = [11, 2, 12, 9] """
 
 
 
-"""" 13. WAP to get the following output 
+"""" 13. WAP to get the following output """
 input: s = 'AABBCCCDAACD'
-output: 2A2B3C1D2A1C1D
-"""
+# output: 2A2B3C1D2A1C1D
+
+
+
+
 
 """ 14. output should be:
 {'apple': [0, 2], 'google':[1,8], 'yahoo':[3, 4, 5, 6, 7], 'gmail':[9, 10, 11] }"""
@@ -155,7 +158,7 @@ output: 2A2B3C1D2A1C1D
 # print(dd)
 
 """ 15. Find all maximum numbers from the below list """
-# numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
+numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
 
 # Method 1:
 # max_ = max(numbers)
@@ -164,4 +167,5 @@ output: 2A2B3C1D2A1C1D
 #         print(num, end=" ")
 
 # Method 2:
-
+numbers.sort()
+max_ = numbers[-1]

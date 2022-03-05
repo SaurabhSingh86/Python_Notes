@@ -76,8 +76,8 @@ print(series(c))
 
 
 """ 9. Find all max numbers from the below list """
-# numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
-# max_ = max(numbers)
+numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
+max_ = max(numbers)
 #
 # # Method 1:
 #
@@ -85,9 +85,9 @@ print(series(c))
 # print(list_)
 #
 # # Method 2:
-# for num in numbers:
-#     if num == max_:
-#         print(num, end=" ")
+for num in numbers:
+    if num == max_:
+        print(num, end=" ")
 
 
 """ 10. WA list comprehension to get a list of even numbers from 1-50 """
