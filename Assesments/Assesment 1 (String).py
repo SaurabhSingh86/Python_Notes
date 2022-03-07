@@ -7,6 +7,7 @@
 """ 2. WAP to count the number of digits & alphabets in the string """
 
 # string = "hai1234python23"
+
 # alp_count = 0
 # dig_count = 0
 
