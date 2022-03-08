@@ -60,25 +60,123 @@ s = "dream big"
 # print(res)
 
 """ 4. How to convert a string to a list and vice-versa. """
+# => convert a string into a list       =====>>> by using split() built-in-function
 
 
+# def convert_into_list(any_string):
+#     return any_string.split()
+#
+#
+# print(convert_into_list("love me like you do"))         # ['love', 'me', 'like', 'you', 'do']
 
-""" 5. Covert the string "Hello welcome to Python" to a comma separated string. """
+
+# => convert list into a string     ====>>>>  by using join() built-in-function
+
+
+# def convert_into_string(any_list):
+#     res = " ".join(any_list)
+#     return res
+#
+#
+# print(convert_into_string(["I", "am", "a", "foodie", "Person."]))    # I am a foodie Person.
+
+""" 5. Convert the string "Hello welcome to Python" to a comma separated string. """
+
+# given_string = "Hello welcome to Python"
+# list_ = given_string.split()
+# res = ",".join(list_)
+# print(res)                                      # Hello,welcome,to,Python
 
 """ 6. Write a program to print alternate characters in a string. """
 
+# Method 1: by using slicing
+# sentence = "Money Heist"
+# print(sentence[::2])                        # MnyHit
+
+
+# Method 2: by using range
+# for i in range(0, len(sentence), 2):
+#     print(sentence[i], end="")              # MnyHit
+
+
 """ 7. Write a Program to print ascii values of the characters present in a string. """
+# Method 1: using function
+
+
+# def ascii_value(character):
+#     return ord(character)
+
+
+# print(ascii_value("P"))                 # 80
+
+# Method 2:
+# user_input = input("Enter a character: ")
+# print(ord(user_input))                  # p = 112
+
 
 """ 8. Write program to convert upper case to lower case and vice-versa without using inbuilt method. """
+sentence = "Ocean Of The Blue Sea"
+# res = ""
+# for char in sentence:
+#     if 'a' <= char <= 'z':
+#         res += chr(ord(char) - 32)
+#     elif "A" <= char <= "Z":
+#         res += chr(ord(char) + 32)
+#     else:
+#         res += char
+# print(res)
+
+
+# Method 2: **************************************************************************************************
+
+# def convert(any_string):
+#     l = []
+#     for char in any_string:
+#         temp = ord(char)
+#         if temp >= 97 and temp <= 122:
+#             l.append(chr(temp - 32))
+#         elif temp >= 65 and temp <= 90:
+#             l.append(chr(temp + 32))
+#         else:
+#             l.append(chr)
+#     return l
+
+# print(convert("Ramta Jogi"))
 
 """ 9. Write program to swap two numbers without using 3rd variable. """
+# Method 1: using function
+
+
+# def swap_num(a, b):
+#     a, b = b, a
+#     return a, b
+#
+#
+# print(swap_num(11, 21))                   # (21, 11)
+
 
 """ 10. Write program to merge two different lists. """
 
-# a = [1, 2, 3]
-# b = [4, 5, 6]
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+# Method 1: using unpacking
+# merge_list = [*a, *b]
+# print(merge_list)                       # [1, 2, 3, 4, 5, 6]
+
+# Method 2: using concatenation
+# c = a + b
+# print(c)                                # [1, 2, 3, 4, 5, 6]
+
+
+# Method 3: Using chain
+# from itertools import chain
+# s = chain(a, b)                         # Returns an Iterators
+# print(list(s))
 
 """ 11. Write program to read a random line in a file. (ex. 50, 65, 78th line) """
+
+
 
 """ 12. Write program to read a random lines in a file. (ex. I want read all lines 10th to 15th line) """
 
