@@ -1,29 +1,77 @@
 """ 1. Write a program to find the length of the string without using inbuilt function (len)"""
 
 
-""" 2. Write a program to reverse a string without using any inbuilt functions """
+# s = "marshmello"
+# count_ = 0
+# for _ in s:
+#     count_ += 1
+# print(count_)
 
+# Method 2: by using function
+
+# def count_(traverse):
+#     _count = 0
+#     for _ in traverse:
+#         _count += 1
+#     return _count
+
+
+# print(count_("marshmello"))                         # 10
+# print(count_([1, 2, "hai", 9]))                     # 4
+# print(count_((1, 2, 9, 66)))                        # 4
+# print(count_({1, 9, 8}))                            # 3
+# print(count_({"a": 1, "b": 2, "c": 3}))             # 3
+
+""" 2. Write a program to reverse a string without using any inbuilt functions """
+s = "dream big"
+
+# Method 1: by using range
+# res = ""
+# for index in range(len(s)-1, -1, -1):
+#     res += s[index]
+#
+# print(res)                                # gib maerd
+
+# Method 2: by using concatenation
+# output = ""
+# for char in s:
+#     output = char + output
+#
+# print(output)
+
+
+# Method 3: by using function
+
+# def reverse(any_string):
+#     res = []
+#     for i in range(len(any_string)-1, -1, -1):
+#         res.append(any_string[i])
+#     output = "".join(res)
+#     return output
+#
+#
+# print(reverse("my galaxy"))                   # yxalag ym
 
 """ 3. Write a program to replace one string with another. e.g. "Hello World" replace "World" with "Universe". """
-
+# s = "Hello World"
+#
+# # Method 1:
+# res = s.replace("World", "Universe")
+# print(res)
 
 """ 4. How to convert a string to a list and vice-versa. """
 
 
-""" 5. Covert the string "Hello welcome to Python" to a comma separated string. """
 
+""" 5. Covert the string "Hello welcome to Python" to a comma separated string. """
 
 """ 6. Write a program to print alternate characters in a string. """
 
-
 """ 7. Write a Program to print ascii values of the characters present in a string. """
-
 
 """ 8. Write program to convert upper case to lower case and vice-versa without using inbuilt method. """
 
-
 """ 9. Write program to swap two numbers without using 3rd variable. """
-
 
 """ 10. Write program to merge two different lists. """
 
@@ -32,18 +80,13 @@
 
 """ 11. Write program to read a random line in a file. (ex. 50, 65, 78th line) """
 
-
 """ 12. Write program to read a random lines in a file. (ex. I want read all lines 10th to 15th line) """
-
 
 """ 13 Program to print last "N" lines of a file. """
 
-
 """ 14. Write a program to check if the given string is Palindrome or not without using reversed method. """
 
-
 """ 15 Write a program to search for a character in a given string and return the corresponding index. """
-
 
 """ 16 Write a program to get the below output """
 # sentence = "hello world welcome to python programming hi there"
@@ -51,22 +94,16 @@
 
 """ 17 Write a to replace all the characters with - if the character occurs more than once in a string """
 
-
 """ 18 write a decorator that returns only positive values of subtraction """
 
-
 """ 19 How to get the count of number of instances of a class that is being created. """
-
 
 """ 20 Write a function which takes a list of strings and integers.If the item is a string it should print as is and 
 if the item is integer of float it should reverse it. """
 
-
 """ 21 Write a class named Simple and it should have iteration capability. """
 
-
 """ 22 Write a Custom class which can access the values of dictionaries using d['a'] and d.a """
-
 
 """ 23 Write a python program to get the below output """
 # sentence = "Hi How are you"
@@ -74,9 +111,7 @@ if the item is integer of float it should reverse it. """
 
 """ 24 Write a python program to get the below output """
 
-
 """ 25 Write a lambda function to add two numbers (a, b) """
-
 
 """ 26 What is the output of the following """
 # a = [1, 2, 3]
@@ -107,7 +142,6 @@ if the item is integer of float it should reverse it. """
 """ 32 A function takes variable number of positional arguments as input. How to check if the arguments that are 
 passed are more than 5 """
 
-
 """ 33 Count the number of occurrences of "CRITICAL", "INFO" and "ERROR" lines in a log file. """
 lines = """CRITICAL:Hello world
 INFO: This is an info
@@ -126,7 +160,6 @@ INFO: This is an info
 ERROR: This is an error 
 CRITICAL: This is critical"""
 
-
 """ 34 Write a function to reverse any iterable without using reverse function. """
 # a = [1, 2, 3, 4, 5]
 
@@ -140,7 +173,6 @@ CRITICAL: This is critical"""
 
 
 """ 37 Write a program to sum all the numbers in below string. """
-
 
 """ 38 Print all the numbers in the below list """
 # a = ['abc', '123', 'hello', '23']
@@ -160,9 +192,7 @@ CRITICAL: This is critical"""
 
 """ 42 Write a program to get square of list of number's using lambda function . """
 
-
 """ 43 Write a function that accepts two strings and returns True if the two strings are anagrams of each other. """
-
 
 """ 44 Write a program to iterate through list and build a new list, only if the items of the list has even number of 
 characters."""
@@ -177,11 +207,9 @@ number of characters. """
 
 """ 46 Write a program which squares the numbers in a list using map object """
 
-
 """ 47 Count number of lines in a file without loading the file to the memory """
 
 """ 48 Printing line and line no's """
-
 
 """ 49 Write a Program to print the sum of entire list and sum of only internal list """
 # l = [[1,2,3],[4,5,6],[7,8,9]]
@@ -202,7 +230,6 @@ number of characters. """
 
 """ 55 What is the difference between defaultdict and normal dictionary. """
 
-
 """
 Defaultdict
 -----------
@@ -217,9 +244,7 @@ Normal Dictionary
 2. In order to work on the value, first the key needs to be created and initialised.
 """
 
-
 """ 56 Explain property decorator in python. """
-
 
 """ 57 What is Mutable and Immutable datatypes. """
 """
@@ -228,7 +253,6 @@ Normal Dictionary
 """
 
 """ 58 Explain get() method in dictionaries. """
-
 
 """
 point =  {'a': 1, 'b': 2}
@@ -239,12 +263,9 @@ point =  {'a': 1, 'b': 2}
            e.g. profile.get('c', 'Sorry the key does not exist')
 """
 
-
 """ 59 Write a list comprehension to get a list of even numbers from 1-50 """
 
-
 """ 60 Find the longest non-repeated substring in the below string """
-
 
 """ 61 Write a program to find the duplicate elements in the list without using inbuilt functions """
 # names = ['apple', 'google', 'apple', 'yahoo', 'google']
@@ -254,7 +275,6 @@ point =  {'a': 1, 'b': 2}
 
 
 """ 63 Write a function to check if the number is Prime """
-
 
 """ 64 How to create a tuple using range function """
 
@@ -270,10 +290,8 @@ should return 2."""
 """ 68 Make a function named tail that takes a sequence (like a list, string, or tuple) and a number n and returns 
 the last n elements from the given sequence, as a list."""
 
-
 """ 69 Write function named is_perfect_square that accepts a number and returns True if it's a perfect square and 
 False if it's not. """
-
 
 """ 70 Write a program to get all the duplicate items and the number of times the item is repeated in the list. """
 # names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'facebook', 'apple', 'gmail', 'gmail', 'gmail', 'gmail']
@@ -282,7 +300,6 @@ False if it's not. """
 """ 71 Write a program to count the number of occurrences of each word in a file. """
 
 """ 72 Write a program to count the number of occurrences of vowels in a file. """
-
 
 """ 73 Write a program to print all numeric values in a list """
 # items = ['apple', 1.2, 'google', '12.6', 26, '100']
@@ -392,11 +409,9 @@ for i in range(1, 6):
 
 """
 
-
 """ 75 Write a program count the occurrence of a particular word in the file """
 
 """ 76 Write a program to map a product to a company and build a dictionary with company and list of products pair """
-
 
 """ 77 Write a program to rotate items of the list """
 # names = ["apple", "google", "yahoo", "gmail", "facebook", "flipkart", "amazon"]
@@ -404,12 +419,9 @@ for i in range(1, 6):
 
 """ 78 Write a program to rotate characters in a string """
 
-
 """ 79 Write a program to count the number of white spaces in a given string """
 
-
 """ 80 Write a program to print only non-repeated characters in a string """
-
 
 """ 81 What is the difference between a list and a tuple """
 
@@ -436,12 +448,9 @@ Where as in tuples, memory is not over allocated, as tuples does not support app
 
 """ 87 Write a program to count no of capital letters in a string """
 
-
 """ 88 Write a program to get the below output """
 
-
 """ 89 Write a program to get the below output """
-
 
 """ 90 Write a program to check if the elements in the second list is series of continuation of the items in the 
 first list """
@@ -483,7 +492,6 @@ e.g.
 The list "a" is getting mutated each time when it is extended.
 """
 
-
 """ 92 Write a program to find the first repeating character in a string """
 # s = 'helloworld'
 
@@ -507,7 +515,6 @@ should be in ascending order and even numbers should be in descending order"""
 
 
 """ 97 Write a program to count the number of occurrences of non-special characters in a given string """
-
 
 """ 98 Grouping Flowers and Animals in the below list """
 # items = ['lotus-flower', 'lilly-flower', 'cat-animal', 'sunflower-flower', 'dog-animal']
@@ -545,18 +552,15 @@ should be in ascending order and even numbers should be in descending order"""
 
 """ 106 Can we override a static method in python? """
 
-
 """ 107 Write a function which returns the sum of lengths of all the iterables """
 
 """ 108 Replace whitespaces with newline character in the below string """
-
 
 """ 109 Replace all vowels with "*" """
 # sentence = "hello world welcome to python"
 
 
 """ 110 Replace all occurances of "Java" with "Python" in a file """
-
 
 """ 111 Maximum sum of 3 numbers and Minimum sum of 3 numbers"""
 # numbers = [10, 15, 20, 25, 30, 35, 40, 15, 15]
@@ -628,5 +632,3 @@ should be in ascending order and even numbers should be in descending order"""
 
 
 """ 129 Can we have multiple init methods in a class """
-
-
