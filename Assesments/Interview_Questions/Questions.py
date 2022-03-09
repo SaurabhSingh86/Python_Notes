@@ -115,7 +115,7 @@ s = "dream big"
 
 
 """ 8. Write program to convert upper case to lower case and vice-versa without using inbuilt method. """
-sentence = "Ocean Of The Blue Sea"
+# sentence = "Ocean Of The Blue Sea"
 # res = ""
 # for char in sentence:
 #     if 'a' <= char <= 'z':
@@ -157,8 +157,8 @@ sentence = "Ocean Of The Blue Sea"
 
 """ 10. Write program to merge two different lists. """
 
-a = [1, 2, 3]
-b = [4, 5, 6]
+# a = [1, 2, 3]
+# b = [4, 5, 6]
 
 # Method 1: using unpacking
 # merge_list = [*a, *b]
@@ -180,11 +180,27 @@ b = [4, 5, 6]
 
 """ 12. Write program to read a random lines in a file. (ex. I want read all lines 10th to 15th line) """
 
+
+
 """ 13 Program to print last "N" lines of a file. """
+
 
 """ 14. Write a program to check if the given string is Palindrome or not without using reversed method. """
 
+# Method1: by using slicing
+
+# def is_palindrome(any_string):
+#     res = any_string[::-1]
+#     if res == any_string:
+#         return f'{any_string} is palindrome'
+#     return f'{any_string} is not palindrome'
+#
+#
+# print(is_palindrome("radar"))           # radar is palindrome
+# print(is_palindrome("india"))           # india is not palindrome
+
 """ 15 Write a program to search for a character in a given string and return the corresponding index. """
+
 
 """ 16 Write a program to get the below output """
 # sentence = "hello world welcome to python programming hi there"
