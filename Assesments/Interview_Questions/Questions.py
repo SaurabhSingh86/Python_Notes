@@ -200,27 +200,92 @@ s = "dream big"
 # print(is_palindrome("india"))           # india is not palindrome
 
 """ 15 Write a program to search for a character in a given string and return the corresponding index. """
+# Method 1: normal method
+
+# string_ = input("Enter your string: ")
+# find_char = input("Enter your character that you find: ")
+#
+# for index, char in enumerate(string_):
+#     if char == find_char:
+#         print(f'Indexing position of {char} is {index}')
+
+# Method 2: by using function
+
+
+# def search_char(string, find_string):
+#     for index, char in enumerate(string):
+#         if char == find_string:
+#             print(f'Indexing position of {char} is {index}')
+#
+#
+# search_char("La ca sa da Papel", "P")
 
 
 """ 16 Write a program to get the below output """
 # sentence = "hello world welcome to python programming hi there"
+# result: d = {'h': ['hello', 'hi'], 'w': ['world', 'welcome'], 't': ['to', 'there'], 'p': ['python', 'programming'] }
+# from collections import defaultdict
+# dd = defaultdict(list)
+# l = sentence.split()
+# for word in l:
+#     dd[word[0]] += [word]
+# print(dd)
 
 
-""" 17 Write a to replace all the characters with - if the character occurs more than once in a string """
+""" 17 Write a program to replace all the characters with - if the character occurs more than once in a string """
+# s = "google"
+# res = ""
+# for char in s:
+#     if s.count(char) > 1:
+#         res += "-"
+#     else:
+#         res += char
+#
+# print(res)
+
 
 """ 18 write a decorator that returns only positive values of subtraction """
 
+
+# def positive_values(func):
+#     def wrapper(*args, **kwargs):
+#         res = func(*args, **kwargs)
+#         return abs(res)
+#     return wrapper
+#
+#
+# @positive_values
+# def sub(a, b):
+#     return a - b
+#
+#
+# print(sub(3, 7))
+# print(sub(196, 1996))
+
 """ 19 How to get the count of number of instances of a class that is being created. """
+
+
 
 """ 20 Write a function which takes a list of strings and integers.If the item is a string it should print as is and 
 if the item is integer of float it should reverse it. """
+list_ = ['apple', 'yahoo', '1234', 100, 123.76, '26.23']
+
+# def func()
+
 
 """ 21 Write a class named Simple and it should have iteration capability. """
 
+
+
+
 """ 22 Write a Custom class which can access the values of dictionaries using d['a'] and d.a """
 
+
+
+
 """ 23 Write a python program to get the below output """
-# sentence = "Hi How are you"
+
+sentence = "Hi How are you"
 
 
 """ 24 Write a python program to get the below output """
@@ -389,6 +454,20 @@ point =  {'a': 1, 'b': 2}
 
 
 """ 63 Write a function to check if the number is Prime """
+
+
+# def is_prime(num):
+#     if num > 1:
+#         for i in range(2, num):
+#             if num % i == 0:
+#                 print(f'{num} is not prime number')
+#                 break
+#             return f'{num} is prime number'
+#
+#
+# print(is_prime(111))             # 111 is prime number
+# print(is_prime(97))              # 97 is prime number
+
 
 """ 64 How to create a tuple using range function """
 
