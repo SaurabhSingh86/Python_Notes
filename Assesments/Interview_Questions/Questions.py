@@ -1,6 +1,5 @@
 """ 1. Write a program to find the length of the string without using inbuilt function (len)"""
 
-
 # s = "marshmello"
 # count_ = 0
 # for _ in s:
@@ -176,14 +175,9 @@ s = "dream big"
 
 """ 11. Write program to read a random line in a file. (ex. 50, 65, 78th line) """
 
-
-
 """ 12. Write program to read a random lines in a file. (ex. I want read all lines 10th to 15th line) """
 
-
-
 """ 13 Program to print last "N" lines of a file. """
-
 
 """ 14. Write a program to check if the given string is Palindrome or not without using reversed method. """
 
@@ -246,7 +240,6 @@ s = "dream big"
 
 """ 18 write a decorator that returns only positive values of subtraction """
 
-
 # def positive_values(func):
 #     def wrapper(*args, **kwargs):
 #         res = func(*args, **kwargs)
@@ -264,65 +257,140 @@ s = "dream big"
 
 """ 19 How to get the count of number of instances of a class that is being created. """
 
-
-
-""" 20 Write a function which takes a list of strings and integers.If the item is a string it should print as is and 
-if the item is integer of float it should reverse it. """
-list_ = ['apple', 'yahoo', '1234', 100, 123.76, '26.23']
-
-# def func()
+""" 20 Write a function which takes a list of strings and integers. If the item is a string it should print as is and 
+if the item is integer or float it should reverse it. """
+# list_ = ['apple', 'yahoo', '1234', 100, 123.76, '26.23']
+#
+#
+# def func(items):
+#     l = []
+#     for item in items:
+#         if isinstance(item, (int, float)):
+#             l.append(str(item)[::-1])
+#         else:
+#             l.append(item)
+#     return l
+#
+#
+# print(func(list_))
 
 
 """ 21 Write a class named Simple and it should have iteration capability. """
 
 
 
-
 """ 22 Write a Custom class which can access the values of dictionaries using d['a'] and d.a """
-
-
-
 
 """ 23 Write a python program to get the below output """
 
-sentence = "Hi How are you"
-
+# sentence = "Hi How are you"
+# # o/p should be "iH woH era uoy"
+#
+# # Method 1:
+# l = sentence.split()
+# for word in l:
+#     print(word[::-1], end=" ")
 
 """ 24 Write a python program to get the below output """
+# sentence = "Hi How are you"
+# o/p should be "uoy era woH iH"
+
+# Method 1: by using reversed function
+# l = sentence.split()
+# for word in reversed(l):
+#     print(word[::-1], end=" ")
+
+
+# Method 2: by using range:
+
 
 """ 25 Write a lambda function to add two numbers (a, b) """
+# res = lambda a, b: a + b
+# print(res(2, 7))
+
 
 """ 26 What is the output of the following """
 # a = [1, 2, 3]
 # b = [4, 5, 6]
-# print([a, b])
-# print((a, b))
+# print([a, b])           # [[1, 2, 3], [4, 5, 6]]    i.e. list of list
+# print((a, b))           # ([1, 2, 3], [4, 5, 6])    i.e Tuple of lists
+# print([*a, *b])         # [1, 2, 3, 4, 5, 6]        i.e. Concatenate it or merge into single list
 
 """ 27 How to remove duplicates from the list without using inbuilt functions """
 # items = [1, 2, 3, 4, 1, 2, 3, 4, 5]
+# l = []
+# for item in items:
+#     if item not in l:
+#         l.append(item)
+# print(l)
+#
+# print(set(items))           # {1, 2, 3, 4, 5} but we get the output in set collection => to avoid this => type cast
+# print(list(set(items)))     # [1, 2, 3, 4, 5]
 
 
 """ 28 Find the longest word in the sentence """
 # sentence = "Hello world. Welcome to Python"
+# l = sentence.split()
+#
+# # by using sorted function
+# res = sorted(l, key=len)
+# print(res[-1])                                              # Welcome
+#
+# # dictionary
+# d = {word: len(word) for word in l}
+# print(max(d.items(), key=lambda item: item[-1]))            # ('Welcome', 7)
+
 
 """ 29 write a program to reverse the values in the dictionary if the value is of type String """
 # d = {'a': 'hello', 'b': 100, 'c': 10.1, 'd': 'world'}
-
+# dictionary = {key: value[::-1] for key, value in d.items() if isinstance(value, str)}
+# print(dictionary)
 
 """ 30 write a program to get 1234 """
-# t = ('1', '2', '3', '4')
+t = ('1', '2', '3', '4')
+# by using join function
+# res = "".join(t)
+# print(res)
 
+# by using for loop
+# output = ""
+# for i in t:
+#     output += i
+# print(output)
 
 """ 31 How to get the elements that are in list b but not in list a """
 # a = [1, 2, 3]
 # b = [1, 2, 3, 4]
 
+# Method 1:
+# for element in b:
+#     if element not in a:
+#         print(element, end="")            # 4
+
+# Method 2:
+# a1 = set(a)
+# b1 = set(b)
+# print(b1.difference(a1))                  # {4}
+
 
 """ 32 A function takes variable number of positional arguments as input. How to check if the arguments that are 
 passed are more than 5 """
 
+
+# def count_arguments(*args):
+#     if len(args) > 5:
+#         print("Length of positional arguments are more than 5")
+#     else:
+#         print("Length of positional arguments are less than 5")
+#
+#
+# count_arguments(1, 2)                       # Length of positional arguments are less than 5
+# count_arguments(9, 8, 5, 26, 11, 31)        # Length of positional arguments are more than 5
+
+
 """ 33 Count the number of occurrences of "CRITICAL", "INFO" and "ERROR" lines in a log file. """
-lines = """CRITICAL:Hello world
+lines = """
+CRITICAL:Hello world
 INFO: This is an info
 ERROR: This is an error 
 CRITICAL: This is critical
@@ -339,13 +407,48 @@ INFO: This is an info
 ERROR: This is an error 
 CRITICAL: This is critical"""
 
+# ???????????????????????????????????????????????????????????????????????????????///
+
+# l = []
+# for line in lines:
+#     line.strip()
+#     list_ = line.split()
+#     print(list_)
+#     l.append(list_[0])
+#
+# res = {item: l.count(item) for item in l}
+# print(res)
+
+
 """ 34 Write a function to reverse any iterable without using reverse function. """
-# a = [1, 2, 3, 4, 5]
+# a_ = [1, 2, 3, 4, 5]
+
+# Method 1: by using range
+
+
+# def reverse_(a):
+#     l = []
+#     for index in range(len(a)-1, -1, -1):
+#         l.append(a[index])
+#     print(l)
+#
+#
+# reverse_(a_)
 
 
 """ 35 Write a function to print the below output. """
 # func("TRACXN", 0)  # Should print RCN
 # func("TRACXN", 1)  # Should print TAX
+
+
+# def func(string_, initial):
+#     if initial:
+#         return string_[::2]
+#     return string_[1::2]
+#
+#
+# print(func("TRACXN", 0))            # RCN
+# print(func("TRACXN", 1))            # TAX
 
 """ 36 Sum all the numbers in the below string. """
 # s = "Sony12India567Pvt2ltd"
@@ -454,7 +557,6 @@ point =  {'a': 1, 'b': 2}
 
 
 """ 63 Write a function to check if the number is Prime """
-
 
 # def is_prime(num):
 #     if num > 1:
