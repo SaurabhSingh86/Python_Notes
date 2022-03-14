@@ -451,43 +451,108 @@ CRITICAL: This is critical"""
 # print(func("TRACXN", 1))            # TAX
 
 """ 36 Sum all the numbers in the below string. """
-# s = "Sony12India567Pvt2ltd"
-
+# s = "Sony12India567Pvt2ltd"        # 1+2+5+6+7+2
+# sum_ = 0
+# for char in s:
+#     if char.isdigit():
+#         sum_ += int(char)
+#
+#
+# print(sum_)
 
 """ 37 Write a program to sum all the numbers in below string. """
+# *********************************************
+# s = "Sony12India567Pvt2ltd"        # 12+567+2
+# import re
+# rr = re.findall(r'[\d]+', s)                # ['12', '567', '2']
+# print(rr)
+# total = 0
+# for num in rr:
+#     total += int(num)
+#
+# print(total)
 
 """ 38 Print all the numbers in the below list """
 # a = ['abc', '123', 'hello', '23']
+# for element in a:
+#     if element.isdigit():
+#         print(element, end=" ")
 
 
 """ 39 Program to print the number of occurrences of characters in a String without using inbuilt functions. """
 # s = 'helloworld'
 
+# Method 1: by using dictionary comprehension
+# d = {char: s.count(char) for char in s}
+# print(d)                        # {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}
+
+# Method 2: by using defaultdict
+# from collections import defaultdict
+# dd = defaultdict(int)
+# for char in s:
+#     dd[char] += s.count(char)
+#
+# print(dd)                       # defaultdict(<class 'int'>, {'h': 1, 'e': 1, 'l': 9, 'o': 4, 'w': 1, 'r': 1, 'd': 1})
+
 
 """ 40 Program to print only the repeated characters and count of the same. """
 # s = 'helloworld'
-
+# # Method 1: by using dictionary comprehension
+# d = {char: s.count(char) for char in s if s.count(char) > 1}
+# print(d)                            # {'l': 3, 'o': 2}
+#
+# # Method 2: by using defaultdict
+# from collections import defaultdict
+# dd = defaultdict(int)
+# for char in s:
+#     if s.count(char) > 1:
+#         dd[char] = s.count(char)
+#
+# print(dd)                           # defaultdict(<class 'int'>, {'l': 3, 'o': 2})
 
 """ 41 Write a program to get alternate characters of a string in list format. """
 # s = 'hello world welcome to python'
-
+# l = [s[index] for index in range(0, len(s), 2)]
+# print(l)
 
 """ 42 Write a program to get square of list of number's using lambda function . """
+# a = [1, 2, 3, 4, 5]
+# square = lambda num: num ** 2
+# l = [square(element) for element in a]
+# print(l)
+
 
 """ 43 Write a function that accepts two strings and returns True if the two strings are anagrams of each other. """
+
+
+# def anagram(string1, string2):
+#     if sorted(string1) == sorted(string2):
+#         return f'Given string is Anagram.'
+#     return f'Given string is Not Anagram.'
+#
+#
+# print(anagram("heart", 'earth'))                # Given string is Anagram.
+# print(anagram("way", 'away'))                   # Given string is Not Anagram.
+
 
 """ 44 Write a program to iterate through list and build a new list, only if the items of the list has even number of 
 characters."""
 # names = ['apple', 'yahoo', 'google', 'gmail', 'walmart', 'flipkart', 'facebook', 'amazon']
+# res = [item for item in names if len(item) % 2 == 0]
+# print(res)
 
 
 """ 45 Write a program to iterate through list and build a new dictionary, only if the items of the list has even 
 number of characters. """
 
 # names = ['apple', 'yahoo', 'google', 'gmail', 'walmart', 'flipkart', 'facebook', 'amazon']
-
+# d_ = {element: len(element) for element in names if len(element) % 2 == 0}
+# print(d_)
 
 """ 46 Write a program which squares the numbers in a list using map object """
+# a = [1, 2, 3, 4, 5]
+# square = map(lambda num: num**2, a)
+# print(list(square))           # [1, 4, 9, 16, 25]
 
 """ 47 Count number of lines in a file without loading the file to the memory """
 

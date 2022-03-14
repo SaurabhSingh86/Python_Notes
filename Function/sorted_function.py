@@ -86,7 +86,6 @@ l = ["python", "java", "c", "ruby", "perl"]
 # print((shortest, len(shortest)), (longest, len(longest)))           # ('is', 2) ('programming', 11)
 
 
-
 """ WAP to short the below list element based on the last character of each string """
 
 # l = ["python", "java", "c", "ruby", "perl"]
