@@ -150,7 +150,7 @@
 # Assignment 2
 """ WAF that returns nth fibonacci number"""
 
-0# def fibo(nth_term):
+# def fibo(nth_term):
 #     a = 0
 #     b = 1
 #     i = 0
@@ -164,6 +164,9 @@
 #     print(l[-1])
 #
 # fibo(7)             # 8
+
+
+""" WAF that checks if the given number is fibonacci or not """
 
 
 """" WAF that take integer & float data type as input or arguments & return it sum """
@@ -242,7 +245,6 @@
 # print(count_(1, 2, 3.5, a=5, b=10))
 
 
-
 """ WAF that check if the given number of arguments is greater than 5 or not """
 
 
@@ -305,9 +307,6 @@
 """ WAF to return a below output """
 # func("TRACXN", 0)     # should print => RCN
 # func("TRACXN", 1)     # should print => TAX
-
-
-""" WAF that checks if the given number is fibonacci or not """
 
 
 """ WAF that takes variable number of inputs & returns length of all the iterables """
