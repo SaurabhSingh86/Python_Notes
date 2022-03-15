@@ -555,6 +555,14 @@ number of characters. """
 # print(list(square))           # [1, 4, 9, 16, 25]
 
 """ 47 Count number of lines in a file without loading the file to the memory """
+path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\files_directory\txt_log_files\file1.txt'
+
+with open(path) as file:
+    count_ = 0
+    for _ in file:
+        count_ += 1
+
+
 
 """ 48 Printing line and line no's """
 
