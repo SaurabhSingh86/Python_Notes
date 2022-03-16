@@ -555,27 +555,73 @@ number of characters. """
 # print(list(square))           # [1, 4, 9, 16, 25]
 
 """ 47 Count number of lines in a file without loading the file to the memory """
-path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\files_directory\txt_log_files\file1.txt'
-
-with open(path) as file:
-    count_ = 0
-    for _ in file:
-        count_ += 1
-
+# path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\files_directory\txt_log_files\file1.txt'
+#
+# with open(path) as file:
+#     count_ = 0
+#     for _ in file:
+#         count_ += 1
+# print(f'Total number of lines are: {count_}')
 
 
 """ 48 Printing line and line no's """
 
-""" 49 Write a Program to print the sum of entire list and sum of only internal list """
-# l = [[1,2,3],[4,5,6],[7,8,9]]
+# with open(path) as file:
+#     for line_number, line in enumerate(list(file), start=1):
+#         print(line_number, line)
 
+
+""" 49 Write a Program to print the sum of entire list and sum of only internal list """
+# l = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Method 1:
+# entire_sum = 0
+# for element in l:
+#     internal_sum = 0
+#     for num in element:
+#         internal_sum += num
+#         entire_sum += num
+#     print(f'Sum of internal list: {internal_sum}')
+# print()
+# print(f'Sum of entire list: {entire_sum}')
+
+# Method 2:
+# internal_sum = [sum(element) for element in l]
+# print(f'Sum of internal list: {internal_sum}')                          # Sum of internal list: [6, 15, 24]
+#
+# print(f'Sum of Entire list: {sum(internal_sum)}')                       # 45
 
 """ 50 Write a program to reverse the list as below """
 # words = ["hi", "hello", "python"]
+# o/p ['nohtyp', 'olleh', 'ih']
+
+# Method 1: by using list comprehension (reversed() function)
+
+# result = [element[::-1] for element in reversed(words)]
+# print(result)
+
+# Method 2: by using list comprehension(slicing)
+
+# result = [element[::-1] for element in words[::-1]]
+# print(result)
 
 """ 51 Write a program to update the tuple """
+# t1 = (1, 2, 3, 4)
+# t2 = (100, 200, 300)
+# # o/p (1, 2, 3, 4, 100, 200, 300)
+#
+# # Method 1:
+# output = (*t1, *t2)
+# print(output)
+#
+# # Method 2:
+# result = t1 + t2
+# print(result)
 
 """ 52 Write a program to replace value present in nested dictionary. """
+# d = {'a': 100, 'b': {'m': 'man', 'n': 'nose', 'o': 'ox', 'c': 'cat'}}
+# Replace "nose" with "net"
+
 
 """ 53 Write a program to count the number of white spaces in a file. """
 
