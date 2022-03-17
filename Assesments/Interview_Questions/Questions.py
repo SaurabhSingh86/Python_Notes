@@ -699,6 +699,8 @@ point =  {'a': 1, 'b': 2}
 """ 66 Write a method that returns the last digit of an integer. For example, the call of get_last_digit(3572) 
 should return 2."""
 
+
+
 """ 67 Write a program to find most common words in a given list. """
 
 """ 68 Make a function named tail that takes a sequence (like a list, string, or tuple) and a number n and returns 
@@ -723,8 +725,6 @@ False if it's not. """
 
 """
 # Left Justified Triangle
-for i in range(1, 6):
-    print(f"{'*'*i:<5}")
 
 *         
 * *       
