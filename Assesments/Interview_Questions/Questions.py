@@ -620,14 +620,47 @@ number of characters. """
 
 """ 52 Write a program to replace value present in nested dictionary. """
 # d = {'a': 100, 'b': {'m': 'man', 'n': 'nose', 'o': 'ox', 'c': 'cat'}}
-# Replace "nose" with "net"
+# # Replace "nose" with "net"
+# # Method 1
+# for key, value in d.items():
+#     if isinstance(value, dict):
+#             d[key]['n'] = "net"
+# print(d)
 
 
 """ 53 Write a program to count the number of white spaces in a file. """
+path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\files_directory\txt_log_files\file1.txt'
+
+# Method 1
+# count_space = 0
+# with open(path) as file:
+#     for line in file:
+#         for char in line:
+#             if char == " ":
+#                 count_space += 1
+# print(count_space)
+#
+# # Method 2:
+# import re
+# white_spaces = 0
+# with open('data/sample.txt') as f:
+#     for line in f:
+#         match = re.findall(r'\s', line)
+#         if match:
+#             white_spaces += len(match)
+# print(white_spaces)
+
 
 """ 54 Grouping anagrams. """
 # words = ['eat', 'ate', 'tea', 'hello', 'silent', 'listen']
-
+# from collections import defaultdict
+# dd = defaultdict(list)
+# for word in words:
+#     # s = "".join(sorted(word))
+#     print(s, end=" ")
+#     dd[s].append(word)
+#
+# print(dd)
 
 """ 55 What is the difference between defaultdict and normal dictionary. """
 
@@ -665,15 +698,61 @@ point =  {'a': 1, 'b': 2}
 """
 
 """ 59 Write a list comprehension to get a list of even numbers from 1-50 """
+# even_num = [num for num in range(1, 51) if num % 2 == 0]
+# print(even_num)
+
 
 """ 60 Find the longest non-repeated substring in the below string """
+# s = "This is a Programming language and Programming is fun"
+# l = s.split()
+#
+# # Method 1: by using list comprehension
+# list_ = [word for word in l if l.count(word) == 1]
+# arrange = sorted(list_, key=len)
+# print(arrange[-1])                      # language
+#
+# # Method 2: by using dictionary comprehension
+# dictionary_ = {word: len(word) for word in l if l.count(word) == 1}
+# arrange = sorted(dictionary_.items(), key=lambda item: item[-1])
+# print(arrange[-1])                      # ('language', 8)
+
 
 """ 61 Write a program to find the duplicate elements in the list without using inbuilt functions """
 # names = ['apple', 'google', 'apple', 'yahoo', 'google']
+# for item in set(names):
+#     count_ = 0
+#     for word in names:
+#         if word == item:
+#             count_ += 1
+#             if count_ > 1:
+#                 print(item, end=" ")
+
 
 """ 62 Write a program to count the number occurrences of each item in the list without using any inbuilt functions """
 # names = ['apple', 'google', 'apple', 'yahoo', 'google', 'facebook', 'gmail', 'yahoo']
-
+#
+# from collections import defaultdict
+# occurrence_ = defaultdict(int)
+# for element in names:
+#     occurrence_[element] += 1
+# print(occurrence_)
+#
+#
+# # Method 2:
+# # Get the unique elements present in the list
+# unique_items = set(names)
+#
+# # declare an empty dictionary
+# d = {}
+#
+# for item in unique_items:
+#     _count = 0
+#     for name in names:
+#         if item == name:
+#             _count += 1
+#     d[item] = _count
+#
+# print(d)
 
 """ 63 Write a function to check if the number is Prime """
 
@@ -1018,31 +1097,135 @@ should be in ascending order and even numbers should be in descending order"""
 
 """ 122 Print all the missing numbers from 1 to 10 in the below list """
 # numbers = [1, 3, 6, 8, 10]
+# for num in range(1, 11):
+#     if num not in numbers:
+#         print(f'Missing Number is {num}')
 
 
 """ 123 Write a python program to get the below output """
 # l1 = [1, 2, 3]
 # l2 = ['a', 'b', 'c']
-# o/p ['1a', '1b', '1c', '2a', '2b', '2c', '3a', '3b', '3c']
+# # o/p1 ['1a', '2b', '3c']
+# # o/p2 ['1a', '1b', '1c', '2a', '2b', '2c', '3a', '3b', '3c']
+#
+# # Output1:
+# res = [str(i) + j for i, j in zip(l1, l2)]
+# print(res)
+#
+# # Output2
+# l = []
+# for i in l1:
+#     for j in l2:
+#         l.append(str(i) + j)
+# print(l)
 
+# Method 2:
+# res = [''.join((str(i), j)) for i in l1 for j in l2]
+# print(res)
 
 """ 124 Write a python program to get the below output """
 # word = "AAAAaaccYYY"
-
+# o/p :
 
 """ 125 What is the output of the below function call """
 
+
+# class Demo:
+#     def greet(self):
+#         print("hello world")
+#
+#     def greet(self):
+#         print("hello universe")
+#
+#
+# d = Demo()
+# d.greet()
+
+
+# => "hello universe"  because Method overloading
+
 """ 126 In the list below, find all the number pairs which results in 10 either when added or subtracted """
 # a = [3, 5, -4, 8, 11, 1, -1, 6]
+# for num1 in a:
+#     for num2 in a:
+#         if num1 != num2:
+#             if num1 + num2 == 10 or num1 - num2 == 10:
+#                 print(num1, num2)
 
 
 """ 127 Write a decorator to prefix +91 to the original phone numbers """
 # numbers = [1234567890, 123456790, 1234567890]
 
 
+
+def print_numbers(numbers):
+    for number in numbers:
+        print(number)
+
+
 """ 128 Write a program to get the below output """
 # d = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
 # o/p should be ['b', 'd']
+# # Method 1:
+# l = [key for key, value in d.items() if value % 2 == 0]
+# print(l)                    # ['b', 'd']
+#
+# # Method 2:
+# keys = list(d.keys())
+# l1 = [key for key in keys[1::2]]
+# print(l1)
 
 
 """ 129 Can we have multiple init methods in a class """
+
+
+# class Point:
+#     def __init__(self, a, b):
+#         self.a = a
+#         self.b = b
+#
+#     def __init__(self, a, b, c):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+
+
+# p = Point(1, 2)                 # TypeError: __init__() missing 1 required positional argument: 'c'
+# print(p.a)
+# print(p.b)
+# Since python is dynamically typed language, it takes the latest __init__ method
+
+# p1 = Point(10, 20, 30)
+# print(p1.a)
+# print(p1.b)
+# print(p1.c)
+
+# Multiple constructor is possible in a single class
+# if we have multiple constructor (__init__) in a class then it will considered latest one.
+# by default constructor will return None
+
+# Multiple constructor is not possible in Python => to solve this problem by using default value => i.e.
+# constructor overloading
+
+# ___________ Constructor overloading / Overloaded constructor______________________
+
+
+# class Point:
+#     def __init__(self, a=0, b=0, c=0, d=0):
+#         self.a = a
+#         self.b = b
+#         self.c = c
+#         self.d = d
+#
+#
+# p1 = Point()
+# p2 = Point(1)
+# p3 = Point(10, 20)
+# p4 = Point(1, 12, 13)
+# p5 = Point(100, 220, 30, 40)
+#
+# print(p1.a)
+# print(p2.a)
+# print(p3.a)
+# print(p4.a)
+# print(p5.a)

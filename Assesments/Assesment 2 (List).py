@@ -170,12 +170,12 @@ k = 2
 #     *n1, n2 = item
 #     item = n2, *n1
 #     i += 1
-#
-# print(item)
+
+print(item)                 # (26, '100', 'apple', 1.2, 'google', '12.6') i.e. tuple
 
 # Method 2:  **********************************************************
-# for i in range(k):
-#     remove_element = item.pop()
-#     item.insert(0, remove_element)
-#
-# print(item)
+for i in range(k):
+    remove_element = item.pop()
+    item.insert(0, remove_element)
+
+print(item)
