@@ -1144,11 +1144,29 @@ import re
 
 
 """ 108 Replace whitespaces with newline character in the below string """
-sentence = "Hello world welcome to python"
+# sentence = "Hello world welcome to python"
 
+# Method 1:
+# res = sentence.replace(" ", "\n")
+# print(res)
+
+# Method 2: use Regular Expression
+import re
+# res = re.sub(r'\s', '\n', sentence)         # \s => matches only whitespace, \n => next line
+# print(res)
+# Hello
+# world
+# welcome
+# to
+# python
+
+# Method 3: using for loop
+# l = sentence.split()
+# for item in l:
+#     print(item)
 
 """ 109 Replace all vowels with "*" """
-# sentence = "hello world welcome to python"
+sentence = "hello world welcome to python"
 
 
 """ 110 Replace all occurances of "Java" with "Python" in a file """

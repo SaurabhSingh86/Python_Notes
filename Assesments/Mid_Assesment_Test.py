@@ -104,10 +104,11 @@
 """10. WA Dictionary comprehension to create a dictionary with word as its key and if the word is of numeric type 
 reverse it else add the word as it is """
 
-# sentence = "12 plus 18 equals to 30"
-# l = sentence.split()
-# d_ = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in l}
-# print(d_)
+sentence = "12 plus 18 equals to 30"
+l = sentence.split()            # ['12', 'plus', '18', 'equals', 'to', '30']
+print(l)
+d_ = {word: str(word)[::-1] if isinstance(word, (int, float, complex)) else word for word in l}
+print(d_)
 # # {'12': '12', 'plus': 'plus', '18': '18', 'equals': 'equals', 'to': 'to', '30': '30'}
 # # we are split the string and the output of split is also string so that we get above output
 #
@@ -139,11 +140,20 @@ output = [11, 2, 12, 9] """
 
 
 """" 13. WAP to get the following output """
-input: s = 'AABBCCCDAACD'
+# input:
+s = 'AABBCCCDAACDA'
 # output: 2A2B3C1D2A1C1D
+i = 0
+res = s
+op = ""
 
+while i < len(s):
+    res = res.lstrip(s[i])
+    count = len(s) - len(res) - i
+    op += str(count) + s[i]
+    i += count
 
-
+print(op)
 
 
 """ 14. output should be:
@@ -158,7 +168,7 @@ input: s = 'AABBCCCDAACD'
 # print(dd)
 
 """ 15. Find all maximum numbers from the below list """
-numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
+# numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
 
 # Method 1:
 # max_ = max(numbers)
@@ -167,5 +177,5 @@ numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
 #         print(num, end=" ")
 
 # Method 2:
-numbers.sort()
-max_ = numbers[-1]
+# numbers.sort()
+# max_ = numbers[-1]
