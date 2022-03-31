@@ -18,7 +18,7 @@ import re
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~ Special Sequences    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
-\w  =>  word charcter. Same as [a-zA-Z0-9]. Matches alphanumeric and underscore
+\w  =>  word character. Same as [a-zA-Z0-9]. Matches alphanumeric and underscore
 \W  =>  Non-word character. Same as [^a-zA-Z0-9]. Matches anything but word
 \d  =>  Matches a digit. Same as [0-9]
 \D  =>  Matches a non-digit. Same as [^0-9]

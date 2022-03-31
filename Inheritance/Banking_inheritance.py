@@ -1,4 +1,5 @@
 class Bank_account:
+
     interest_rate = 0.04
 
     def __init__(self, name, balance=0):
@@ -37,6 +38,7 @@ class Bank_account:
         interest_amount = self.balance * Bank_account.interest_rate
         self.balance += interest_amount
         self.e_passbook.append(f'Interest Amount credited Rs {interest_amount}')
+
 
 c1 = Bank_account("Ss", 1000)
 c2 = Bank_account("Ps", 2000)

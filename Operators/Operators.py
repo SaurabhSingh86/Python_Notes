@@ -13,11 +13,11 @@
 
 ## 1. Arithmetic operator =>    +, -, *, **, /, //, %
 """
->>> # addition
->>> 2 + 3
+# addition
+print(2 + 3)
 5
 
->>> 1.4 + 9.6
+print(1.4 + 9.6)
 11.0
 
 >>> 2 + 6j + 7 + 4j

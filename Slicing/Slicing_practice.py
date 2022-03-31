@@ -1,5 +1,6 @@
 s = "Sky is no limit"
-                    # interpreter execution start_index => step_size => end_index => step_size =>end .... till the end
+# interpreter execution start_index => step_size => end_index => step_size =>end .... till the end
+
 # Sky
 print(s[:3])
 print(s[-15:-12])

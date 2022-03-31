@@ -1019,35 +1019,133 @@ should be in ascending order and even numbers should be in descending order"""
 
 """ 100 Filter only those characters except digits """
 # s = '@hello12world34welcome!123'
-
+#
+# # Method 1:
+# res = ""
+# for char in s:
+#     if not char.isdigit():
+#         res += char
+#
+# print(res)
+#
+# # Method 2: using Regular Expression
+# import re
+# l = re.findall(r'\D', s) #['@', 'h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd', 'w', 'e', 'l', 'c', 'o', 'm', 'e', '!']
+# res = "".join(l)
+# print(res)                  # @helloworldwelcome!
 
 """ 101 Count number of words in a sentence. ignore special characters. """
 # sentence = "Hi there! How are you:) How are you doing today!"
+# l = sentence.split()
+# print(f'Total number of words are: {len(l)}')
 
+# Method 2: using Regular_Expression
+import re
+# l = re.findall(r'\b\w+', sentence.lower())
+# print(f'Total number of words are: {len(l)}')
+
+
+# count the no. of occurrence
+# Method 1:
+# from collections import Counter
+# c = Counter(l)
+# print(c)
+
+# Method 2:
+# l = sentence.split()
+# d = {item: l.count(item) for item in l}
+# print(d)                # {'Hi': 1, 'there!': 1, 'How': 2, 'are': 2, 'you:)': 1, 'you': 1, 'doing': 1, 'today!': 1}
+
+# above method is not work properly so
+# l1 = re.findall(r'\b\w+', sentence.lower())
+# d1 = {item: l1.count(item) for item in l1}
+# print(d1)
 
 """ 102 Grouping even and odd numbers """
 # numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# o/p should be {1: [1, 3, 5, 7, 9], 0: [2, 4, 6, 8, 10]}
-
+# # o/p should be {1: [1, 3, 5, 7, 9], 0: [2, 4, 6, 8, 10]}
+# from collections import defaultdict
+# res = defaultdict(list)
+# for num in numbers:
+#     if num % 2 == 0:
+#         res[0] += [num]     # res[0].append(num)
+#     else:
+#         res[1] += [num]     # res[1].append(num)
+#
+# print(res)
 
 """ 103 Find all max numbers from the below list """
 # numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
-# Output should be [4, 4, 4]
+# # Output should be [4, 4, 4]
+# max_ = max(numbers)
+# all_max_num = [num for num in numbers if num == max_]
+# print(all_max_num)
+
 
 """ 104 Find all max length words from the below sentence """
 # sentence = "hello world hi apple you yahoo to you"
+# # Output should be ['hello', 'world', 'apple', 'yahoo']
+# res = sorted(sentence.split(), key=len)
+# max_ = len(res[-1])
+# max_length = [item for item in res if len(item) == max_]
+# print(max_length)
 
 
-""" 105 Find the range from the following string """
+""" 105 Find the range from the following string """ # ************************************************************
 # sentence = '0-0, 4-8, 20-20, 43-45'
-# Output Should be [0, 4, 5, 6, 7, 8, 20, 43, 44, 45, 46]
+# # Output Should be [0, 4, 5, 6, 7, 8, 20, 43, 44, 45, 46]
+# l = sentence.split(",")
+# res = []
+# for ranges in l:
+#     start, end = ranges.split("-")
+#     for num in range(int(start), int(end)+1):
+#         res.append(num)
+#
+# print(res)
 
 
 """ 106 Can we override a static method in python? """
 
+
+# class Parent:
+#     @staticmethod
+#     def demo():
+#         print("Running Parent's demo method")
+#
+#
+# class Child:
+#     @staticmethod
+#     def demo():
+#         print("Running Child's demo method")
+#
+#
+# c = Child()
+# c.demo()
+# Running Child's demo method
+# Yes, we can override a static method in Python
+
+
 """ 107 Write a function which returns the sum of lengths of all the iterables """
 
+
+# def sum_of_length(*iterables):
+#     print(iterables)
+#     total = 0
+#     for iterable in iterables:
+#         total += len(iterable)
+#     print(f'Total length of the iterables are: {total}')
+#
+#
+# sum_of_length([1, 2, 3])                                                            # 3
+# sum_of_length([1, 2, 3], [9, 10])                                                   # 5
+# sum_of_length(["hai", 2, "Hello"], (20, 30), {"Python", "VS"})                      # 7
+# sum_of_length((1, 2, 3), (2, 3, 5, 8), {"a": "apple", "b": 2, "c": "Camel"})        # 10
+# sum_of_length({1, "rainbow", 3}, (20, 30, 89), {"a": "apple", "b": 2, "c": "Camel"}, [2.5, 5+6j, "True", False]) # 13
+
+
 """ 108 Replace whitespaces with newline character in the below string """
+sentence = "Hello world welcome to python"
+
 
 """ 109 Replace all vowels with "*" """
 # sentence = "hello world welcome to python"
@@ -1065,34 +1163,130 @@ should be in ascending order and even numbers should be in descending order"""
 """ 113 Write a program to print all the number which are ending with 5
 """
 # numbers = ['1', '12', '123', '12345', '125', '905', '55', '5', '95655', '55555']
-
+#
+# # Method 1: using comprehension
+# res = [num for num in numbers if num[-1] == '5']
+# print(res)
+#
+# # Method 2: using Regular expression
+# import re
+# for num in numbers:
+#     match = re.findall("5$", num)
+#     if match:
+#         print(num, end=" ")
 
 """ 114 Write a program to get the indexes of each item in the below list """
 # names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'google', 'gmail', 'gmail', 'gmail']
-# output should be -  {'apple': [0, 2], 'google': [1, 5], 'yahoo': [3, 4], 'gmail': [6, 7, 8]}
+# # output should be -  {'apple': [0, 2], 'google': [1, 5], 'yahoo': [3, 4], 'gmail': [6, 7, 8]}
+#
+#
+# from collections import defaultdict
+# res = defaultdict(list)
+# for index, item in enumerate(names):
+#     res[item] += [index]
+# print(res)
 
 
 """ 115 Write a program to print "Bangalore" 10 times without using "for" loop """
+# Method 1:
+# print("bangalore\n" * 10)
+
 
 """ 116 Write a program to print all the words which starts with letter 'h' in the given string """
+# string = 'hello world hi hello universe how are you happy birthday'
+# # l1= string.split()
+#
+# # Method 1:
+# l = [word for word in string.split() if word[0] in "hH"]
+# print(l)
+#
+# # Method 2: using regular expression  *****************************************************************************
+# import re
+# matches = re.findall(r'\bh\w+', 'hello world hi hello universe how are you happy birthday')
+# print(matches)
+
 
 """ 117 Write a program to sum all even numbers in the given string """
 # sentence = 'hello 123 world 567 welcome to 9724 python'
+#
+# # Method 1:
+# sum_ = 0
+# for char in sentence:
+#     if char.isdigit() and int(char) % 2 == 0:
+#         sum_ += int(char)
+#
+# print(sum_)
 
+# Method 2: using regular expression  ***************************************************************************
+# import re
+# numbers = re.findall()
 
 """ 118 Write a program to add each number in word1 to number in word2 """
 # e.g. 1 + 5, 2 + 6, 3 + 7, 4 + 8, 5 + 9
+# word1 = 'hello 1 2 3 4 5'
+# word2 = 'world 5 6 7 8 9'
+#
+# # Method 1: using regular expression method
+# import re
+# number1 = re.findall(r'\d', word1)
+# number2 = re.findall(r'\d', word2)
+# add = []
+# for num1, num2 in zip(number1, number2):
+#     add.append(int(num1) + int(num2))
+#
+# print(add)
 
+# Method 2: using comprehension
+# number1 = [num for num in word1.split() if num.isdigit()]
+# number2 = [num for num in word2.split() if num.isnumeric()]
+#
+# res = []
+# for num1, num2 in zip(number1, number2):
+#     res.append(int(num1) + int(num2))
+#
+#
+# print(res)
 
 """ 119 Write a program to filter out even and odd numbers in the given string """
-# sentence = 'hello 123 world 456 welcome to python498675634'
+sentence = 'hello 123 world 456 welcome to python498675634'
+
+# even_ = [char for char in sentence if char.isdigit() and int(char) % 2 == 0]
+# odd_ = [char for char in sentence if char.isnumeric() and int(char)%2 != 0]
+#
+# print(f'Even numbers are: {even_} \n Odd numbers are: {odd_}')
+
+
+# Method 2: using Regular_expression *******************************************************************************
+# import re
+# numbers = re.findall(r'\d', sentence)   # ['1', '2', '3', '4', '5', '6', '4', '9', '8', '6', '7', '5', '6', '3', '4']
+#
+# even_ = [num for num in numbers if int(num) % 2 == 0]
+# odd_ = [num for num in numbers if int(num) % 2 != 0]
+# print(f'Even numbers are: {even_} \n Odd numbers are: {odd_}')
+
 
 """ 120 Write a program to print all the number which are starting with 8 """
 # numbers = ['857', '987', '8', '120', '888888', '547', '7674', '89', '589', '388888', '2889']
 
+# Method 1: using regular expression ****************************************************************************
+# import re
+# for number in numbers:
+#     matches = re.findall(r'^8', number)
+#     if matches:
+#         print(number, end=" ")
 
-""" 121 Write a program to remove duplicates from the list without using set or empty list """
+# Method 2: using com
+# res = [num for num in numbers if num[0] == '8']
+# print(res)
+
+""" 121 Write a program to remove duplicates from the list without using set or empty list """ # *******************
 # l1 = [1, 2, 3, 4, 1, 2, 3, 4, 3, 4, 4]
+# l2 = l1[::]          # or l2 = l1.copy()
+# for item in l2:
+#     if l1.count(item) > 1:
+#         l1.remove(item)
+#
+# print(l1)
 
 
 """ 122 Print all the missing numbers from 1 to 10 in the below list """
@@ -1123,9 +1317,10 @@ should be in ascending order and even numbers should be in descending order"""
 # res = [''.join((str(i), j)) for i in l1 for j in l2]
 # print(res)
 
-""" 124 Write a python program to get the below output """
+""" 124 Write a python program to get the below output """ # *****************************************
 # word = "AAAAaaccYYY"
-# o/p :
+# o/p : ['Y3', 'c2', 'A4', 'a2']
+
 
 """ 125 What is the output of the below function call """
 
@@ -1157,10 +1352,21 @@ should be in ascending order and even numbers should be in descending order"""
 # numbers = [1234567890, 123456790, 1234567890]
 
 
-
-def print_numbers(numbers):
-    for number in numbers:
-        print(number)
+# def prefix_country_code(func):
+#     def wrapper(*args, **kwargs):
+#         number_, = args
+#         add_country_code = ["+91" + str(num) for num in number_]
+#         return func(add_country_code)
+#     return wrapper
+#
+#
+# @prefix_country_code
+# def print_numbers(p_numbers):
+#     for number in p_numbers:
+#         print(number)
+#
+#
+# print_numbers(numbers)
 
 
 """ 128 Write a program to get the below output """

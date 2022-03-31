@@ -1,18 +1,34 @@
-# # l = [1, 2, 3, 4, 5]
-# # # using list comprehension:
-# # list_ = [num ** 2 for num in l]
-# # print(list_)
-# #
-# # # by using generators:
-# #
-# #
-# # def squares():
-# #     for item in l:
-# #         yield item ** 2
-# #
-# # print(next(res))
+# def greet():
+#     yield "Hello world"
+#     yield "hai"
+#     yield "hello"
 #
 #
+# msg = greet()
+# for sentence in msg:
+#     print(sentence)
+
+# l = [1, 2, 3, 4, 5]
+# using list comprehension:
+# list_ = [num ** 2 for num in l]
+# print(list_)
+
+# by using generators:
+
+
+# def squares():
+#     for item in l:
+#         yield item ** 2
+#
+#
+# res = (item ** 2 for item in l)
+# print(next(res))        # 1
+# print(next(res))        # 4
+# print(next(res))        # 9
+# print(next(res))        # 16
+# print(next(res))        # 25
+# print(next(res))        # StopIteration
+
 """ WAG function to yield even numbers in the range 1 - 50 """
 #
 #
@@ -108,6 +124,7 @@
 #     print("In exception block")
 
 
+# ------------------------------------------------------------------------------------------------------------------
 # default exception block
 
 # a = 10
@@ -119,6 +136,8 @@
 # except:
 #     print("In exception block")
 
+
+# ------------------------------------------------------------------------------------------------------------------
 # specific exception block
 
 # a = 10
@@ -132,6 +151,7 @@
 #
 # print("hello")
 
+# ------------------------------------------------------------------------------------------------------------------
 # Multiple exception block : we can handle n number of exception block
 
 # a = 10
@@ -150,12 +170,17 @@
 
 # or
 
-try:
-    print(a / b)
-except(ZeroDivisionError, NameError):
-    print("In except block")
+# try:
+#     print(a / b)
+# except(ZeroDivisionError, NameError):
+#     print("In except block")
+#
+# # or
+# except(ZeroDivisionError, NameError) as error_msg:
+#     print("In Except block")
+#     print(error_msg)
 
-# or
-except(ZeroDivisionError, NameError) as error_msg:
-    print("In Except block")
-    print(error_msg)
+
+
+# ------------------------------------------------------------------------------------------------------------------
+# Generic Exception block
