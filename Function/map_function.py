@@ -10,6 +10,9 @@
 # res = map(palindrome, list_)
 # print(list(res))                        # [False, True, True, False, False, True]
 
+# res1 = filter(palindrome, list_)
+# print(list(res1))                       # ['mom', 'dad', 'civic']
+
 
 """ WAP that checks if the given list of numbers are even or odd """
 

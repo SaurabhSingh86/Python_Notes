@@ -1,0 +1,42 @@
+copy():
+returns a copy of the list.
+syntax: list_var.copy()
+
+e.g.
+a = [1, 2 , 3]
+b = a.copy()
+or
+b = a[:]
+
+a = [1, 2 , 3]
+b = a
+a.append(4)
+
+a = [1, 2 , 3]
+b = a.copy()
+a.append(4)
+
+a = [1, 2 , 3, [10, 20]]
+b = a.copy()
+a[3].append(30)
+
+
+
+_________________________________________
+Shallow copy:
+whenever a list is copied using copy() method or slicing the elements in the original list(a) will be copied to the
+copied list(b)
+
+if the original list has nested list the same list with same address will be shared by both original as well as
+copied list.
+
+Hence, the changes made in the nested list will be reflecting i the both lists.
+
+in order to overcome this & to create two nested lists separately for both original & copied lists deep copy is done.
+
+----------------------------------------------
+Deep copy:
+from copy import deepcopy
+a = [1, 2, 3, [10, 20]]
+d = deepcopy(a)
+a[3].append(30)

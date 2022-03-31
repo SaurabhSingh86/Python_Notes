@@ -115,7 +115,8 @@
 
 """ WAF to print fibonacci series in the user-defined range """
 
-# def fibo(n):
+
+# def fibonacci(n):
 #     a = 0
 #     b = 1
 #     i = 0
@@ -127,7 +128,7 @@
 #         i += 1
 #
 #
-# fibo(10)                # 0 1 1 2 3 5 8 13 21 34
+# fibonacci(10)                # 0 1 1 2 3 5 8 13 21 34
 
 
 # Assignment 1

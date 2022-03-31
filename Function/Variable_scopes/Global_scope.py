@@ -24,10 +24,10 @@ b = 10
 def spam():
     global b
     b += 5
-    print(b)                # => 15
+    # print(b)                # => 15
 
 
 spam()
-print(b)                    # => 10
+print(b)                    # => 15
 
 # => UnboundLocalError: local variable 'b' referenced before assignment

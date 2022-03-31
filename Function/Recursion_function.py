@@ -31,7 +31,7 @@ import sys
 # print(sys.getrecursionlimit())                  # 10
 
 # Method 2
-from sys import setrecursionlimit
+from sys import se
 # setrecursionlimit(1500)                         # nothing to display
 # print(getrecursionlimit())                      # 1500
 
