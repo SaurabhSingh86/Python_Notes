@@ -301,9 +301,59 @@
 
 """ WAF to return last digit of a number """
 
+
+
 """ WAF name tail that take a sequence as input & a number n & return last nth element from the sequence """
 
+
+def tail(sequence, n):
+    return sequence[-n:]
+
+
+print(tail("Wonderland", 4))                                        # land
+print(tail("AirIndia", 5))                                          # India
+print(tail(["M.P.", "U.P.", "Delhi", "Goa"], 2))                    # ['Delhi', 'Goa']
+print(tail(("Mango", "banana", "apple", "Grapes", "Papaya"), 2))    # ('Grapes', 'Papaya')
+
 """ WAF named is perfect square that access a number & returns True, if it is a perfect square & returns False if it is not """
+# Method 1: using import math
+# from math import sqrt
+#
+#
+# def is_perfect_square(num):
+#     return num == sqrt(num) ** 2
+#
+#
+# print(is_perfect_square(5))         # False
+# print(is_perfect_square(36))        # True
+
+
+# Method 2:
+
+
+# def is_perfect_square(num):
+#     sq = int(num ** 0.5)
+#     if sq * sq == num:
+#         return True
+#     return False
+#
+#
+# print(is_perfect_square(9))             # True
+# print(is_perfect_square(10))            # False
+
+
+# Method 3: using range
+
+
+def is_perfect_square(num):
+    for i in range(num):
+        if i ** 2 == num:
+            return True
+        return False
+
+
+print(is_perfect_square(9))
+
 
 """ WAF to return a below output """
 # func("TRACXN", 0)     # should print => RCN

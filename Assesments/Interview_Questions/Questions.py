@@ -21,8 +21,9 @@
 # print(count_({1, 9, 8}))                            # 3
 # print(count_({"a": 1, "b": 2, "c": 3}))             # 3
 
+
 """ 2. Write a program to reverse a string without using any inbuilt functions """
-s = "dream big"
+# s = "dream big"
 
 # Method 1: by using range
 # res = ""
@@ -51,12 +52,14 @@ s = "dream big"
 #
 # print(reverse("my galaxy"))                   # yxalag ym
 
+
 """ 3. Write a program to replace one string with another. e.g. "Hello World" replace "World" with "Universe". """
 # s = "Hello World"
 #
 # # Method 1:
 # res = s.replace("World", "Universe")
 # print(res)
+
 
 """ 4. How to convert a string to a list and vice-versa. """
 # => convert a string into a list       =====>>> by using split() built-in-function
@@ -79,12 +82,14 @@ s = "dream big"
 #
 # print(convert_into_string(["I", "am", "a", "foodie", "Person."]))    # I am a foodie Person.
 
+
 """ 5. Convert the string "Hello welcome to Python" to a comma separated string. """
 
 # given_string = "Hello welcome to Python"
 # list_ = given_string.split()
 # res = ",".join(list_)
 # print(res)                                      # Hello,welcome,to,Python
+
 
 """ 6. Write a program to print alternate characters in a string. """
 
@@ -142,6 +147,7 @@ s = "dream big"
 
 # print(convert("Ramta Jogi"))
 
+
 """ 9. Write program to swap two numbers without using 3rd variable. """
 # Method 1: using function
 
@@ -172,6 +178,7 @@ s = "dream big"
 # from itertools import chain
 # s = chain(a, b)                         # Returns an Iterators
 # print(list(s))
+
 
 """ 11. Write program to read a random line in a file. (ex. 50, 65, 78th line) """
 
@@ -450,6 +457,7 @@ CRITICAL: This is critical"""
 # print(func("TRACXN", 0))            # RCN
 # print(func("TRACXN", 1))            # TAX
 
+
 """ 36 Sum all the numbers in the below string. """
 # s = "Sony12India567Pvt2ltd"        # 1+2+5+6+7+2
 # sum_ = 0
@@ -629,7 +637,7 @@ number of characters. """
 
 
 """ 53 Write a program to count the number of white spaces in a file. """
-path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\files_directory\txt_log_files\file1.txt'
+# path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\files_directory\txt_log_files\file1.txt'
 
 # Method 1
 # count_space = 0
@@ -814,115 +822,205 @@ should return 2."""
 """ 68 Make a function named tail that takes a sequence (like a list, string, or tuple) and a number n and returns 
 the last n elements from the given sequence, as a list."""
 
-""" 69 Write function named is_perfect_square that accepts a number and returns True if it's a perfect square and 
+
+# def tail(sequence, n):
+#     return sequence[-n:]
+#
+#
+# print(tail("Women", 3))                                             # men
+# print(tail(["M.P.", "U.P.", "Delhi", "Goa"], 2))                    # ['Delhi', 'Goa']
+# print(tail(("Mango", "banana", "apple", "Grapes", "Papaya"), 2))    # ('Grapes', 'Papaya')
+
+
+""" 69 Write a function named is_perfect_square that accepts a number and returns True if it's a perfect square and 
 False if it's not. """
+
+# Method 1: using import math
+# from math import sqrt
+#
+#
+# def is_perfect_square(num):
+#     return num == sqrt(num) ** 2
+#
+#
+# print(is_perfect_square(5))         # False
+# print(is_perfect_square(36))        # True
+
+
+# Method 2:
+
+
+# def is_perfect_square(num):
+#     sq = int(num ** 0.5)
+#     if sq * sq == num:
+#         return True
+#     return False
+#
+#
+# print(is_perfect_square(9))             # True
+# print(is_perfect_square(10))            # False
+
+
+# # Method 3: using range   ????????????????????????????????????????????????????? not working check
+#
+#
+# def is_perfect_square(num):
+#     for i in range(num):
+#         if i ** 2 == num:
+#             return True
+#         return False
+#
+#
+# print(is_perfect_square(9))
+# print(is_perfect_square(121))
+
 
 """ 70 Write a program to get all the duplicate items and the number of times the item is repeated in the list. """
 # names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'facebook', 'apple', 'gmail', 'gmail', 'gmail', 'gmail']
 
+# Method 1: using comprehension
+# d = {element: names.count(element) for element in names if names.count(element) > 1}
+# print(d)
 
 """ 71 Write a program to count the number of occurrences of each word in a file. """
 
+
 """ 72 Write a program to count the number of occurrences of vowels in a file. """
+
 
 """ 73 Write a program to print all numeric values in a list """
 # items = ['apple', 1.2, 'google', '12.6', 26, '100']
-
+# res = [item for item in items if isinstance(item, (int, float, complex))]
+# print(res)
 
 """ 74 Triangle Patterns """
 
-"""
-# Left Justified Triangle
 
+# Left Justified Triangle
+# for i in range(1, 6):
+#     print(f"{'* '*i:<5}")
+
+"""
 *         
 * *       
 * * *     
 * * * *   
 * * * * * 
+"""
+
 
 # Right Justified Triangle
-for i in range(1, 6):
-    print(f"{'*'*i:>5}")
+# for i in range(1, 6):
+#     print(f"{' *'*i:>10}")
 
+"""
         * 
       * * 
     * * * 
   * * * * 
 * * * * * 
+"""
 
 # Equilateral Triangle
-for i in range(1, 6):
-    print(f"{'* '*i:^10}")
+# for i in range(1, 6):
+#     print(f"{'* ' * i : ^10}")
 
+"""
     *     
    * *    
   * * *   
  * * * *  
 * * * * * 
+"""
+
+# for i in range(1, 6):
+#     print(f"{' *' * i : ^10}")
+
+"""
+*    
+    * *   
+   * * *  
+  * * * * 
+ * * * * *
+"""
+
 
 # Inverted Triangles (Left Justified)
-for i in range(6, 0, -1):
-    print(f"{'*'*i:<6}")
-
+# for i in range(6, 0, -1):
+#     print(f"{'* ' * i: <6}")
+"""
 * * * * * * 
 * * * * * 
 * * * * 
 * * * 
 * *   
 *   
+"""
 
 # Inverted Triangles (Right Justified)
-for i in range(6, 0, -1):
-    print(f"{'*'*i:>12}")
-
+# for i in range(6, 0, -1):
+#     print(f"{'* '*i:>12}")
+"""
 * * * * * * 
   * * * * * 
     * * * * 
       * * * 
         * * 
           * 
-# Inverted Triangles (Centre)
-for i in range(6, 0, -1):
-    print(f"{'* '*i:^12}")
+"""
 
+
+# Inverted Triangles (Centre)
+# for i in range(6, 0, -1):
+#     print(f"{'* '*i:^12}")
+
+"""
  * * * * * *
   * * * * * 
    * * * *  
     * * *   
      * *    
       * 
+"""
+
+# ------------------------------------------------------------------------------------------------------------------
 
 # Number Pattern in triangle (Left Justified)
 
-pat = ''
-for i in range(1, 6):
-    pat += str(i)
-    print(f'{pat:<5}')
+# pat = ''
+# for i in range(1, 6):
+#     pat += str(i) + " "
+#     print(f'{pat:<5}')
 
+"""
 1    
-12   
-123  
-1234 
-12345
+1 2  
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+"""
 
 # Number Pattern in triangle (Right Justified)
-pat = ''
-for i in range(1, 6):
-    pat += str(i)
-    print(f'{pat:>5}')
+# pat = ''
+# for i in range(1, 6):
+#     pat += str(i) + " "
+#     print(f'{pat:>10}')
 
-    1
-   12
-  123
- 1234
-12345
+"""
+        1 
+      1 2 
+    1 2 3 
+  1 2 3 4 
+1 2 3 4 5
 
+"""
 # Number Pattern in triangle (Centre)
-pat = ''
-for i in range(1, 6):
-    pat = pat + ' '+ str(i)
-    print(f'{pat:^10}')
+# pat = ''
+# for i in range(1, 6):
+#     pat = pat + ' ' + str(i)
+#     print(f'{pat:^10}')
 
+"""
      1    
     1 2   
    1 2 3  
@@ -930,6 +1028,48 @@ for i in range(1, 6):
  1 2 3 4 5
 
 """
+# ------------------------------------------------------------------------------------------------------------------
+# Alphabet Pattern
+
+# Left justification
+# pat = ""
+# for i in range(ord("a"), ord('d') + 1):
+#     pat += chr(i) + " "
+#     print(pat)
+
+"""
+a 
+a b 
+a b c 
+a b c d 
+"""
+
+# Right Justification
+# pat = ""
+# for i in range(ord("a"), ord("d") + 1):
+#     pat += chr(i) + " "
+#     print(f'{pat:>8}')
+
+"""
+      a 
+    a b 
+  a b c 
+a b c d  
+"""
+
+# Central
+# pat = ""
+# for i in range(ord("a"), ord("d") + 1):
+#     pat += chr(i) + " "
+#     print(f'{pat:^8}')
+
+"""
+   a    
+  a b   
+ a b c  
+a b c d 
+"""
+
 
 """ 75 Write a program count the occurrence of a particular word in the file """
 
@@ -937,13 +1077,86 @@ for i in range(1, 6):
 
 """ 77 Write a program to rotate items of the list """
 # names = ["apple", "google", "yahoo", "gmail", "facebook", "flipkart", "amazon"]
+# n = int(input("Number of rotation: "))
+#
+# # Method 1:
+# i = 1
+# while i <= n:
+#     *a, b = names
+#     names = [b, *a]
+#     i += 1
+#
+# print(names)
+
+
+# Method 2:
+# for item in range(n):
+#     remove_item = names.pop()
+#     add_remove_item = names.insert(0, remove_item)
+#
+# print(names)
 
 
 """ 78 Write a program to rotate characters in a string """
+# string = "helloworld"
+# n = int(input("Enter your number of rotations: "))
+
+# Method 1: using while loop
+# i = 1
+# res = ""
+# while i <= n:
+#     last_char = string[-1]
+#     res = last_char + string[:len(string)-1]
+#     string = res
+#     i += 1
+#
+# print(res)
+
+
+# Method 2:
+
+
+# def rotate_string(string_, n):
+#     string_ = list(string_)
+#     for _ in range(n):
+#         last_item = string_.pop()
+#         string_.insert(0, last_item)
+#     return ''.join(string_)
+#
+#
+# print(rotate_string("helloworld", 2))               # ldhellowor
+# print(rotate_string("karnataka", 4))                # takakarna
+
 
 """ 79 Write a program to count the number of white spaces in a given string """
+# sentence = """Hello world welcome to Python Hi  How are you. Hi how are you"""
+#
+# # Method 1 using for loop
+# count = 0
+# for char in sentence:
+#     if char == " ":
+#         count += 1
+#
+# print(f'Total number of white spaces are: {count}')
+#
+#
+# # Method 2: using built-in-function
+# count_white_space = sentence.count(" ")
+# print(f'Total number of white spaces are: {count_white_space}')
+
+# Method 3: using Regular Expression
+# import re
+# spaces = re.findall(r'\s', sentence)        # \s  =>  Matches only whitespace
+# print(f'Total number of white spaces are: {len(spaces)}')
+
 
 """ 80 Write a program to print only non-repeated characters in a string """
+# s = 'helloworld'
+#
+# # Method 1: using comprehension
+# non_repeated_char = [char for char in s if s.count(char) == 1]
+# print(non_repeated_char)
+
 
 """ 81 What is the difference between a list and a tuple """
 
@@ -957,18 +1170,66 @@ Where as in tuples, memory is not over allocated, as tuples does not support app
 """
 
 """ 82 Write a program to print all the consonants in a given string """
-# s = 'helloworld'
+s = 'helloworld'
+# for char in s:
+#     if char.isalpha() and char not in "aeiouAEIOU":
+#         print(char, end=" ")
 
 
 """ 83 Write a program to count the number of commented lines in a text file """
+# with open(path) as file:
+#     count_commented_line = 0
+#     for line in file:
+#         if line.strip():
+#             if line.startswith("#"):
+#                 count_commented_line += 1
+#
+# print(f'Total number of commented lines are: {count_commented_line}')
 
-""" 84 Write a program to check if the year is leap year or not """
+
+""" 84 Write a program to check if the year is leap year or not """ # ****************************************
+# import calendar
+# print(calendar.isleap(2012))            # True
+# print(calendar.isleap(1816))            # True
+# print(calendar.isleap(2022))            # False
 
 """ 85 Liner Search """
 
 """ 86 Difference between xrange and range """
+"""
+python2- xrange
+python3- range
+
+1. xrange does not stop, start and step attributes. But range object has start, stop and step attributes.
+  Python-3
+  r = range(0, 10)
+  r.start
+  r.stop
+  r.step
+
+  r = xrange(0, 10)
+  In Python-2 The above attributes are not supported.
+
+2. range Object supports slicing! But xrange does not support slicing
+
+3. range object has __contains__ method implemented. So it supports membership testing. 
+   But xrange does not implement __contains__ method. 
+   So Python will iterate over each and every item in the range xrange object until it finds a match. 
+   (So if you are searching for a number in range is faster than xrange)
+
+4. range will accept integer of any size. But xrange objects accepts integer size equivalent to C long!
+"""
+
 
 """ 87 Write a program to count no of capital letters in a string """
+sentence = "Hi How are You WelCome to PytHon"
+count_uppercase = 0
+for char in sentence:
+    if char.isupper():
+        count_uppercase += 1
+
+print(f' Total number of capital letters in a string are: {count_uppercase}')
+
 
 """ 88 Write a program to get the below output """
 
@@ -1022,7 +1283,7 @@ The list "a" is getting mutated each time when it is extended.
 #         break
 
 """ 93 Write a program to find the index of nth occurrence of a sub-string in a string """ #???????????????????
-sentence = "hello world welcome to python hello hi how are you hello there"
+# sentence = "hello world welcome to python hello hi how are you hello there"
 
 
 # def index_position(char):
@@ -1299,7 +1560,7 @@ import re
 
 
 """ 109 Replace all vowels with "*" """
-sentence = "hello world welcome to python"
+# sentence = "hello world welcome to python"
 
 # Method 1
 # res = ""
@@ -1329,7 +1590,7 @@ sentence = "hello world welcome to python"
 
 
 """ 111 Maximum sum of 3 numbers and Minimum sum of 3 numbers"""
-numbers = [10, 15, 20, 25, 30, 35, 40, 15, 15]
+# numbers = [10, 15, 20, 25, 30, 35, 40, 15, 15]
 
 # Method 1: using sorted built-in-function
 # sorted_list = sorted(numbers)
@@ -1438,7 +1699,7 @@ numbers = [10, 15, 20, 25, 30, 35, 40, 15, 15]
 # print(res)
 
 """ 119 Write a program to filter out even and odd numbers in the given string """
-sentence = 'hello 123 world 456 welcome to python498675634'
+# sentence = 'hello 123 world 456 welcome to python498675634'
 
 # even_ = [char for char in sentence if char.isdigit() and int(char) % 2 == 0]
 # odd_ = [char for char in sentence if char.isnumeric() and int(char)%2 != 0]
