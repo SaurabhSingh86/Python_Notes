@@ -770,17 +770,46 @@ point =  {'a': 1, 'b': 2}
 
 
 """ 64 How to create a tuple using range function """
+# res = tuple(range(11))
+# print(res)              # (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 """ 65 Write a program to find the largest number in the list without using any inbuilt functions """
 # numbers = [10, 20, 30, 40, 50]
-
+# largest_number = 0
+# for num in numbers:
+#     if num > largest_number:
+#         largest_number = num
+#
+#
+# print(largest_number)
 
 """ 66 Write a method that returns the last digit of an integer. For example, the call of get_last_digit(3572) 
 should return 2."""
 
 
+# def last_digit(num):
+#     s = str(num)
+#     return int(s[-1])
+#
+#
+# print(last_digit(198766542))
+
 
 """ 67 Write a program to find most common words in a given list. """
+# words = ['look', 'into', 'my', 'eyes', 'look', 'into', 'my', 'eyes', 'the', 'eyes', 'the', 'eyes', 'the', 'eyes',
+# 'not', 'around', 'the', 'eyes', "don't", 'look', 'around', 'the','eyes', 'look', 'into', 'my', 'eyes', "you're",
+# 'under']
+
+# # Method 1:
+# d = {word: words.count(word) for word in words}
+# sorted_d = sorted(d.items(), key=lambda item: item[-1])
+# print(sorted_d[-1])
+#
+# # Method 2: using Counter
+# from collections import Counter
+# res = Counter(words)
+# print(res.most_common(1))
+
 
 """ 68 Make a function named tail that takes a sequence (like a list, string, or tuple) and a number n and returns 
 the last n elements from the given sequence, as a list."""
@@ -987,34 +1016,137 @@ The list "a" is getting mutated each time when it is extended.
 
 """ 92 Write a program to find the first repeating character in a string """
 # s = 'helloworld'
+# for char in s:
+#     if s.count(char) > 1:
+#         print(f'first repeated character is: {char}')
+#         break
+
+""" 93 Write a program to find the index of nth occurrence of a sub-string in a string """ #???????????????????
+sentence = "hello world welcome to python hello hi how are you hello there"
 
 
-""" 93 Write a program to find the index of nth occurrence of a sub-string in a string """
-# sentence = "hello world welcome to python hello hi how are you hello there"
+# def index_position(char):
+#     return sentence.rindex(char)
+#
+#
+# print(index_position("r"))
+# print(len(sentence))
+
+
+# Method 2:
+"""import re
+
+>>> def index_nth_occurance(sentence, pat, n):
+      matches = re.finditer(pat, sentence)
+      _count = 0
+      for match in matches:
+         _count +=1
+         if _count == n:
+            return f"Start Index: {match.start()}, End Index: {match.end()}"
+
+>>> index_nth_occurance(sentence, 'hello', 3)
+>>> Start Index: 51, End Index: 56
+>>> index_nth_occurance(sentence, 'hello', 2)
+>>> Start Index: 30, End Index: 35
+>>> index_nth_occurance(sentence, 'hello', 2)
+>>> Start Index: 0, End Index: 5"""
 
 
 """ 94 Write a program to print prime numbers from 1 to 50 """
+# prime_numbers = []
+# for num in range(1, 51):
+#     if num > 1:
+#         for i in range(2, num):
+#             if num % i == 0:
+#                 break
+#         else:
+#             prime_numbers.append(num)
+#
+# print(prime_numbers)
+
 
 """ 95 Write a program to sort a list which has mix of both odd and even numbers, the sorted list should have odd 
 numbers first and then even numbers in sorted order"""
 # a = [3, 4, 1, 7, 2, 12, 8, 6, 9, 11]
-# o/p should be [1, 3, 7, 9, 11, 2, 4, 6, 8, 12]
+# # o/p should be [1, 3, 7, 9, 11, 2, 4, 6, 8, 12]
+#
+# odd_numbers = [num for num in a if num % 2 != 0]
+# even_numbers = [num for num in a if num % 2 == 0]
+#
+# odd_numbers.sort()
+# even_numbers.sort()
+#
+# print([*odd_numbers, *even_numbers])
+# print(odd_numbers + even_numbers)
 
 
 """ 96 Write a program to sort a list which has mix of both odd and even numbers, in the sorted list, odd numbers 
 should be in ascending order and even numbers should be in descending order"""
 # a = [3, 4, 1, 7, 2, 12, 8, 6, 9, 11]
-# o/p should be [1, 3, 7, 9, 11, 12, 8, 6, 4, 2]
+# # o/p should be [1, 3, 7, 9, 11, 12, 8, 6, 4, 2]
+#
+# odd_numbers = [num for num in a if num % 2 != 0]
+# even_numbers = [num for num in a if num % 2 == 0]
+#
+# odd_numbers.sort()
+# even_numbers.sort(reverse=True)
+#
+# print([*odd_numbers, *even_numbers])  # or
+# print(odd_numbers + even_numbers)
 
 
 """ 97 Write a program to count the number of occurrences of non-special characters in a given string """
+# string = 'hello@world! welcome!!! Python$ hi how are you & where are you?'
+
+# # Method 1: 2nd preferable
+# non_special_chr = ""
+# for char in string:
+#     if char.isalnum():              # char.isdigit() or char.isalpha()
+#         non_special_chr += char
+#
+# from collections import defaultdict
+# res = defaultdict(int)
+# for char in set(non_special_chr):
+#     res[char] += non_special_chr.count(char)
+#
+# print(res)
+
+# Method 2: first preferable
+# from collections import defaultdict
+# d = defaultdict(int)
+# for char in string:
+#     if char.isalnum():
+#         d[char] += 1
+#
+# print(d)
+
+# Method 3: using Regular_Expression (1st preferable)
+# import re
+# characters = re.findall(r'\w', string)                      # \w  =>  word character. Same as [a-zA-Z0-9].
+# res = {char: characters.count(char) for char in characters}
+# print(res)
+
 
 """ 98 Grouping Flowers and Animals in the below list """
 # items = ['lotus-flower', 'lilly-flower', 'cat-animal', 'sunflower-flower', 'dog-animal']
+# from collections import defaultdict
+# grouping = defaultdict(list)
+# for item in items:
+#     l = item.split("-")
+#     grouping[l[-1]] += [l[0]]
+#
+# print(grouping)
 
 
 """ 99 Grouping files with same extensions """
 # files = ['apple.txt', 'yahoo.pdf', 'gmail.pdf', 'google.txt', 'amazon.pdf', 'facebook.txt', 'flipkart.pdf']
+# from collections import defaultdict
+# res = defaultdict(list)
+# for element in files:
+#     l = element.split(".")
+#     res[l[-1]] += [l[0]]
+#
+# print(res)
 
 
 """ 100 Filter only those characters except digits """
@@ -1165,18 +1297,58 @@ import re
 # for item in l:
 #     print(item)
 
+
 """ 109 Replace all vowels with "*" """
 sentence = "hello world welcome to python"
 
+# Method 1
+# res = ""
+# for char in sentence:
+#     if char.lower() in "aeiou":
+#         res += "*"
+#     else:
+#         res += char
+#
+# print(res)          # h*ll* w*rld w*lc*m* t* pyth*n
 
-""" 110 Replace all occurances of "Java" with "Python" in a file """
+# Method 2:
+# import re
+# res = re.sub(r'[aeiouAEIOU]', '*', sentence)      # [abcd]=>any character which matches either 'a' or 'b' or 'c' or 'd'
+# print(res)              # h*ll* w*rld w*lc*m* t* pyth*n
+
+
+""" 110 Replace all occurrences of "Java" with "Python" in a file """
+
+
+# import re
+# with open('java.txt', 'r') as java_file:
+#     with open('python.py', 'a') as python_file:
+#         for line in java_file:
+#             new_line = re.sub("Java", "Python", line)
+#             python_file.write(new_line)
+
 
 """ 111 Maximum sum of 3 numbers and Minimum sum of 3 numbers"""
-# numbers = [10, 15, 20, 25, 30, 35, 40, 15, 15]
+numbers = [10, 15, 20, 25, 30, 35, 40, 15, 15]
+
+# Method 1: using sorted built-in-function
+# sorted_list = sorted(numbers)
+#
+# sum_max_3 = sum(numbers[-3:])
+# sum_min_3 = sum(numbers[:3])
+#
+# print(f'Sum of maximum 3 numbers are: {sum_max_3}')
+# print(f'Sum of minimum 3 numbers are: {sum_min_3}')
+
 
 """ 112 Write a program to get the output as below """
-# i/p is "python@#$%pool"
-# o/p should be ['PYTHON', 'POOL']
+# input = "python@#$%pool"
+# # o/p should be ['PYTHON', 'POOL']
+# import re
+# words = re.findall(r'\w+', input)       # \w =>word character. Same as [a-zA-Z0-9].Matches alphanumeric and underscore
+# res = [word.upper() for word in words]
+# print(res)                              # ['PYTHON', 'POOL']
+
 
 """ 113 Write a program to print all the number which are ending with 5
 """
