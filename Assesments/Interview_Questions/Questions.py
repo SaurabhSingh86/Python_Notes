@@ -1222,13 +1222,24 @@ python3- range
 
 
 """ 87 Write a program to count no of capital letters in a string """
-sentence = "Hi How are You WelCome to PytHon"
-count_uppercase = 0
-for char in sentence:
-    if char.isupper():
-        count_uppercase += 1
+# sentence = "Hi How are You WelCome to PytHon"
 
-print(f' Total number of capital letters in a string are: {count_uppercase}')
+# Method 1: using buil-in-method
+# count_uppercase = 0
+# for char in sentence:
+#     if char.isupper():
+#         count_uppercase += 1
+#
+#
+# print(f'Total number of Capital letters are: {count_uppercase}')
+
+# Method 2: without using built-in-method
+# count_uppercase = 0
+# for char in sentence:
+#     if 65 <= ord(char) <= 90:
+#         count_uppercase += 1
+#
+# print(f'Total number of Capital letters are: {count_uppercase}')
 
 
 """ 88 Write a program to get the below output """

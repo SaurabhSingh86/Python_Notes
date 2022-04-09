@@ -8,7 +8,7 @@
 #          The default value is None (compare the element directly)
 #
 # reverse => is a boolean value. If set to True, then the list elements are sorted as if each comparison were reversed.
-#            sorted by default ascending order
+#            sorted by-default ascending order
 #            if we want descending order then use => reverse=True
 #            strings are sorted => alphabetically  (based on ASCII value)
 #            Numbers are sorted => numerically
@@ -26,7 +26,7 @@
 # print(sorted(l))                                       # [1, 2, 3, 4, 5, 7, 9, 11]  output in the form of List
 # print(sorted(l, reverse=True))                         # [11, 9, 7, 5, 4, 3, 2, 1]
 
-# list_ = ["python", "java", "c", "ruby", "perl"]
+# list_ = ["Python", "java", "c", "ruby", "perl"]
 # print(sorted(list_))                                   # ['c', 'java', 'perl', 'python', 'ruby']
 # print(sorted(list_, reverse=True))                     # ['ruby', 'python', 'perl', 'java', 'c']
 
@@ -50,7 +50,7 @@
 
 """ WAP to sort the element present in the list based on their length """
 
-l = ["python", "java", "c", "ruby", "perl"]
+# l = ["python", "java", "c", "ruby", "perl"]
 #
 # print(sorted(l, key=len))                           # ['c', 'java', 'ruby', 'perl', 'python']
 # print(sorted(l, key=len, reverse=True))             # ['python', 'java', 'ruby', 'perl', 'c']
@@ -75,13 +75,13 @@ l = ["python", "java", "c", "ruby", "perl"]
 """ WAP to find the longest & the shortest word along with their length in the following string """
 
 # sentence = "Python is programming language"
-
-# Method 1:
+#
+# # Method 1:
 # l = sorted(sentence.split(), key=len)
 # print(f'Longest word {l[-1]}, contain {len(l[-1])} characters')
 # print(f'Shortest word {l[0]}, contain {len(l[0])} characters')
-
-# Method 2:
+#
+# # Method 2:
 # shortest, *rest, longest = sorted(sentence.split(), key=len)
 # print((shortest, len(shortest)), (longest, len(longest)))           # ('is', 2) ('programming', 11)
 
