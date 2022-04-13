@@ -53,13 +53,13 @@ comprehension"""
 
 """
 
-# for num in range(1, 11):
-#     if num % 2 == 0:
-#         r = num / 2
-#         print("*" * int(r))
-#
-#     else:
-#         print("*")
+for num in range(1, 11):
+    if num % 2 == 0:
+        r = num / 2
+        print("* " * int(r))
+
+    else:
+        print("*")
 
 
 """ 5. WAP to reverse a string without using any in built function """

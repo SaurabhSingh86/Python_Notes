@@ -30,7 +30,7 @@ copied list(b)
 if the original list has nested list the same list with same address will be shared by both original as well as
 copied list.
 
-Hence, the changes made in the nested list will be reflecting i the both lists.
+Hence, the changes made in the nested list will be reflecting in the both lists.
 
 in order to overcome this & to create two nested lists separately for both original & copied lists deep copy is done.
 

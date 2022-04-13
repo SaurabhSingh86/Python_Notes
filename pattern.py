@@ -94,10 +94,14 @@
 
 # Left Justified
 
+# class Solution:
+#     def
 # pat = ''
 # for i in range(1, 6):
 #     pat += str(i) + " "
 #     print(f'{pat:<5}')
+
+
 
 """
 1    
@@ -178,3 +182,43 @@ a b c d
  a b c  
 a b c d 
 """
+
+
+""" WAP to print the following pattern 
+* 
+* 
+* 
+* * 
+* 
+* * * 
+* 
+* * * * 
+* 
+* * * * * 
+
+"""
+
+# for num in range(1, 11):
+#     if num % 2 == 0:
+#         r = num / 2
+#         print("* " * int(r))
+#
+#     else:
+#         print("* ")
+
+
+""" Write a program to get the below output """
+"""
+* 
+* * 
+* 
+* * * 
+* 
+* * * * 
+* 
+* * * * * 
+"""
+
+# for i in range(1, 5):
+#     print("* " * 1)
+#     print("* " * (i+1))

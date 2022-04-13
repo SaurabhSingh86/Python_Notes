@@ -345,14 +345,14 @@ print(tail(("Mango", "banana", "apple", "Grapes", "Papaya"), 2))    # ('Grapes',
 # Method 3: using range
 
 
-def is_perfect_square(num):
-    for i in range(num):
-        if i ** 2 == num:
-            return True
-        return False
-
-
-print(is_perfect_square(9))
+# def is_perfect_square(num):
+#     for i in range(num):
+#         if i ** 2 == num:
+#             return True
+#         return False
+#
+#
+# print(is_perfect_square(9))
 
 
 """ WAF to return a below output """

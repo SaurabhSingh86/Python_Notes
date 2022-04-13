@@ -181,8 +181,37 @@
 
 
 """ 11. Write program to read a random line in a file. (ex. 50, 65, 78th line) """
+# n = int(input("Enter your required line number: "))
+
+
+# Method 1: using enumerate
+# with open(path) as file:
+#     for line_number, line in enumerate(file, start=1):
+#         if line_number == n:
+#             print(line_number, line)
+
+
+# Method 2:
+# with open(path) as file:
+#     count = 0
+#     for line in file:
+#         count += 1
+#         if count == n:
+#             print(count, line)
+#             break
+
+
+# Method 3: using islice
+# from itertools import islice
+# with open(path) as file:
+#     res = islice(file, n-1, n)
+#     print(list(res))
+
 
 """ 12. Write program to read a random lines in a file. (ex. I want read all lines 10th to 15th line) """
+# # Method 1: using islice
+# with open(path) as file:
+#     res = islice(file, )
 
 """ 13 Program to print last "N" lines of a file. """
 
@@ -395,13 +424,13 @@ passed are more than 5 """
 # count_arguments(9, 8, 5, 26, 11, 31)        # Length of positional arguments are more than 5
 
 
-""" 33 Count the number of occurrences of "CRITICAL", "INFO" and "ERROR" lines in a log file. """
+""" 33 Count the number of occurrences of "CRITICAL", "INFO" and "ERROR" lines in a log file. """ # ****************
 lines = """
-CRITICAL:Hello world
+CRITICAL: Hello world
 INFO: This is an info
 ERROR: This is an error 
 CRITICAL: This is critical
-CRITICAL:Hello world
+CRITICAL: Hello world
 INFO: This is an info
 ERROR: This is an error 
 CRITICAL: This is critical
@@ -414,18 +443,15 @@ INFO: This is an info
 ERROR: This is an error 
 CRITICAL: This is critical"""
 
-# ???????????????????????????????????????????????????????????????????????????????///
 
-# l = []
-# for line in lines:
-#     line.strip()
-#     list_ = line.split()
-#     print(list_)
-#     l.append(list_[0])
+# from collections import defaultdict
+# res = defaultdict(int)
+# for line in lines.split('\n'):
+#     if line.strip():
+#         l = line.split(":")
+#         res[l[0]] += 1
 #
-# res = {item: l.count(item) for item in l}
 # print(res)
-
 
 """ 34 Write a function to reverse any iterable without using reverse function. """
 # a_ = [1, 2, 3, 4, 5]
@@ -518,10 +544,12 @@ CRITICAL: This is critical"""
 #
 # print(dd)                           # defaultdict(<class 'int'>, {'l': 3, 'o': 2})
 
+
 """ 41 Write a program to get alternate characters of a string in list format. """
 # s = 'hello world welcome to python'
 # l = [s[index] for index in range(0, len(s), 2)]
 # print(l)
+
 
 """ 42 Write a program to get square of list of number's using lambda function . """
 # a = [1, 2, 3, 4, 5]
@@ -557,10 +585,12 @@ number of characters. """
 # d_ = {element: len(element) for element in names if len(element) % 2 == 0}
 # print(d_)
 
+
 """ 46 Write a program which squares the numbers in a list using map object """
 # a = [1, 2, 3, 4, 5]
 # square = map(lambda num: num**2, a)
 # print(list(square))           # [1, 4, 9, 16, 25]
+
 
 """ 47 Count number of lines in a file without loading the file to the memory """
 # path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\files_directory\txt_log_files\file1.txt'
@@ -1170,7 +1200,7 @@ Where as in tuples, memory is not over allocated, as tuples does not support app
 """
 
 """ 82 Write a program to print all the consonants in a given string """
-s = 'helloworld'
+# s = 'helloworld'
 # for char in s:
 #     if char.isalpha() and char not in "aeiouAEIOU":
 #         print(char, end=" ")
@@ -1243,8 +1273,35 @@ python3- range
 
 
 """ 88 Write a program to get the below output """
+"""
+* 
+* * 
+* 
+* * * 
+* 
+* * * * 
+* 
+* * * * * 
+"""
+
+# for i in range(1, 5):
+#     print("* " * 1)
+#     print("* " * (i+1))
 
 """ 89 Write a program to get the below output """
+# a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+"""
+[1, 2]
+[3, 4]
+[5, 6]
+[7, 8]
+[9]
+"""
+
+# for item in range(0, len(a), 2):
+#     print(a[item: item+2])
+
 
 """ 90 Write a program to check if the elements in the second list is series of continuation of the items in the 
 first list """
