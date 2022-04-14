@@ -214,6 +214,14 @@
 #     res = islice(file, )
 
 """ 13 Program to print last "N" lines of a file. """
+# path = r'C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\my_file1.txt'
+#
+# from collections import deque
+# n = int(input("Enter required number of lines: "))
+# with open(path) as file:
+#     lines = deque(file, n)
+#     print(list(lines))
+
 
 """ 14. Write a program to check if the given string is Palindrome or not without using reversed method. """
 
@@ -293,6 +301,7 @@
 
 """ 19 How to get the count of number of instances of a class that is being created. """
 
+
 """ 20 Write a function which takes a list of strings and integers. If the item is a string it should print as is and 
 if the item is integer or float it should reverse it. """
 # list_ = ['apple', 'yahoo', '1234', 100, 123.76, '26.23']
@@ -327,6 +336,7 @@ if the item is integer or float it should reverse it. """
 # for word in l:
 #     print(word[::-1], end=" ")
 
+
 """ 24 Write a python program to get the below output """
 # sentence = "Hi How are you"
 # o/p should be "uoy era woH iH"
@@ -351,6 +361,7 @@ if the item is integer or float it should reverse it. """
 # print([a, b])           # [[1, 2, 3], [4, 5, 6]]    i.e. list of list
 # print((a, b))           # ([1, 2, 3], [4, 5, 6])    i.e Tuple of lists
 # print([*a, *b])         # [1, 2, 3, 4, 5, 6]        i.e. Concatenate it or merge into single list
+
 
 """ 27 How to remove duplicates from the list without using inbuilt functions """
 # items = [1, 2, 3, 4, 1, 2, 3, 4, 5]
@@ -1225,6 +1236,7 @@ Where as in tuples, memory is not over allocated, as tuples does not support app
 
 """ 85 Liner Search """
 
+
 """ 86 Difference between xrange and range """
 """
 python2- xrange
@@ -1495,6 +1507,7 @@ should be in ascending order and even numbers should be in descending order"""
 # res = "".join(l)
 # print(res)                  # @helloworldwelcome!
 
+
 """ 101 Count number of words in a sentence. ignore special characters. """
 # sentence = "Hi there! How are you:) How are you doing today!"
 # l = sentence.split()
@@ -1522,6 +1535,7 @@ import re
 # d1 = {item: l1.count(item) for item in l1}
 # print(d1)
 
+
 """ 102 Grouping even and odd numbers """
 # numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # # o/p should be {1: [1, 3, 5, 7, 9], 0: [2, 4, 6, 8, 10]}
@@ -1534,6 +1548,7 @@ import re
 #         res[1] += [num]     # res[1].append(num)
 #
 # print(res)
+
 
 """ 103 Find all max numbers from the below list """
 # numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
@@ -1679,8 +1694,7 @@ import re
 # print(res)                              # ['PYTHON', 'POOL']
 
 
-""" 113 Write a program to print all the number which are ending with 5
-"""
+""" 113 Write a program to print all the number which are ending with 5 """
 # numbers = ['1', '12', '123', '12345', '125', '905', '55', '5', '95655', '55555']
 #
 # # Method 1: using comprehension
@@ -1693,6 +1707,7 @@ import re
 #     match = re.findall("5$", num)
 #     if match:
 #         print(num, end=" ")
+
 
 """ 114 Write a program to get the indexes of each item in the below list """
 # names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'google', 'gmail', 'gmail', 'gmail']
@@ -1740,6 +1755,7 @@ import re
 # import re
 # numbers = re.findall()
 
+
 """ 118 Write a program to add each number in word1 to number in word2 """
 # e.g. 1 + 5, 2 + 6, 3 + 7, 4 + 8, 5 + 9
 # word1 = 'hello 1 2 3 4 5'
@@ -1765,6 +1781,7 @@ import re
 #
 #
 # print(res)
+
 
 """ 119 Write a program to filter out even and odd numbers in the given string """
 # sentence = 'hello 123 world 456 welcome to python498675634'
@@ -1797,6 +1814,7 @@ import re
 # Method 2: using com
 # res = [num for num in numbers if num[0] == '8']
 # print(res)
+
 
 """ 121 Write a program to remove duplicates from the list without using set or empty list """ # *******************
 # l1 = [1, 2, 3, 4, 1, 2, 3, 4, 3, 4, 4]

@@ -5,18 +5,31 @@
 # print(sorted(l))
 
 
-""" 2. s = "this world is not enough". Sort the words based on length """
+""" 2. Sort the words based on length """
+# s = "this world is not enough"
+# l = s.split()
+# d = {item: len(item) for item in l}
+# res = sorted(d.items(), key=lambda item: item[-1])
+# print(res)
 
-""" 3. l = ['hello', 'ball', 'zebra', 'yak', 'apple'] 
-Sort based on the last character from the word """
+""" 3. Sort based on the last character from the word """
+# l = ['hello', 'ball', 'zebra', 'yak', 'apple']
+# res = sorted(l, key=lambda item: item[-1])
+# print(res)
 
 
-""" 4. d = {'flipkart':10, 'walmart':15, 'google':20} 
-Sort based on the length of the keys """
+""" 4. Sort based on the length of the keys """
+d = {'flipkart': 10, 'walmart': 15, 'google': 20}
+# res = sorted(d.items(), key=lambda item: item[0])
+# print(res)
+
+print(sorted(d, key=len))
 
 
 """ 5. d = {'flipkart':10, 'walmart':15, 'google':20} 
 Sort based on the values """
+
+
 
 """ 6. WAF that accepts two strings & returns True if the two strings are Anagram of each other """
 

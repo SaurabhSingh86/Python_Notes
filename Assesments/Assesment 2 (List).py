@@ -77,6 +77,7 @@
 #
 # print(set_)
 
+
 """ 5. Build a list with only even length string """
 
 # names = ["apple", "google", "yahoo", "facebook", "yelp", "flipkart", "gmail", "instagram", "microsoft"]
@@ -116,6 +117,7 @@
 #         entire_sum += i     # 0+1= 1, 1+2= 3, 3+3=6, 6+4=10, 10+5=15, 15+6= 21
 #     print(f'Sum of internal list {internal_sum}')
 # print(f'Sum of entire list --> {entire_sum}')   # 6 + 15 + 24 = 45
+
 
 """ 8. WAP to print list of Prime numbers between 1 - 100 """
 
@@ -171,11 +173,11 @@ k = 2
 #     item = n2, *n1
 #     i += 1
 
-print(item)                 # (26, '100', 'apple', 1.2, 'google', '12.6') i.e. tuple
+# print(item)                 # (26, '100', 'apple', 1.2, 'google', '12.6') i.e. tuple
 
 # Method 2:  **********************************************************
-for i in range(k):
-    remove_element = item.pop()
-    item.insert(0, remove_element)
-
-print(item)
+# for i in range(k):
+#     remove_element = item.pop()
+#     item.insert(0, remove_element)
+#
+# print(item)

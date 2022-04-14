@@ -19,11 +19,13 @@
 # l1 = [item[::-1] if len(item) % 2 != 0 else item for item in names]
 # print(l1)
 
+
 """ 4. WA list comprehension to raise the elements in the list to the power of their index """
 # a = [1, 2, 3, 4, 5]
 #
 # list_ = [item ** index for index, item in enumerate(a)]
 # print(list_)
+
 
 """ 5. Build a list of tuples with string & its length pair using list comprehension """
 # names = ["apple", "google", "yahoo", "facebook", "yelp", "flipkart", "gmail", "instagram", "microsoft"]
@@ -31,15 +33,17 @@
 # l2 = [(item, len(item)) for item in names]
 # print(l2)
 
+
 """ 6.  WAP to print all numeric values in a list using list comprehension """
 # items = ["apple", 1.2, 'google', '12.6', 26, '100']
 #
 # res = [element for element in items if isinstance(element, (int, float, complex))]
 # print(res)
 
+
 """ 7. WAP to rotate elements in the list """
-items = ["apple", 1.2, 'google', '12.6', 26, '100']
-n = 3
+# items = ["apple", 1.2, 'google', '12.6', 26, '100']
+# n = 3
 #
 # # Method 1: by using while loop
 # i = 1
@@ -58,26 +62,26 @@ n = 3
 
 
 """ 8. WAP to check if the elements in the second list is series of continuation of the items in the first list """
-a = [10, 12, 14, 16, 18]
-b = [20, 22, 24, 26, 28]
-c = [*a, *b]
+# a = [10, 12, 14, 16, 18]
+# b = [20, 22, 24, 26, 28]
+# c = [*a, *b]
+#
+# def series(c):
+#     dif = c[1] - c[0]
+#     for i in range(len(c)-1):
+#         if c[i+1] - c[i] == dif:
+#             continue
+#         else:
+#             return "not a series of first list"
+#     return 'is a series'
 
-def series(c):
-    dif = c[1] - c[0]
-    for i in range(len(c)-1):
-        if c[i+1] - c[i] == dif:
-            continue
-        else:
-            return "not a series of first list"
-    return 'is a series'
 
-
-print(series(c))
+# print(series(c))
 
 
 """ 9. Find all max numbers from the below list """
-numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
-max_ = max(numbers)
+# numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]
+# max_ = max(numbers)
 #
 # # Method 1:
 #
@@ -85,9 +89,9 @@ max_ = max(numbers)
 # print(list_)
 #
 # # Method 2:
-for num in numbers:
-    if num == max_:
-        print(num, end=" ")
+# for num in numbers:
+#     if num == max_:
+#         print(num, end=" ")
 
 
 """ 10. WA list comprehension to get a list of even numbers from 1-50 """

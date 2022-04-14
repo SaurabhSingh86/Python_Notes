@@ -39,7 +39,7 @@
 # print(d1)
 
 """ 6. Group even & odd index values with comprehension """
-l = [1, 2, 2, 3, 4, 4, 5, 5, 5, 6, 7, 7, 8, 8, 8, 88, 99, 100]
+# l = [1, 2, 2, 3, 4, 4, 5, 5, 5, 6, 7, 7, 8, 8, 8, 88, 99, 100]
 
 # Method 1:
 # e_index = [l[index] for index in range(0, len(l), 2)]
