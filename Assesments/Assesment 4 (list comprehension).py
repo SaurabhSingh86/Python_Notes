@@ -78,6 +78,13 @@
 
 # print(series(c))
 
+l = [1, 2, 3, 4, 5, 6]
+a = 7
+sum = 0
+for i in range(len(l)-1):
+    if l[i] + l[i+1] == a:
+        print(l[i], l[i+1])
+
 
 """ 9. Find all max numbers from the below list """
 # numbers = [1, 2, 3, 0, 4, 3, 2, 4, 2, 1, 0, 4]

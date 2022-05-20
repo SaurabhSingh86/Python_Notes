@@ -234,3 +234,5 @@
 #         print('google')
 
 
+print(dir(int))
+print(type(5))
