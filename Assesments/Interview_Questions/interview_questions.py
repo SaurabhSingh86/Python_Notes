@@ -1,5 +1,5 @@
 """ find the second highest value in the given dictionary"""
-# d = {"a": 20, "b": 10, "c": 30, "d": 30}
+d = {"a": 20, "b": 10, "c": 30, "d": 30}
 # l = []
 # for key, value in d.items():
 #     if value not in l:
@@ -10,14 +10,14 @@
 
 
 from collections import defaultdict
-
+d1 = defaultdict()
 # d1 = {}
-# for key, value in d.items():
-#     if d[key] not in d1.values():
-#         d1[key] = value
-#
-# res = sorted(d1.items(), key=lambda item: item[-1])
-# print(res[-2])
+for key, value in d.items():
+    if d[key] not in d1.values():
+        d1[key] = value
+
+res = sorted(d1.items(), key=lambda item: item[-1])
+print(res[-2])
 
 
 """ """
