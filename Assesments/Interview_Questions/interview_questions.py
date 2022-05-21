@@ -1,5 +1,5 @@
 """ find the second highest value in the given dictionary"""
-d = {"a": 20, "b": 10, "c": 30, "d": 30}
+# d = {"a": 20, "b": 10, "c": 30, "d": 30}
 # l = []
 # for key, value in d.items():
 #     if value not in l:
@@ -8,16 +8,17 @@ d = {"a": 20, "b": 10, "c": 30, "d": 30}
 # res = sorted(l)
 # print(res[-2])
 
-
-from collections import defaultdict
-d1 = defaultdict()
-# d1 = {}
-for key, value in d.items():
-    if d[key] not in d1.values():
-        d1[key] = value
-
-res = sorted(d1.items(), key=lambda item: item[-1])
-print(res[-2])
+# d = {"a": 20, "b": 10, "c": 30, "d": 30}
+#
+# from collections import defaultdict
+# d1 = defaultdict(int)
+# # d1 = {}
+# for key, value in d.items():
+#     if d[key] not in d1.values():
+#         d1[key] = value
+#
+# res = sorted(d1.items(), key=lambda item: item[-1])
+# print(res[-2])
 
 
 """ """
@@ -84,8 +85,8 @@ import re
 # equal_(s1)
 # equal_(s2)
 
-""" """
-#
+""" WAP to print user defined key input """
+
 # d = {"a": 1, "b": 2, "c": 3}
 # user_input = input("Enter your string: ")
 # sum_ = 0
@@ -105,7 +106,7 @@ import re
 
 
 """ find the missing item in the list"""
-list1 = [1, 2, 3, 4, 5, 6, 7, 8, 10]
+# list1 = [1, 2, 3, 4, 5, 6, 7, 8, 10]
 
 
 # Method 1:
@@ -122,3 +123,11 @@ list1 = [1, 2, 3, 4, 5, 6, 7, 8, 10]
 #     expected_sum += num
 # find_missing_term = expected_sum - sum_list1
 # print(find_missing_term)
+# ---------------------------------------------------------------------------------------------------------------------
+s = "sonyindia"
+# output = "india", "ia"
+
+ss = "i"
+for index, char in enumerate(s):
+    if char == ss:
+        print(s[index:])
