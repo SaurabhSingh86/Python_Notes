@@ -46,6 +46,7 @@ Responsible for Daily and Weekly Status Reports.
 
 4) Where did you use Abstract class in your Project
 
+
 # ---------------------------------------------------------------------------------------------------------------------
 """
 
@@ -63,6 +64,43 @@ Responsible for Daily and Weekly Status Reports.
 #                            }
 # ---------------------------------------------------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+""" count the no of characters in a string without using len """
+s = "langauge"
+count = 0
+for _ in s:
+    count += 1
+print(count)
+
+# ---------------------------------------------------------------------------------------------------------------------
+""" find prime no to given range (100, 200)"""
+# for num in range(100, 201):
+#     if num > 100:
+#         for i in range(2, num):
+#             if num % i == 0:
+#                 break
+#         else:
+            # print(num, end=" ")
+
+
+""" find given no is prime or not """
+def prime_(num):
+    for i in range(2, num//2 + 1):
+        if num % i == 0:
+            print(f"{num} is not a prime number")
+            break
+    else:
+        print(f'{num} is a prime number')
+
+
+prime_(10)
+
+# ---------------------------------------------------------------------------------------------------------------------
 """ Decorators,one program"""
 "example 1: "
 # def sub_deco(func):
@@ -293,5 +331,3 @@ s1 = "python is simple language"
 # print(s1[])# print(s1[])
 # # print(s1[]
 # # print(s1[])
-
-"""

@@ -9,8 +9,23 @@
 # ----------------------------------------------------------------------------------------------------------------------
 """ Swap two number without using third variable """
 
+
+def swap(a, b):
+    a, b = b, a
+    print(f'value of a is {a}, value of b is {b}')
+
+swap(5, 10)
+
+
 # ----------------------------------------------------------------------------------------------------------------------
 """ Swap two number with using third variable """
+def swap(a, b):
+    c = a
+    a = b
+    b = c
+    print(f'value of a is {a}, value of b is {b}')
+
+swap(10, 20)
 
 # ---------------------------------------------------------------------------------------------------------------------
 """WAP to check the sum of any two elements that is present inside the list is 7 & print each element in the form of 
@@ -33,9 +48,20 @@ tuples """
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ to check open bracer are close or not """
-# s1 = "([{([{}])}])"
-# s2 = "([{([{})})"
+s1 = "([{([{}])})"
+s2 = "([{([{})})"
+open_b = 0
+close_b = 0
+for braces in s1:
+    if braces in '({[':
+        open_b += 1
+    else:
+        close_b += 1
 
+if open_b == close_b:
+    print(f'No of open braces are equal to close braces')
+else:
+    print(f'No of open braces is not equal to close braces')
 # ---------------------------------------------------------------------------------------------------------------------
 """ merge two dictionaries"""
 # d1 = {"a":1, "b":2}
@@ -135,8 +161,26 @@ s = "abcabccba"
 # x = range(0, 11)
 # print(x.stop)
 # ---------------------------------------------------------------------------------------------------------------------
+s1 = "hai"
+s2 = "row"
+s3 = "how"
+for i, j, k in zip(s1, s2, s3):
+    print(i,j,k)
 
 
+l1 = [1, 2]
+l2 = [3, 4, 5]
+l3 = [6, 7, 8, 9]
+for i, j, k in zip(l1, l2, l3):
+    r = i, j, k
+    print(i, j, k)
+    print(type(r))
+print()
+# it means data loss in above e.g to avoid this we have to use zip longest
+from  itertools import zip_longest
+
+for i, j , k in zip_longest(l1, l2, l3, fillvalue="-"):
+    print(i, j, k)
 # ---------------------------------------------------------------------------------------------------------------------
 
 
