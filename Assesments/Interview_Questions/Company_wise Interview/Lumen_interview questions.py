@@ -39,6 +39,12 @@ Responsible for Identifying Test Scenarios and Test Case Development.
 Developed test automation framework using Pytest unit testing framework.
 Responsible for Daily and Weekly Status Reports.
 
+------------------------------------------------------------------------------------------------------------------------------------
+Thanks for A2A. It's very real time question and in this situation what you can do is first verify that defect/bug is valid or not ? If it is valid then try to reproduce in different system and send screenshot, proper defect report to developer. Now even after this developer is not accepting then you can send email to respective developer regarding issue and cc to you test lead.
+
+If Test lead is also not taking it seriously or not accepting then you can escalate this issue to Test Manager. Even though if they are not accepting then take final call with Business Analyst or Product Owner. B.A/P.O is the person who closely interact with client/business, so you can check with him. If B.A is telling this is not a bug then you can write a B.A comment in JIRA/Test Case and close it.
+
+If B.A is accepting this as a defect/bug then send email and inform why this is a bug to respective developer, cc to development lead, test lead, test manager, B.A/P.O
 ---------------------------------------------------------------------------------------------------------------------
 3) Explain Framework And oops concept
 
@@ -67,15 +73,32 @@ Responsible for Daily and Weekly Status Reports.
 # ---------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" remove spaces in between the sentence """
+s = "Python is Programming Language"
+# Method 1: using built-in-method
+# res = s.replace(" ", "")
+# print(res)
+# print(s.replace(" ", ""))
 
-
+# Method 2 using for loop
+# res = ""
+# for char in s:
+#     if char == " ":
+#         continue
+#     else:
+#         res += char
+# print(res)
+# print()
+# # Method 3: using join built in
+# res = "".join(s.split())
+# print(res)
 # ---------------------------------------------------------------------------------------------------------------------
 """ count the no of characters in a string without using len """
-s = "langauge"
-count = 0
-for _ in s:
-    count += 1
-print(count)
+# s = "langauge"
+# count = 0
+# for _ in s:
+#     count += 1
+# print(count)
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ find prime no to given range (100, 200)"""
@@ -89,16 +112,16 @@ print(count)
 
 
 """ find given no is prime or not """
-def prime_(num):
-    for i in range(2, num//2 + 1):
-        if num % i == 0:
-            print(f"{num} is not a prime number")
-            break
-    else:
-        print(f'{num} is a prime number')
-
-
-prime_(10)
+# def prime_(num):
+#     for i in range(2, num//2 + 1):
+#         if num % i == 0:
+#             print(f"{num} is not a prime number")
+#             break
+#     else:
+#         print(f'{num} is a prime number')
+#
+#
+# prime_(10)
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ Decorators,one program"""
@@ -177,27 +200,27 @@ prime_(10)
 
 """example 2: WADF that calculates time of execution of a function """
 
-import time
-
-
-def p_outer(n):
-    def delay(func):
-        def wrapper(*args, **kwargs):
-            start = time.time()
-            time.sleep(n)                       # here I'm taking just 2 seconds delay so that we'll get execution time
-            func(*args, **kwargs)               # it is normal program that's why execution time is zero
-            end = time.time()
-            print(f'Time of execution is: {end - start}')
-        return wrapper
-    return delay
-
-
-@p_outer(2)
-def sub(a, b):
-    print(f'Output of a-b is {a - b}')
-
-
-sub(10, 20)
+# import time
+#
+#
+# def p_outer(n):
+#     def delay(func):
+#         def wrapper(*args, **kwargs):
+#             start = time.time()
+#             time.sleep(n)                       # here I'm taking just 2 seconds delay so that we'll get execution time
+#             func(*args, **kwargs)               # it is normal program that's why execution time is zero
+#             end = time.time()
+#             print(f'Time of execution is: {end - start}')
+#         return wrapper
+#     return delay
+#
+#
+# @p_outer(2)
+# def sub(a, b):
+#     print(f'Output of a-b is {a - b}')
+#
+#
+# sub(10, 20)
 
 """example 3: WADF to print "hello world" message if the user has not given input """
 
@@ -297,7 +320,7 @@ a,b,c,d = 1,2,3,4,5
 a=1,b=2,c=[3,4],d=5
 a = ? ,b = ?, c= ?, d= ?
 """
-a, b, *c, d = 1, 2, 3, 4, 5
+# a, b, *c, d = 1, 2, 3, 4, 5
 # print(a, b, c, d, sep=',')
 # 1, 2, [3, 4], 5
 
@@ -331,3 +354,10 @@ s1 = "python is simple language"
 # print(s1[])# print(s1[])
 # # print(s1[]
 # # print(s1[])
+
+
+
+import time
+
+current_time = time.localtime(time.time())
+print(f"Current time is {current_time}")

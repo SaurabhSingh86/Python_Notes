@@ -10,22 +10,22 @@
 """ Swap two number without using third variable """
 
 
-def swap(a, b):
-    a, b = b, a
-    print(f'value of a is {a}, value of b is {b}')
-
-swap(5, 10)
+# def swap(a, b):
+#     a, b = b, a
+#     print(f'value of a is {a}, value of b is {b}')
+#
+# swap(5, 10)
 
 
 # ----------------------------------------------------------------------------------------------------------------------
 """ Swap two number with using third variable """
-def swap(a, b):
-    c = a
-    a = b
-    b = c
-    print(f'value of a is {a}, value of b is {b}')
-
-swap(10, 20)
+# def swap(a, b):
+#     c = a
+#     a = b
+#     b = c
+#     print(f'value of a is {a}, value of b is {b}')
+#
+# swap(10, 20)
 
 # ---------------------------------------------------------------------------------------------------------------------
 """WAP to check the sum of any two elements that is present inside the list is 7 & print each element in the form of 
@@ -48,28 +48,31 @@ tuples """
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ to check open bracer are close or not """
-s1 = "([{([{}])})"
-s2 = "([{([{})})"
-open_b = 0
-close_b = 0
-for braces in s1:
-    if braces in '({[':
-        open_b += 1
-    else:
-        close_b += 1
-
-if open_b == close_b:
-    print(f'No of open braces are equal to close braces')
-else:
-    print(f'No of open braces is not equal to close braces')
+# s1 = "([{([{}])})"
+# s2 = "([{([{})})"
+# open_b = 0
+# close_b = 0
+# for braces in s1:
+#     if braces in '({[':
+#         open_b += 1
+#     else:
+#         close_b += 1
+#
+# if open_b == close_b:
+#     print(f'No of open braces are equal to close braces')
+# else:
+#     print(f'No of open braces is not equal to close braces')
 # ---------------------------------------------------------------------------------------------------------------------
 """ merge two dictionaries"""
 # d1 = {"a":1, "b":2}
 # d2 = {"c":3, "d":4}
-# d3 = {}
 # d3 ={**d1, **d2}
 # print(d3)
 # print({**d1, **d2})
+# # res = (**d1, **d2)      # Syntax Erro
+# # print(res)
+# print(**d1, **d2)       # Type Error
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ merge two tuples"""
@@ -83,16 +86,26 @@ else:
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ merge two lists """
-l1 = [1, 2, 3]
-l2 = [4, 5]
-l3 = *l1, *l2                   # (1, 2, 3, 4, 5)
-l4 = [*l1, *l2]                 # [1, 2, 3, 4, 5]
-l5 = l1 + l2                    # [1, 2, 3, 4, 5]
-print(l3)
-print(l4)
-print(l5)
+# l1 = [1, 2, 3]
+# l2 = [4, 5]
+# l3 = *l1, *l2                   # (1, 2, 3, 4, 5)
+# l4 = [*l1, *l2]                 # [1, 2, 3, 4, 5]
+# l5 = l1 + l2                    # [1, 2, 3, 4, 5]
+# print(l3)
+# print(l4)
+# print(l5)
+
+input = [12, 34, 56, 78]
+# O/P : [78, 34, 56, 12]
+a, *b, c = input
+print([c, b, a])            # [78, [34, 56], 12]
+print(c, b, a)              # 78 [34, 56] 12
+print([c, *b, a])           # [78, 34, 56, 12]
 
 
+# def func(input):
+#     a, *b, c = input
+#     input = [c, b, a]
 
 # ---------------------------------------------------------------------------------------------------------------------
 # t1 = ("hello")               # print(type(t))          # <class 'str'>
@@ -161,27 +174,44 @@ s = "abcabccba"
 # x = range(0, 11)
 # print(x.stop)
 # ---------------------------------------------------------------------------------------------------------------------
-s1 = "hai"
-s2 = "row"
-s3 = "how"
-for i, j, k in zip(s1, s2, s3):
-    print(i,j,k)
+# s1 = "hai"
+# s2 = "row"
+# s3 = "how"
+# for i, j, k in zip(s1, s2, s3):
+#     print(i,j,k)
 
 
-l1 = [1, 2]
-l2 = [3, 4, 5]
-l3 = [6, 7, 8, 9]
-for i, j, k in zip(l1, l2, l3):
-    r = i, j, k
-    print(i, j, k)
-    print(type(r))
-print()
-# it means data loss in above e.g to avoid this we have to use zip longest
-from  itertools import zip_longest
-
-for i, j , k in zip_longest(l1, l2, l3, fillvalue="-"):
-    print(i, j, k)
+# l1 = [1, 2]
+# l2 = [3, 4, 5]
+# l3 = [6, 7, 8, 9]
+# for i, j, k in zip(l1, l2, l3):
+#     r = i, j, k
+#     print(i, j, k)
+#     print(type(r))
+# print()
+# # it means data loss in above e.g to avoid this we have to use zip longest
+# from  itertools import zip_longest
+#
+# for i, j , k in zip_longest(l1, l2, l3, fillvalue="-"):
+#     print(i, j, k)
 # ---------------------------------------------------------------------------------------------------------------------
+""" remove the duplicates element from the list"""
+# l = [1, 2, 1, 3, 'a', 'b', 'a']
 
+# Method 1 using set (if order doesn't matter)
+print(list(set(l)))
 
+# Method 2
+# l1 = []
+# for element in l:
+#     if element not in l1:
+#         l1.append(element)
+#
+# print(l1)
 # ---------------------------------------------------------------------------------------------------------------------
+""" count the duplicates elements form the list"""
+# l2 = []
+# for item in set(l):
+#     # l2.append((item, l.count(item)))                    # [(1, 2), (2, 1), (3, 1), ('b', 1), ('a', 2)]
+#     l2.append([item, l.count(item)])                    # [['b', 1], [1, 2], [2, 1], [3, 1], ['a', 2]]
+# print(l2)

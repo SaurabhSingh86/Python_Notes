@@ -166,14 +166,14 @@ k = 2
 
 # Method 1: by using while loop
 
-# i = 1
-#
-# while i <= k:
-#     *n1, n2 = item
-#     item = n2, *n1
-#     i += 1
+i = 1
 
-# print(item)                 # (26, '100', 'apple', 1.2, 'google', '12.6') i.e. tuple
+while i <= k:
+    *n1, n2 = item
+    item = n2, *n1          # if we are giving * before n1 then we get = ('100', ['apple', 1.2, 'google', '12.6', 26])
+    i += 1
+
+print(item)                 # (26, '100', 'apple', 1.2, 'google', '12.6') i.e. tuple
 
 # Method 2:  **********************************************************
 # for i in range(k):
