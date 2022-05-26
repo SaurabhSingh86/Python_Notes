@@ -359,5 +359,8 @@ s1 = "python is simple language"
 
 import time
 
-current_time = time.localtime(time.time())
-print(f"Current time is {current_time}")
+# current_time = time.localtime(time.time())
+# print(f"Current time is {current_time}")
+
+import random
+print(random.randint(1,101))

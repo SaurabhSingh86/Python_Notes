@@ -1,6 +1,14 @@
 """ Square of element by using function"""
 
 """ sort the list"""
+l = [100, 10, 30, 99, 101, 500, 1000]
+# l.sort()        # in ascending order
+# print(l)        # [10, 30, 99, 100, 101, 500, 1000]
+
+# Method2 using sorted()
+res = sorted(l)
+print(res)      # [10, 30, 99, 100, 101, 500, 1000]
+
 
 """ If u get a new project are u able to create basic setups w. r. t to selenium configuration files"""
 
@@ -70,7 +78,7 @@ From this point, use Ctrl+Shift+C to select the element.
 Wap to identify and store common words . Replace common words with user provided input."""
 
 """ 3.reverse a string,i/p: "hi welcome to python"
-                             o/p: "ih emoclew ot nohtyp""""
+                             o/p: "ih emoclew ot nohtyp"""
 
 """ 5.how do you handle alert
 6.write a sample script for alert"""
@@ -80,9 +88,9 @@ Wap to identify and store common words . Replace common words with user provided
     @decor
     def func()"""
 
-""" what is _repr_? how you used?"""
+""" what is _repr_? how you used? """
 
-""" Write a python pgm on palindrome, without using slicing"""
+""" Write a python pgm on palindrome, without using slicing """
 
-""" What is dataclass?"""
+""" What is dataclass? """
 

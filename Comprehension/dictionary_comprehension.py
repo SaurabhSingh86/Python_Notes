@@ -8,9 +8,9 @@
 
 """WAP to create a dictionary with words & its length pair"""
 # s = "sky is no limit"
-
-# # dict_ = {word: len(word) for word in list_}
-# # print(dict_)
+#
+# dict_ = {word: len(word) for word in s.split()}
+# print(dict_)
 #
 """ WAP to create a dictionary with character & its count pair """
 #
