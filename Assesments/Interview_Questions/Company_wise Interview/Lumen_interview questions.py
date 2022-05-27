@@ -2,42 +2,9 @@
 
 """ 
 1) Introduce Yourself
-Very Good afternoon,
-My name is Saurabh Singh. I am basically from Rewa M.P.
-If I talk about my educational background, I did my schooling in Rewa.
-I’ve completed my graduation in Bachelor of Engineering with Mechanical stream (my Thesis was “Automatic Shading 
-system for car by using solar Energy”). 
-And also completed my post-graduation in Mtech with Thermal Engineering (my master thesis was “Transient Thermal 
-Analysis of car brake rotor disc by using ANSYS software through FEA method”.)
-
 
 ---------------------------------------------------------------------------------------------------------------------
 2) Explain about Project and Roles and Responsibilities
-Talking about my professional Experience
-I have 2+ years experiences in software Industry.
-I worked in HDAO info system pvt ltd, Bengaluru Karnataka as a Automation Engineers. In this job, I participated/worked 
-in a project-
-
-Project Name: Online Ticket Booking System
-Client Name: That was internal project of this company
-Role: Automation Engineer
-Testing tools: Python-Selenium, Git, Jira, Pycharm, Postman
-Brief introduction: (purpose)
-It’ll provide range of choice for Flights, Trains, Buses and Hotels for travelers.
-The main purpose of this project was it provides a single platform for all forms of ticket booking. This project 
-provides clients with an option to book tickets online and to search online for confirmation. Customers can book 
-airline tickets, bus tickets, and train tickets and they can book or reserve hotels using this method.
-
-Main features:  
-Main features of this projects were:
-Flights, Buses, Trains, Hotels, Others
-My responsibilities were-
-First Understand the requirements
-Test Execution Manually in the initial stages of development.
-Identifying the defect, preparing Bug report & raising the defect using Jira.
-Responsible for Identifying Test Scenarios and Test Case Development.
-Developed test automation framework using Pytest unit testing framework.
-Responsible for Daily and Weekly Status Reports.
 
 ------------------------------------------------------------------------------------------------------------------------------------
 Thanks for A2A. It's very real time question and in this situation what you can do is first verify that defect/bug is valid or not ? If it is valid then try to reproduce in different system and send screenshot, proper defect report to developer. Now even after this developer is not accepting then you can send email to respective developer regarding issue and cc to you test lead.
