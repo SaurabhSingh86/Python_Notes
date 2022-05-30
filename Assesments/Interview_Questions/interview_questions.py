@@ -32,7 +32,7 @@
 #     res = res + str(int(num)**2)
 # print(res)
 
-# Mwthod 2:
+# Method 2:
 # l = "623"
 # res = []
 # for i in l:

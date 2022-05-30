@@ -35,6 +35,139 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------
+# """ 1. given two int a & b in one step you can add 2 to any num a or b
+# your have to """
+#
+#
+# # class Solution:
+# #     def solve(self, A, B):
+# #         if self.A > self.B:
+# #             print(B)
+# #             print(B + 2 = )
+#
+#
+# """ 3.  Max height of staircase
+# Given an int A respresnting the square blocks the height of each square block is 1. the task is to create a staricase a
+# the first stair would require only one block. the second stair would require two blocks and son on
+#  find and return the max height of the staricase"""
+#
+#
+# """ delete middle of each """
+#
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+#
+#
+# class Solution(ListNode):
+#
+#     def del_middle_element(self):
+#         self.list = []
+#         if len(self.val) % 2 != 0:
+#             rem_index = int(len(self.val)//2)
+#             for i in range(len(self.val)):
+#                 if i == rem_index:
+#                     pass
+#                 else:
+#                     self.list.append(self.val[i])
+#             return self.list
+#
+#         else:
+#             rem_index = int(len(self.val) // 2)
+#             for i in range(len(self.val)):
+#                 if i == rem_index:
+#                     pass
+#                 else:
+#                     self.list.append(self.val[i])
+#             return self.list
+#
+#
+# n1 = Solution([1, 2, 3, 4])
+# print(n1.del_middle_element())
+#
+# n2 = Solution([1, 2, 3, 4, 5])
+# print(n2.del_middle_element())
+
+
+s = "Python Welcome Jayashr world mediumn hi"
+# l = {item: len(item) for item in s.split()}
+# print(l)
+# res = dict(sorted(l.items(), key=lambda item: item[-1]))
+# print(res)
+# max_ = dict(res[-1])
+# print(max_)
+
+# l = [item for item in s.split()]
+# res = sorted(l, key=len)
+# print(res)
+# max_len = len(res[-1])
+# for word in l:
+#     if len(word) == max_len:
+#         print((word, len(word)), end=" ")
+
+
+""" WAP to print all the second largest word in the given list """
+# l = ['hai', "hello", "Not", "a", "Google", "world", "yahooo"]
+#
+# l1 = [len(element) for element in l]
+# print(l1)
+# # l1 = [1, 3, 3, 5, 5, 6, 6]
+# r_dup = list(set(l1))
+# print(r_dup)
+# a = sorted(r_dup)
+# print(a)
+# s_a = (a[-2])
+# for item in l:
+#     if len(item) == s_a:
+#         print(item, len(item), end=" ")
+
+# """ waf to return 3 digit numbers only """
+#
+#
+# def func(int):
+#     s = str(int)
+#     return s[-3:]
+#
+#
+# print(func(123))
+# print(func(1234))
+
+
+# d = {"a": 1, "b": 5, "c": 6, "d": 2}
+# l1 = [5, 1, 3, 4, 2]
+# l = sort(l1)
+# l = [1, 2, 3, 4, 5]
+# n = 1
+# for i in range(n):
+#     rem_e = l.pop()
+#     add_e = l.insert(0, rem_e)
+# print(l)
+
+
+# l = [1, 1, 3, 4, 4, 4]
+# # output = [1, 4, 4, 4, 4]
+#
+#
+# def func(num, k):
+#     s = str(num)
+#     for i in s:
+#         for i in range(4):
+#             if i[0]:
+#                 p = int(i)+1
+#                 for i in range(6):
+#                     if i[1]:
+#                         q = int(i)+1
+#     return (p+
+# print(func(512,10))
+
+# import time
+# current_time = time.localtime(time.time())
+# print(current_time)
+
+
+# driver.get_window_size()
+# driver.set_window_size(1000, 800)
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ Square of element by using function"""
@@ -98,6 +231,22 @@
 "1. Create a function should accept one argument as a string and u have to fetch the data from a file and u have map "
 "the words and get the count of it they asked "
 
+# path_file = r"C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\my_file1.txt"
+# from collections import defaultdict
+#
+# def word_count(path):
+#     with open(path) as file:
+#         dd = defaultdict(int)
+#         count = 0
+#         for line in file:
+#             if line.strip():
+#                 for word in line.split():
+#                     dd[word] += 1
+#         print(dd)
+#
+# word_count(path_file)
+
+
 # ---------------------------------------------------------------------------------------------------------------------
 
 " 2. Function should accept a list and and if any number divisible by 3 then modify to 33 or else keep it as it is"
@@ -122,7 +271,6 @@
 If new class is created how is it possible access the abstract class .. Clarify the answer """
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ programs to execute on list, dictionary and regular expression """
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -189,6 +337,20 @@ s = "@python& is2 programming2 language32!$"
 # ---------------------------------------------------------------------------------------------------------------------
 
 "Python program to read string from one file n print in another file"
+
+read_file_path = r"C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\my_file1.txt"
+write_file_path = r"C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\write_file1.txt"
+
+with open(read_file_path) as read_file, open(write_file_path, 'w') as write_file:
+    for line in read_file:
+        write_file.write(line)
+
+    print("Execution done successfully")
+
+
+
+
+
 # ---------------------------------------------------------------------------------------------------------------------
 
 """ Reversing the list of number without inbuilt function"""

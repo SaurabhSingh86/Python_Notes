@@ -250,3 +250,13 @@ a b c d
 
 
 
+"""
+
+
+"""
+
+start_position = 4
+for row in range(1, 5):
+    for i in range(1, 5):
+        if i == start_position:
+            print("*", end=" ")
