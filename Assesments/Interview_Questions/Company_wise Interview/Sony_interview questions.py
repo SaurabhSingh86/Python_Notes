@@ -1,30 +1,76 @@
 # ---------------------------------------------------------------------------------------------------------------------
+""" how to get date"""
+from datetime import date
+
+current_date = date.today()
+print(f"Today's date is {current_date}")
+
+from datetime import datetime
+current_date_time = datetime.now()
+print(current_date_time)
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" sequences """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" select in Selenium"""
+# ---------------------------------------------------------------------------------------------------------------------
+""" mro """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" _repr_ or _str_ """
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" how do you generate report """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" fixtures, mark, scope """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" what is conftext """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" what is cicd or csid """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+"""When you try to print the object instance normally it will print memory address of the object But when you have 
+repr or str method it will print the string that repr or str method """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" Programs add two numbers if variable is 0 it shouldn't add otherwise need to add , list find the count of vowels """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" difference between web services & web api """
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" rest api"""
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+"""  Fibonacci series using generator function """
 
-# ---------------------------------------------------------------------------------------------------------------------
+
+def fibonachi(num):
+    a, b = 0, 1
+    while a <= num:
+        yield a
+        a, b = b, a+b
+
+
+res = fibonachi(20)
+
+for number in res:
+    print(number)
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -251,6 +297,7 @@ s = "Python Welcome Jayashr world mediumn hi"
 
 " 2. Function should accept a list and and if any number divisible by 3 then modify to 33 or else keep it as it is"
 
+# Method 1:
 # def divide(*args):
 #     l = args[0]
 #     res = []
@@ -260,9 +307,21 @@ s = "Python Welcome Jayashr world mediumn hi"
 #         else:
 #             res.append(num)
 #     return res
+
+
+print(divide([1, 3, 13, 30, 15, 96, 99]))       # [1, 33, 13, 33, 33, 33, 33]
+
+
+# Method 2: using comprehension
+
+
+# def func(numbers):
+#     l = [33 if num % 3 == 0 else num for num in numbers]
+#     return l
 #
 #
-# print(divide([1, 3, 13, 30, 15, 96, 99]))
+# print(func([1, 3, 13, 30, 15, 96, 99]))         # [1, 33, 13, 33, 33, 33, 33]
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -276,6 +335,7 @@ If new class is created how is it possible access the abstract class .. Clarify 
 # ---------------------------------------------------------------------------------------------------------------------
 
 """ write a program to read excel"""
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -377,7 +437,7 @@ with open(read_file_path) as read_file, open(write_file_path, 'w') as write_file
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-" What is assert Asset "
+" What is assert in Python? "
 # ---------------------------------------------------------------------------------------------------------------------
 
 " Selenium grid"
@@ -441,6 +501,8 @@ Output : [10, 20, 30, 40]"""
 # ---------------------------------------------------------------------------------------------------------------------
 
 """ between web browser and api """
+
+
 # ---------------------------------------------------------------------------------------------------------------------
 " 2. What is A/B testing?"
 
@@ -530,9 +592,7 @@ From this point, use Ctrl+Shift+C to select the element.
 # <class 'str'>
 # ---------------------------------------------------------------------------------------------------------------------
 
-""" 8. S = a + '[' + b + ']' + c     
 
- what is this process called as ?"""
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ 13. Xavier is the second brother of Mala. Mala's son finished second on the finish line with Xavier's son.
@@ -580,14 +640,68 @@ o/p: "ih emoclew ot nohtyp
     @decor2
     def func()"""
 
-# first execute decor1 => decor2
+# first execute decor1 => decor2 => func()
+# or   decor1(decor2(func()))
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ what is _repr_? how you used? """
+""" What is __rep__ in Python? """
 
+# =>	__repr__ is a special method used to represent a class’s objects as a string.
+# =>	__repr__ is called by the repr() built-in function.
+# =>	You can define your own string representation of your class objects using the _ _repr_ _ method.
+# E.g.
+
+
+class Person_details:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __repr__(self):
+        rep = 'Person(' + self.name + ',' + str(self.age) + ')'
+        return rep
+
+
+person_object = Person_details("Purnima Singh", 28)
+print(person_object)
+# Person(Purnima Singh,28)
+
+
+""" 
+8. S = a + '[' + b + ']' + c     
+
+ what is this process called as ?
+ """
 # ---------------------------------------------------------------------------------------------------------------------
 
 """ What is dataclass? """
 
+
+
 # ---------------------------------------------------------------------------------------------------------------------
+# extra questions
+
+# d = {"a": 10, "b": 20, "c": 30}
+#
+# # our requirement is We want to add 1 of each value or increment the value of d
+#
+# for key in d:
+#     d[key] = d[key] + 1
+
+# print(d)
+
+
+# def add_(*args, **kwargs):
+#     print(args)
+#
+# add_(1, 2,)
+# print()
+# add_([1, 2])
+#
+#
+# def sum_(list_):
+#     print(list_)
+#
+# sum_(1, 2)
+# sum_([1, 2])
