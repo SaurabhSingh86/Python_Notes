@@ -309,7 +309,7 @@ s = "Python Welcome Jayashr world mediumn hi"
 #     return res
 
 
-print(divide([1, 3, 13, 30, 15, 96, 99]))       # [1, 33, 13, 33, 33, 33, 33]
+# print(divide([1, 3, 13, 30, 15, 96, 99]))       # [1, 33, 13, 33, 33, 33, 33]
 
 
 # Method 2: using comprehension
@@ -338,7 +338,6 @@ If new class is created how is it possible access the abstract class .. Clarify 
 
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ how will u Handle partial dynamic element """
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -398,17 +397,14 @@ s = "@python& is2 programming2 language32!$"
 
 "Python program to read string from one file n print in another file"
 
-read_file_path = r"C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\my_file1.txt"
-write_file_path = r"C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\write_file1.txt"
-
-with open(read_file_path) as read_file, open(write_file_path, 'w') as write_file:
-    for line in read_file:
-        write_file.write(line)
-
-    print("Execution done successfully")
-
-
-
+# read_file_path = r"C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\my_file1.txt"
+# write_file_path = r"C:\Users\Saurabh\PycharmProjects\Python_Notes\File_directory\write_file1.txt"
+#
+# with open(read_file_path) as read_file, open(write_file_path, 'w') as write_file:
+#     for line in read_file:
+#         write_file.write(line)
+#
+#     print("Execution done successfully")
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -436,8 +432,8 @@ with open(read_file_path) as read_file, open(write_file_path, 'w') as write_file
 
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 " What is assert in Python? "
+
 # ---------------------------------------------------------------------------------------------------------------------
 
 " Selenium grid"
@@ -481,7 +477,6 @@ Output : [10, 20, 30, 40]"""
 # print(l)                # [10, 20, 30, 40]
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ Write generator program to count the number of numbers inside list ."""
 
 
@@ -496,10 +491,7 @@ Output : [10, 20, 30, 40]"""
 #
 # print(next(count_([3, 4, 5, 6])))               # 4
 
-
-
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ between web browser and api """
 
 
@@ -507,7 +499,6 @@ Output : [10, 20, 30, 40]"""
 " 2. What is A/B testing?"
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ 3. Can you screen freeze in selenium , how ?
 For screen freeze while inspecting
 
@@ -522,7 +513,6 @@ From this point, use Ctrl+Shift+C to select the element.
 
 """
 # ---------------------------------------------------------------------------------------------------------------------
-
 """5. What is ternary operator in Python"""
 # Ternary operators are also known as conditional expressions are operators that evaluate something based on a
 # condition being true or false. It was added to Python in version 2.5.
@@ -615,7 +605,6 @@ Wap to identify and store common words . Replace common words with user provided
 #     print("Kindly Enter valid word that you want to replace")
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ 
 reverse a string,
 i/p: "hi welcome to python"
@@ -629,12 +618,10 @@ o/p: "ih emoclew ot nohtyp
 
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ 5.how do you handle alert
 6.write a sample script for alert"""
 
 # ---------------------------------------------------------------------------------------------------------------------
-
 """ take 2 decorator, what is order of execution?
     @decor1
     @decor2
@@ -653,18 +640,18 @@ o/p: "ih emoclew ot nohtyp
 # E.g.
 
 
-class Person_details:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def __repr__(self):
-        rep = 'Person(' + self.name + ',' + str(self.age) + ')'
-        return rep
-
-
-person_object = Person_details("Purnima Singh", 28)
-print(person_object)
+# class Person_details:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def __repr__(self):
+#         rep = 'Person(' + self.name + ',' + str(self.age) + ')'
+#         return rep
+#
+#
+# person_object = Person_details("Purnima Singh", 28)
+# print(person_object)
 # Person(Purnima Singh,28)
 
 

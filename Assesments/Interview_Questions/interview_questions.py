@@ -131,3 +131,48 @@ ss = "i"
 for index, char in enumerate(s):
     if char == ss:
         print(s[index:])
+
+        # class Person_details:
+        #     def __init__(self, name, age):
+        #         self.name = name
+        #         self.age = age
+        #
+        #     def __repr__(self):
+        #         rep = 'Person(' + self.name + ',' + str(self.age) + ')'
+        #         return rep
+        #
+        # person_object = Person_details("Purnima Singh", 28)
+        # print(person_object)
+        # # Person(Purnima Singh,28)
+
+        """ assert """
+
+        # assert is a keyword that is used when debugging code.
+        # The assert statement in Python is meant to debug your code—not to handle runtime errors.
+
+        # greet = "hello"
+        #
+        # # if condition return True, then nothing happen
+        # assert greet == "hello"
+        # #
+        #
+        # # if condition return False, AssertionError is raised
+        # assert greet == "hai"
+        # # AssertionError
+        #
+        # # or we can also give
+        # assert greet == "Good day", "greet should be 'hello'"
+
+        "WAP that only allows only the batch with all hot food to be dispatched else, rejects the whole batch "
+
+        # initializing list of food temperatures
+        batch = [40, 26, 30, 39, 25, 21]
+
+        # initializing cut temperature
+        cut = 26
+
+        # using assert to check for temperature greater than cut
+
+        for i in batch:
+            assert i >= 26, "Batch is reject"
+            print(str(i) + " is O.K")

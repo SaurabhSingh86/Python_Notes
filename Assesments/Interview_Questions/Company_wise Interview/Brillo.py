@@ -130,8 +130,111 @@ password & login button
 
 # ---------------------------------------------------------------------------------------------------------------------
 
+# Array = [12, 3, 1, 2, -6, 5, -8, 6]
+# targetSum = 0
+#
+# # Output: [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
+# # sum_ = 0
+# l = []
+# for num1 in Array:
+#     for num2 in Array:
+#         for num3 in Array:
+#             if num1 + num2 + num3 == targetSum:
+#                 l.append([num1, num2, num3])
+#
+# print(l)
 
+# Array = [12, 3, 1, 2, -6, 5, -8, 6]
+# targetSum = 0
+#
+# Array.sort()
+# for i in range(len(Array)-2):
+#     right = i
+#     left = i+1
+
+
+# Validate Subsequence:
+Array = [5, 1, 22, 25, 6, -1, 8, 10]
+Sequence = [1, 6, -1, 10]
+Output: True
+Sequence = [1, 1]
+Output: False
+
+# def sequence(Array, Sequence):
+#     for num in Sequence:
+#         if num not in Array:
+#             return False
+#         else:
+#             Array.remove(num)
+#
+#     else:
+#         return True
+
+# print(sequence(Array, Sequence))
+
+# Array = [5, 1, 22, 25, 6, -1, 8, 10]
+# # Sequence = [1, 6, -1, 10]
+# Sequence = [1, 22, 1, 2]
+
+
+# Output: True
+
+# def sequence(Array, Sequence):
+#     for num in Sequence:
+#         if num not in Array:
+#             return False
+#         else:
+#             Array.remove(num)
+#
+#     else:
+#         return True
+#
+#
+# print(sequence(Array, Sequence))
+
+# Array = [12, 3, 1, 2, -6, 5, -8, 6]
+# targetSum = 0
+#
+# # Output: [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
+# # sum_ = 0
+# l = []
+# array = Array
+# for num1 in Array:
+#     array.remove(num1)
+#     for num2 in array:
+#         array.remove(num2)
+#         for num3 in array:
+#             if num1 + num2 + num3 == targetSum:
+#                 l.append([num1, num2, num3])
+#                 array.append(num1)
+#                 array.append(num2)
+#
+# print(l)
+
+
+#
 # ---------------------------------------------------------------------------------------------------------------------
+Array = [12, 3, 1, 2, -6, 5, -8, 6]
+targetSum = 0
+Output: [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
+res = []
+Array.sort()
+
+for num1 in Array:
+    for num2 in Array:
+        if num1 == num2:
+            continue
+        else:
+            for num3 in Array:
+                if num1 == num3 or num2 == num3:
+                    continue
+                else:
+                    if targetSum == num1 + num2 + num3:
+                        res.append([num1, num2, num3])
+
+print(res)
+print(len(res))
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 
