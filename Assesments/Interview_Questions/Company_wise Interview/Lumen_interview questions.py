@@ -1,4 +1,75 @@
-"""Lumen interview questions """
+"""
+Lumen first round Interview questions
+1. about yourself
+2. about project
+3. Roles & Responisbilties
+4. Current company name & position
+
+5. if you get the new features in between then 
+5.1 what are the procedures to follow
+5.2 what was your first expression when you get a new features
+5.3 How to resolve this type of problem
+5.4 Meetings
+
+6. what type of challenges you have faced in your previous projects?
+7. How to prioties the defects?
+8. What types of defects you get in your projects?
+9. if you didn't get the confirmation messages how to reproduce it?
+10. Give me some example of priority (what is priority or types)
+11. What are negative test scenario & where did you used in preious projects?
+12. Minor defects in your projects
+
+13. Python:
+13.1 How to check the current version of Python
+13.2 How to get the current time 
+13.3 How to generate random number
+Take one string s = "Saurabh Singh"
+13.4 remove the duplicate items
+13.5 remove the spaces in between
+13.6 reversed the item i.e o/p should be Singh Saurabh
+
+14. How to read excel file
+15. what are Git & Jenkins & after this ask git command
+16. Why do you want to leave your company?
+17. What is the notice period?
+18. Are you only static on python or you can learn any other languages
+19. what is your current location?
+20. you are not from Karnataka, what is the reason behind staying here?
+21. What are the defects you get in previous projects? (Explain anyone)
+22. Explicit wait & implicit wait
+23. If a web element is present in the DOM but it is not going to click but you can see the element easily.
+24. robot framework
+
+Lumen interview questions asked in the final round
+1. Where are you from?
+2. Speciality of your hometown
+3. Current location
+4. Current company
+5. self-introduction
+6. Roles & responsibilities
+7. Details about the previous company
+8. Previous project name & explain
+9. Ask so many questions which are related to the project
+10. What is a framework, pytest in detail.
+11. mainly focus on POM and why it is needed
+12. what is qtp/uft & page object class
+13. in the initial stage why did you do it manually before Automation
+14. Are you part of writing the test script or modifying the test scripts?
+15. How to write the test case?
+16. how to write scratch if your framework is ready?
+17. Almost all test cases can be Automatable why do manually in the initial stage.
+18. There is a website it could to tested by another tool but my requirement is it will be automated by the python-selenium tool what will you do & what procedure you follow?
+19. How the python helps in the selenium?
+20. Why do you want to leave your company?
+21. What is the notice period?
+22. Are you willing to learn new things or languages?
+23. If you want you can ask me any question (then i asked 2 questions)
+24. If the framework is ready & you need to install other packages how can you do this?
+
+They are mainly focused on projects & asked why need this (pom etc) is there any alternative & asked a question which is related to real-time scenarios & told every test cases can be automatable just you have to use another tool for that.
+They are looking for candidates who have knowledge of how to create a framework, write test scripts, scratch, qtp, and uft.
+
+"""
 
 """ 
 1) Introduce Yourself

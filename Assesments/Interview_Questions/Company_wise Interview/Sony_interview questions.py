@@ -574,7 +574,7 @@ From this point, use Ctrl+Shift+C to select the element.
 # while num:
 #     s.append(chr(48 + num % 10))
 #     num = num // 10
-# a = "".join(reversed(s))
+# a = "".join(reversed(s))                                  # ****** here no need to type case & for loop (reversed())
 #
 # print(a)
 # print(type(a))

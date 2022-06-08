@@ -1,4 +1,60 @@
 """
+Brillio first round Interview Questions
+1. about yourself
+2. how many years of experience in Selenium
+3. Write a login page?
+(there was a "live coding board" we had to write our codes on that board)
+4. How to automate a login page interacting with an excel file or Html file, in the login page there was a username, password & login button
+5. how many years of experience in Java & Python
+6. how comfortable in SQL?
+7. Do you have any knowledge of SQL (again asked)?
+8. Difference between Implicit wait & Explicit wait?
+9.  How to handle alerts
+
+10. Rating yourself in java & python
+string_ = 'selenium'
+10.1 WAP to find the no. of occurrence of each character
+10.2 WAP to sort the list on the basis of occurrence
+Both the code is written in "live coding board" & run in "online complier"
+explain the logic.
+
+11. Again she asked regarding SQL
+
+Final round Interview Questions in Brillo
+1. About yourself
+2. Python Programming Questions
+2.1 Array = [12, 3, 1, 2, -6, 5, -8, 6]
+	targetSum = 0
+	Output: [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
+
+2.2 Array = [5, 1, 22, 25, 6, -1, 8, 10]
+	Sequence = [1, 6, -1, 10]
+	Output: True
+	Sequence = [1, 1]
+	Output: False
+
+3. Decorator
+4. Generator & its benefits
+5. Framework
+6. how to take screenshots (write code)
+7. How to handle popups
+8. How to communicate with developers?
+9. What is your daily working procedure?
+10. What type of framework do you have to use in your project, and how to create test cases?
+11. What are the benefits of the folder/packages in the framework
+12. What is POM(in detail)?
+13. Where did you use Decorator in your project?
+14. What are soft assertion and hard assertion?
+15. can you give the priority after discussing with the developer?
+16. What are the benefits of severity & priority?
+17. what is time complexity?
+18. where did you use Explicit wait & Implicit wait in your projects?
+19. Asked many more questions from agile, selenium, projects, pythons
+"""
+
+
+
+"""
 string_ = 'selenium'
 1. WAP to print the no. of occurrence of each character
 2. WAP to sort the list on the basis of occurrence
