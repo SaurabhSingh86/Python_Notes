@@ -127,7 +127,7 @@ password & login button
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ find the second highest no from set """
-# s = {10, 20, 30, 4}
+s = {10, 20, 30, 4}
 
 # Method 1 using sorted (first preference)
 # res = sorted(s)
@@ -139,17 +139,21 @@ password & login button
 # l.sort()
 # print(l[-2])            # 20
 
-# Method 3:
-# max_ = 0            # highest value
-# max2_ = 0           # second-highest value
-# for item in s:
-#     if item > max_:
-#         max2_ = max_
-#         max_ = item
-#
-#
-# print(f'Maximum value {max_}')
-# print(f'Second highest value {max2_}')
+# Method 3:this method not work in all the conditions like l = [100, 20, 10, 5, 2, 1, 0] or s = [1000, 999, 2000,
+# 10, 5000, 0, 5000, 20, 10, 0] to avoid this problem we use one more condition that is inside a elif statement
+
+max_ = 0            # highest value
+max2_ = 0           # second-highest value
+for item in s:
+    if item > max_:
+        max2_ = max_
+        max_ = item
+    elif item > max2_:
+        max2_ = item
+
+
+print(f'Maximum value {max_}')
+print(f'Second highest value {max2_}')
 # Maximum value 30
 # Second highest value 20
 

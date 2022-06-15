@@ -1,13 +1,97 @@
+""" sort the list without using built-in method """
+# l = [10, 20, 1, 3, 9, 8, 0]
+# for i in range(len(l)):
+#     for j in range(i+1, len(l)):
+#         if l[i] > l[j]:   # if I want output in descending order then we use '<' insted of '>'=> [20, 10, 9, 8, 3, 1, 0]
+#             l[i], l[j] = l[j], l[i]
+# print(l)
+# [0, 1, 3, 8, 9, 10, 20]
+
+# ---------------------------------------------------------------------------------------------------------------------
+""" Git Commands """
+# In previous project for version control we were using "Github" tool. I was working on Pycharm in this platform
+# there is an option commit, push, update-project, clone, merge etc. We used directly.
+
+# ---------------------------------------------------------------------------------------------------------------------
+"""  """
+s = "Sky is no limit"
+# here I want the ouptput like word as a key and its length as a value then I want to sort
+d = {word: len(word) for word in s.split()}
+from collections import defaultdict
+dd = defaultdict(int)
+for word in s.split():
+    dd[word] = len(word)
+print(dd)
+
+print(sorted(d.items(), key=lambda item: item[-1]))
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+""" find maximum 2 number from a list """
+l = [100, 100, 20, 20, 10, 5, 5, 10]
+
+# Method 1: using sort build-in-function of list
+# l1 = list(set(l))
+# l1.sort()
+# print(l1[-2:])
+# [20, 100]
+
+# Method 2: without using built-in-method
+# max1 = 0
+# max2 = 0
+# for num in set(l):
+#     if num > max1:
+#         max2 = max1
+#         max1 = num
+# print(max1, max2)
+
+# s = l
+s = [1000, 999, 2000, 10, 5000, 0, 5000, 20, 10, 0]
+max_ = 0            # highest value
+max2_ = 0           # second-highest value
+for item in set(s):
+    if item > max_:
+        max2_ = max_
+        max_ = item
+    elif item > max2_:
+        max2_ = item
+
+print(f'Maximum value {max_}')
+print(f'Second highest value {max2_}')
+
+# ---------------------------------------------------------------------------------------------------------------------
+""" wap to remove white space form begining & last from the string """
+s = "   Welcome to Python World    "
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+""" WAP to remove all white spaces from the string"""
+s = "   Welcome to Python World    "
+
+# ---------------------------------------------------------------------------------------------------------------------
+""" WRP to execute yield and return in single program """
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+
+
 # ---------------------------------------------------------------------------------------------------------------------
 """ how to get date"""
-from datetime import date
-
-current_date = date.today()
-print(f"Today's date is {current_date}")
-
-from datetime import datetime
-current_date_time = datetime.now()
-print(current_date_time)
+# from datetime import date
+#
+# current_date = date.today()
+# print(f"Today's date is {current_date}")
+#
+# from datetime import datetime
+# current_date_time = datetime.now()
+# print(current_date_time)
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -60,23 +144,17 @@ repr or str method it will print the string that repr or str method """
 """  Fibonacci series using generator function """
 
 
-def fibonachi(num):
-    a, b = 0, 1
-    while a <= num:
-        yield a
-        a, b = b, a+b
-
-
-res = fibonachi(20)
-
-for number in res:
-    print(number)
-
-# ---------------------------------------------------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------------------------------------------------
+# def fibonachi(num):
+#     a, b = 0, 1
+#     while a <= num:
+#         yield a
+#         a, b = b, a+b
+#
+#
+# res = fibonachi(20)
+#
+# for number in res:
+#     print(number)
 
 # ---------------------------------------------------------------------------------------------------------------------
 
