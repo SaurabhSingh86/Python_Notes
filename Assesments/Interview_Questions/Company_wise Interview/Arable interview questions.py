@@ -54,15 +54,16 @@
 # -------------->>> Memory Management in Python  <<<---------------------
 
 # 1. Garbage Collection:
-# Garbage collection is a process in which the interpreter frees up the memory when not in use to make it available for other objects.
+# Garbage collection is a process in which the interpreter frees up the memory when not in use to make it available
+# for other objects.
 # Assume a case where no reference is pointing to an object in memory i.e. it is not in use so, the virtual machine
 # has a garbage collector that automatically deletes that object from the heap memory
 
 
 
 # 2. Reference Counting:
-# Reference counting works by counting the number of times an object is referenced by other
-# objects in the system. When references to an object are removed, the reference count for an object is decremented.
+# Reference counting works by counting the number of times an object is referenced by other objects in the system.
+# When references to an object are removed, the reference count for an object is decremented.
 # When the reference count becomes zero, the object is deallocated.
 #
 # For example, Let’s suppose there are two or more variables that have the same value, so, what Python virtual

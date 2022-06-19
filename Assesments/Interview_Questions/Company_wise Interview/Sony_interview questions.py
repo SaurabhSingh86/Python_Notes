@@ -16,19 +16,19 @@
 """  """
 s = "Sky is no limit"
 # here I want the ouptput like word as a key and its length as a value then I want to sort
-d = {word: len(word) for word in s.split()}
-from collections import defaultdict
-dd = defaultdict(int)
-for word in s.split():
-    dd[word] = len(word)
-print(dd)
-
-print(sorted(d.items(), key=lambda item: item[-1]))
+# d = {word: len(word) for word in s.split()}
+# from collections import defaultdict
+# dd = defaultdict(int)
+# for word in s.split():
+#     dd[word] = len(word)
+# print(dd)
+#
+# print(sorted(d.items(), key=lambda item: item[-1]))
 
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ find maximum 2 number from a list """
-l = [100, 100, 20, 20, 10, 5, 5, 10]
+# l = [100, 100, 20, 20, 10, 5, 5, 10]
 
 # Method 1: using sort build-in-function of list
 # l1 = list(set(l))
@@ -46,30 +46,78 @@ l = [100, 100, 20, 20, 10, 5, 5, 10]
 # print(max1, max2)
 
 # s = l
-s = [1000, 999, 2000, 10, 5000, 0, 5000, 20, 10, 0]
-max_ = 0            # highest value
-max2_ = 0           # second-highest value
-for item in set(s):
-    if item > max_:
-        max2_ = max_
-        max_ = item
-    elif item > max2_:
-        max2_ = item
-
-print(f'Maximum value {max_}')
-print(f'Second highest value {max2_}')
+# s = [1000, 999, 2000, 10, 5000, 0, 5000, 20, 10, 0]
+# max_ = 0            # highest value
+# max2_ = 0           # second-highest value
+# for item in set(s):
+#     if item > max_:
+#         max2_ = max_
+#         max_ = item
+#     elif item > max2_:
+#         max2_ = item
+#
+# print(f'Maximum value {max_}')
+# print(f'Second highest value {max2_}')
 
 # ---------------------------------------------------------------------------------------------------------------------
-""" wap to remove white space form begining & last from the string """
+""" wap to remove white space from beginning & last from the string """
 s = "   Welcome to Python World    "
 
+# Method1: using strip built-in-method of string
+print(s.strip())
+# 'Welcome to Python World'
+
+# if I want remove white spaces from begining
+print(s.lstrip())
+# 'Welcome to Python World    '
+
+
+# if I want remove white spaces from last
+print(s.rstrip())
+# '   Welcome to Python World'
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ WAP to remove all white spaces from the string"""
 s = "   Welcome to Python World    "
 
+# Method 1: using replace built-in-method of string
+print(s.replace(" ", ""))
+# 'WelcometoPythonWorld'
+
+# Method 2: without using built-in-method
+res = ""
+for char in s:
+    if char == " ":
+        continue
+    else:
+        res += char
+print(res)
+# 'WelcometoPythonWorld'
+
 # ---------------------------------------------------------------------------------------------------------------------
 """ WRP to execute yield and return in single program """
+# I didn't use till now but I'm thinking I need some time to think on it
+"I want to generate a sequence of values from 1 to 10 and check weather a given no is present inside a generated or not"
+
+
+def generate_num(num):
+    while num >= 1:
+        yield num
+        num -= 1
+
+
+def value(n):
+    g = generate_num(10)
+    if n in g:
+        return True
+    else:
+        return False
+
+
+print(value(11))            # False
+print(value(3))             # True
+
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 

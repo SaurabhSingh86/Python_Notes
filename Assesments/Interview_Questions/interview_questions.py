@@ -1,3 +1,6 @@
+""" WAF sort the list without using built-in-method """
+
+
 """ find the second highest value in the given dictionary"""
 # d = {"a": 20, "b": 10, "c": 30, "d": 30}
 # l = []
@@ -123,14 +126,15 @@ import re
 #     expected_sum += num
 # find_missing_term = expected_sum - sum_list1
 # print(find_missing_term)
+
 # ---------------------------------------------------------------------------------------------------------------------
-s = "sonyindia"
+# s = "sonyindia"
 # output = "india", "ia"
 
-ss = "i"
-for index, char in enumerate(s):
-    if char == ss:
-        print(s[index:])
+# ss = "i"
+# for index, char in enumerate(s):
+#     if char == ss:
+#         print(s[index:])
 
         # class Person_details:
         #     def __init__(self, name, age):
@@ -145,34 +149,34 @@ for index, char in enumerate(s):
         # print(person_object)
         # # Person(Purnima Singh,28)
 
-        """ assert """
+""" assert """
 
-        # assert is a keyword that is used when debugging code.
-        # The assert statement in Python is meant to debug your code—not to handle runtime errors.
+# assert is a keyword that is used when debugging code.
+# The assert statement in Python is meant to debug your code—not to handle runtime errors.
 
-        # greet = "hello"
-        #
-        # # if condition return True, then nothing happen
-        # assert greet == "hello"
-        # #
-        #
-        # # if condition return False, AssertionError is raised
-        # assert greet == "hai"
-        # # AssertionError
-        #
-        # # or we can also give
-        # assert greet == "Good day", "greet should be 'hello'"
+# greet = "hello"
+#
+# # if condition return True, then nothing happen
+# assert greet == "hello"
+# #
+#
+# # if condition return False, AssertionError is raised
+# assert greet == "hai"
+# # AssertionError
+#
+# # or we can also give
+# assert greet == "Good day", "greet should be 'hello'"
 
-        "WAP that only allows only the batch with all hot food to be dispatched else, rejects the whole batch "
+"WAP that only allows only the batch with all hot food to be dispatched else, rejects the whole batch "
 
-        # initializing list of food temperatures
-        batch = [40, 26, 30, 39, 25, 21]
+# initializing list of food temperatures
+# batch = [40, 26, 30, 39, 25, 21]
 
-        # initializing cut temperature
-        cut = 26
+# initializing cut temperature
+# cut = 26
 
-        # using assert to check for temperature greater than cut
+# using assert to check for temperature greater than cut
 
-        for i in batch:
-            assert i >= 26, "Batch is reject"
-            print(str(i) + " is O.K")
+# for i in batch:
+#     assert i >= 26, "Batch is reject"
+#     print(str(i) + " is O.K")

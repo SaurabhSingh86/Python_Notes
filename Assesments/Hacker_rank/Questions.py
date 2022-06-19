@@ -44,48 +44,88 @@
 # print_full_name(first_name, last_name)
 
 
-input = ["(90, 180)", "(+90, +180)", " (90, -180)", "(90.0, 180.1)"]
-# for i in l:
-#     print(i)
-#     l = list(i)
-#     print(type(l))
-#     print(l)
-#     x, y = l
-#     print(x)
-#     print(y)
+# input = ["(90, 180)", "(+90, +180)", " (90, -180)", "(90.0, 180.1)"]
+# # for i in l:
+# #     print(i)
+# #     l = list(i)
+# #     print(type(l))
+# #     print(l)
+# #     x, y = l
+# #     print(x)
+# #     print(y)
+#
+# import re
+#
+# def validate(data):
+#     # (latitude, longitude)
+#     pattern = r'\(' + r'[\+-]?(90(\.0+)?|[1-8]\d(\.[0-9]+)?|\d(\.[0-9]+)?), [\+-]?(180(\.0+)?|1[0-7]\d(\.[0-9]+)?|[1-9]\d(\.[0-9]+)?|\d(\.[0-9]+)?)' + r'\)'
+#     return re.search(pattern, data)
+#
+# for i in range(int(input().strip())):
+#     if validate(input().strip()):
+#         print("Valid")
+#     else:
+#         print("Invalid")
+#
+#
+#
+# import re
+#
+# SIGN = '[\+-]?'
+# DECIMALS = '(\.[0-9]+)?'
+# ZEROS = '(\.0+)?'
+#
+# LATITUDE =  f'{SIGN}(90{ZEROS}|[1-8]\d{DECIMALS}|\d{DECIMALS})'
+# LONGITUDE = f'{SIGN}(180{ZEROS}|1[0-7]\d{DECIMALS}|[1-9]\d{DECIMALS}|\d{DECIMALS})'
+#
+# REGEX = f'\({LATITUDE}, {LONGITUDE}\)'
+# pattern = re.compile(REGEX)
+#
+# def validate(value):
+#     return pattern.search(value)
+#
+# for _ in range(int(input())):
+#     if validate(input()):
+#         print('Valid')
+#     else:
+#         print('Invalid')
 
-import re
+# -----------------------------------------------------------------------------------------------------------------
 
-def validate(data):
-    # (latitude, longitude)
-    pattern = r'\(' + r'[\+-]?(90(\.0+)?|[1-8]\d(\.[0-9]+)?|\d(\.[0-9]+)?), [\+-]?(180(\.0+)?|1[0-7]\d(\.[0-9]+)?|[1-9]\d(\.[0-9]+)?|\d(\.[0-9]+)?)' + r'\)'
-    return re.search(pattern, data)
+s1 = "hello how are you"        # "Hello How Are You"
+s2 = "12hello how are you"      # "12hello How Are You"
 
-for i in range(int(input().strip())):
-    if validate(input().strip()):
-        print("Valid")
-    else:
-        print("Invalid")
+# if we use ".title()"   => "12Hello How Are You"
 
 
+def capital(s):
+    res = []
+    if 0 <= len(s) <= 1000:
+        for word in s.split():
+            if word.isalpha():
+                res.append(word.title())
+            else:
+                res.append(word)
+    return " ".join(res)
 
-import re
 
-SIGN = '[\+-]?'
-DECIMALS = '(\.[0-9]+)?'
-ZEROS = '(\.0+)?'
+print(capital(s1))
+print(capital(s2))
 
-LATITUDE =  f'{SIGN}(90{ZEROS}|[1-8]\d{DECIMALS}|\d{DECIMALS})'
-LONGITUDE = f'{SIGN}(180{ZEROS}|1[0-7]\d{DECIMALS}|[1-9]\d{DECIMALS}|\d{DECIMALS})'
+# above method is not valid for all test cases only pass 2/6
+# but normal title() method 5/6 except "12Hello How Are You"
 
-REGEX = f'\({LATITUDE}, {LONGITUDE}\)'
-pattern = re.compile(REGEX)
 
-def validate(value):
-    return pattern.search(value)
+def capital(s):
+    res = ""
+    if 0 <= len(s) <= 1000:
+        for word in s.split():
+            if word.isalpha():
+                res += word.title() + " "
+            else:
+                res += word + " "
+    return res
 
-for _ in range(int(input())):
-    if validate(input()):
-        print('Valid')
-    else:
-        print('Invalid')
+
+print(capital(s1))
+print(capital(s2))
