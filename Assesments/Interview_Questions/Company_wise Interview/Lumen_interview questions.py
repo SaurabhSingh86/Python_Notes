@@ -394,7 +394,7 @@ s1 = "python is simple language"
 # # print(s1[])
 
 
-
+""" WAP to create random nummer """
 import time
 
 # current_time = time.localtime(time.time())
@@ -402,3 +402,41 @@ import time
 
 import random
 print(random.randint(1,101))
+
+
+
+"""
+1. self instroduction 
+2. Tell me about your frame work which you used in your project 
+3. what is API testing ? how you used 
+4. Difference between smoke and sanity testing 
+5. Difference between Load testing and Stress testing 
+6. Can you tell about Defect life cycle 
+7. i have 50 test cases , you are doing Regression testing , SO you have only 2 days of time to complete the 
+  regression testing . the scenario is , you has to complete the regression testing with in end of day(today).
+  Tomorrow is the release and you only the QA in your team , and you have 50 test cases . So how you can complete
+  regression testing with in the day 
+8. difference between list and dict 
+9. difference between .py and .pyc
+10.Explain slicing 
+11. what are the keywords available in Python ?
+12.How to combine data frames ?
+13.What is python path ? 
+14.what is local and global variables in the python ?
+15.Explain OPP 
+16.what is polymerphism ?
+17.What is data Abstraction ? 
+18.What is data Encapsulation ?
+19.Explain Inheritance 
+20.Explain about Postman 
+21.How you test in Postman ? 
+22.What you know about GIT ?
+23.For what purpose we use GIT ?
+24.how you can going to sink the code from local repository to global repository ?
+25.How can you revert the codes ?
+26.Tell about jenkins 
+27.what is sql ?
+28.Find the 2nd highest sal and details of the employee from employee dynamic table 
+29.how can you verify the log ? 
+30.Define agile methodology 
+"""
