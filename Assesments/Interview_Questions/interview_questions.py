@@ -67,10 +67,11 @@ import re
 
 
 """ """
-# s1 = "([{([{}])}])"
-# s2 = "([{([{})})"
+s1 = "([{([{}])}])"
+s2 = "([{([{})})"
+s3 = "({[2()}}]"
 #
-#
+# Method 1:
 # def equal_(s):
 #     open_ = 0
 #     close_ = 0
@@ -87,6 +88,29 @@ import re
 #
 # equal_(s1)
 # equal_(s2)
+
+# Method 2:
+
+
+def equal_(s):
+    count = 0
+    for char in s:
+        if char in "({[":
+            count += 1
+        elif char in ")}]":             # else can also use but if we have int, float, alphabet then is will not work
+            count -= 1
+    return count
+
+
+# count_ = equal_(s1)
+# count_ = equal_(s2)
+count_ = equal_(s3)
+if count_ == 0:
+    print("equal")
+else:
+    print("Not equal")
+
+
 
 """ WAP to print user defined key input """
 

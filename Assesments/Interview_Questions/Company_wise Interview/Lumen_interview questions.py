@@ -21,6 +21,9 @@ Lumen first round Interview questions
 
 13. Python:
 13.1 How to check the current version of Python
+There are two ways:
+1. in Pycharm in terminal
+
 13.2 How to get the current time 
 13.3 How to generate random number
 Take one string s = "Saurabh Singh"
@@ -72,17 +75,24 @@ They are looking for candidates who have knowledge of how to create a framework,
 """
 
 """ 
-1) Introduce Yourself
+
 
 ---------------------------------------------------------------------------------------------------------------------
-2) Explain about Project and Roles and Responsibilities
+
 
 ------------------------------------------------------------------------------------------------------------------------------------
-Thanks for A2A. It's very real time question and in this situation what you can do is first verify that defect/bug is valid or not ? If it is valid then try to reproduce in different system and send screenshot, proper defect report to developer. Now even after this developer is not accepting then you can send email to respective developer regarding issue and cc to you test lead.
+Thanks for A2A. It's very real time question and in this situation what you can do is first verify that defect/bug is 
+valid or not ? If it is valid then try to reproduce in different system and send screenshot, proper defect report to 
+developer. Now even after this developer is not accepting then you can send email to respective developer regarding 
+issue and cc to you test lead.
 
-If Test lead is also not taking it seriously or not accepting then you can escalate this issue to Test Manager. Even though if they are not accepting then take final call with Business Analyst or Product Owner. B.A/P.O is the person who closely interact with client/business, so you can check with him. If B.A is telling this is not a bug then you can write a B.A comment in JIRA/Test Case and close it.
+If Test lead is also not taking it seriously or not accepting then you can escalate this issue to Test Manager. 
+Even though if they are not accepting then take final call with Business Analyst or Product Owner. B.A/P.O is the 
+person who closely interact with client/business, so you can check with him. If B.A is telling this is not a bug then 
+you can write a B.A comment in JIRA/Test Case and close it.
 
-If B.A is accepting this as a defect/bug then send email and inform why this is a bug to respective developer, cc to development lead, test lead, test manager, B.A/P.O
+If B.A is accepting this as a defect/bug then send email and inform why this is a bug to respective developer, 
+cc to development lead, test lead, test manager, B.A/P.O
 ---------------------------------------------------------------------------------------------------------------------
 3) Explain Framework And oops concept
 
@@ -96,11 +106,65 @@ If B.A is accepting this as a defect/bug then send email and inform why this is 
 
 """ Method overloading and method overriding,explain with example"""
 
+# Method Overloading
+# If two methods have the same name but different type of arguments then those methods are said to be overloaded methods.
+#
+# In Python, method overloading is not possible.
+#
+# If we are trying to declare multiple methods with same name and different number of arguments then python will always
+# consider only last method.
+
+# class demo:
+#     def m1(self):
+#         print("no argument method")
+#
+#     def m1(self,x):
+#         print("one argument method")
+#
+#     def m1(self,x,y):
+#         print("two argument method")
+#
+#
+# s=demo()
+# s.m1(2,7)
+
+
+# Method Overriding
+# Whatever members available in the parent class are by default available to the child class through inheritance.
+#
+# If the child class is not satisfied with parent class implementation, then, the  child class is allowed to redefine
+# that method in the child class based on its requirement. This concept is called overriding.
+
+
+# class Parent:
+#     def greet(self):
+#         print("Good Morning")
+#
+#
+# class Child(Parent):
+#     def greet(self):
+#         print("Hello Everyone, Have a great day")
+#
+#
+# s = Child()
+# s.greet()			# Hello Everyone, Have a great day
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 
 """ 5) Where did you use list and tuple in your Project """
-# When I was working on my project i worked on list & tuple
+# When I was working on my project I used list & tuple so many times
+# for Shopping cart system ~~~~~~~~>>>>
+# list was used         =>  [name of all categories]     # Men, Women, Kids
+# tuple was used        =>  (stores the multiple data like categories, total no of clothes)
+#                           ('men', 500), ('women', 1000), ('Kids', 600)
+# dictionary was used   =>  {
+#                             'men': [colors, types, brands, pattern],
+#                            'women': (colors, types, brands, pattern),
+#                            'kids' : [colors, types, brands, pattern]
+#                           }
+
+# for online ticket booking system ~~~~~~~~>>
 # list was used         => [airlines names]         # Air Asia, Air India, Go First, IndiGo, SpiceJet, Vistara
 # tuple was used        => (stores the multiple data like airlines name, stopage)
 # dictionary was used   => {"airlines_name1":[no_of_stopage, durations, checkin_weight, meal],
@@ -146,7 +210,7 @@ s = "Python is Programming Language"
 #             if num % i == 0:
 #                 break
 #         else:
-            # print(num, end=" ")
+# print(num, end=" ")
 
 
 """ find given no is prime or not """
@@ -235,7 +299,6 @@ s = "Python is Programming Language"
 # print(greeting("Senorita"))         # Hey Senorita!!  #  Welcome to Python world.
 
 
-
 """example 2: WADF that calculates time of execution of a function """
 
 # import time
@@ -290,7 +353,6 @@ s = "Python is Programming Language"
 
 """ Apply multiple decorator on a single function """
 
-
 # def add_deco(func):
 #     def wrapper(*args, **kwargs):
 #         print("Hello Everyone!!")
@@ -336,7 +398,7 @@ s = "Python is Programming Language"
 # Method 1:
 # for num in a:
 #     if num % 2 == 0:
-        # print(num, end=' ')
+# print(num, end=' ')
 # 2 4 6 8 10
 
 # Method 2: using list
@@ -358,11 +420,16 @@ a,b,c,d = 1,2,3,4,5
 a=1,b=2,c=[3,4],d=5
 a = ? ,b = ?, c= ?, d= ?
 """
-# a, b, *c, d = 1, 2, 3, 4, 5
-# print(a, b, c, d, sep=',')
-# 1, 2, [3, 4], 5
+a, b, *c, d = 1, 2, 3, 4, 5
+# print(a, b, c, d, sep=',')                    # 1, 2, [3, 4], 5
+# print([a, b, c, d])                           # [1, 2, [3, 4], 5]
+
 
 # ---------------------------------------------------------------------------------------------------------------------
+""" 10.Explain slicing """
+# Slicing is a process of extracting multiple data at a time.
+# Syntax: variable_name = [Start_index: End_index: Step_value]
+
 """ Take one string(using slicing method) he told to extract some characters in string """
 s1 = "python is simple language"
 
@@ -401,42 +468,124 @@ import time
 # print(f"Current time is {current_time}")
 
 import random
-print(random.randint(1,101))
 
-
+print(random.randint(1, 101))
 
 """
-1. self instroduction 
+1. self introduction 
 2. Tell me about your frame work which you used in your project 
-3. what is API testing ? how you used 
 4. Difference between smoke and sanity testing 
-5. Difference between Load testing and Stress testing 
 6. Can you tell about Defect life cycle 
+
 7. i have 50 test cases , you are doing Regression testing , SO you have only 2 days of time to complete the 
   regression testing . the scenario is , you has to complete the regression testing with in end of day(today).
   Tomorrow is the release and you only the QA in your team , and you have 50 test cases . So how you can complete
   regression testing with in the day 
+  
 8. difference between list and dict 
 9. difference between .py and .pyc
-10.Explain slicing 
+
+
+
 11. what are the keywords available in Python ?
+import, True, False, is, in, not, if, else, elif, def, for, while, lambda, global, nonlocal, break, continue, pass, 
+None, class, return, yield, try, except, finally, and, or, 
+
 12.How to combine data frames ?
-13.What is python path ? 
-14.what is local and global variables in the python ?
+
 15.Explain OPP 
 16.what is polymerphism ?
+
 17.What is data Abstraction ? 
 18.What is data Encapsulation ?
 19.Explain Inheritance 
-20.Explain about Postman 
-21.How you test in Postman ? 
-22.What you know about GIT ?
-23.For what purpose we use GIT ?
+
 24.how you can going to sink the code from local repository to global repository ?
 25.How can you revert the codes ?
-26.Tell about jenkins 
+
+
 27.what is sql ?
 28.Find the 2nd highest sal and details of the employee from employee dynamic table 
-29.how can you verify the log ? 
-30.Define agile methodology 
+
+
+
+
 """
+
+""" 3. what is API testing ? how you used  20.Explain about Postman. 21.How you test in Postman ? """
+# in previous project we were mainly focus on Python-Selenium, I didn't get any opportunity to work on Application
+# Programming Interface i.e. API, but I'm willing to work on that so I'm trying to learn myself till now I've some basic
+#  knowledge on API. Postman, RestAssured are some API tools, where we can perform "CRUD" operations on the given URL
+#  (URL is provided by Developer) C stands for Create (but in API Post), R => Read (Get), U => Update (Put/Fetch) and
+#  D => Delete (Delete).
+#  We use API when the frontend is not ready.
+#  There are two types of website 1. Normal website 2. Secured website
+#  While doing on Secured website we need authentication so here we use "Bearer Token", "OAuth 2.0".
+#  let us take one e.g.
+#  Suppose I want to perform API on Github. We can't perform directly because it is secured website so what can I do.
+#  here I've an account on Github so I've can create "Barer Token" or "OAuth 2.0" then we can perform the operations.
+
+""" 22.What you know about GIT ? 23.For what purpose we use GIT ? """
+# In previous project for version control we were using "Github" tool. I was working on Pycharm in this platform
+# there is an option commit, push, update-project, clone, merge etc. We used directly.
+
+
+""" 13.What is python path ?  """
+# It is an environment variable which is used when a module is imported. Whenever a module is imported, PYTHONPATH is
+# also looked up to check for the presence of the imported modules in various directories. The interpreter uses it to
+# determine which module to load.
+
+""" 29.how can you verify the log ? """
+# in my project I was using Assert: The assert statement in Python is meant to debug your code, not to handle run
+# time errors.
+# I used assertion condition inside the class:
+# if assertion condition is True => Program continue to run it means doesn't do anything & continue the normal flow
+# of execution.
+# if assertion conditon is False => Assertion stops programs & give the AssertionError along with optional msg
+
+""" 5. Difference between Load testing and Stress testing """
+# These types of testing are done under performance testing:
+# In performance testing, testing the stability & response time an application by applying load.
+# Stability       => it is the ability to withstand the load.
+# Response time   => It is the total time taken to send the request to the server, time taken to run the program & also
+#                     the time taken to response-back to the user i.e. T = T1 + T2 + T3
+# Load            => load is nothing but the number of users.
+#
+# Types of performance testing:
+# testing the stability & response time of an application
+# 1. Load testing     => by applying the load which is equal to or less than the number of users
+# 2. Stress testing   => by applying the load which is more than the number of users
+# 3. Volume testing   => by transferring huge volume of data
+# 4. Soak testing     => for a particular period of time
+
+""" 14.what is local and global variables in the python? """
+# Global variable: Variables declared outside a function or in global space are called global variables. These variables
+# can be accessed by any function in the program.
+
+# Local Variable: Any variable declared inside a function is known as a local variable. This variable is present in the
+#  local space and not in the global space.
+
+""" 26.Tell about jenkins """
+# Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software
+# DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
+# Programming languages used: Java
+
+""" 30.Define agile methodology """
+# It is a model where we develop the software is an incremental & iterative manner.
+# In order to overcome the drawback which was there in all previous models we have come up with Agile model
+# Here we build larger product in a shorter cycles called as sprint.
+
+# Incremental       => because we are giving the software in incremental order to the customer.
+# Iterative model   => bcz in all the cycle we are repeating the same process/stages
+#                       i.e Requirement collection, Feasibility study, Design, code, test
+
+# Meeting conducted in Agile Methodlogy
+# Sprint planning meeting: Assign the task to each engg. & keep a track of it.
+# Stand-up meeting: here entire scrum team meets, this meeting is completely done by scrum master. In this meeting each engg. Should tell
+# What they have done yesterday
+# What are the hurdles/problems they have faced yesterday’s task
+# What activities are planning to do today?
+# Sprint review meeting: Demo of the product
+# Retrospect meeting:  discuss achievements & drawbacks or we can say that summary of the product.
+
+
