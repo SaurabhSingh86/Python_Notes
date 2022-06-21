@@ -103,53 +103,6 @@ cc to development lead, test lead, test manager, B.A/P.O
 
 # ---------------------------------------------------------------------------------------------------------------------
 """
-
-""" Method overloading and method overriding,explain with example"""
-
-# Method Overloading
-# If two methods have the same name but different type of arguments then those methods are said to be overloaded methods.
-#
-# In Python, method overloading is not possible.
-#
-# If we are trying to declare multiple methods with same name and different number of arguments then python will always
-# consider only last method.
-
-# class demo:
-#     def m1(self):
-#         print("no argument method")
-#
-#     def m1(self,x):
-#         print("one argument method")
-#
-#     def m1(self,x,y):
-#         print("two argument method")
-#
-#
-# s=demo()
-# s.m1(2,7)
-
-
-# Method Overriding
-# Whatever members available in the parent class are by default available to the child class through inheritance.
-#
-# If the child class is not satisfied with parent class implementation, then, the  child class is allowed to redefine
-# that method in the child class based on its requirement. This concept is called overriding.
-
-
-# class Parent:
-#     def greet(self):
-#         print("Good Morning")
-#
-#
-# class Child(Parent):
-#     def greet(self):
-#         print("Hello Everyone, Have a great day")
-#
-#
-# s = Child()
-# s.greet()			# Hello Everyone, Have a great day
-
-
 # ---------------------------------------------------------------------------------------------------------------------
 
 """ 5) Where did you use list and tuple in your Project """
@@ -474,7 +427,9 @@ print(random.randint(1, 101))
 """
 1. self introduction 
 2. Tell me about your frame work which you used in your project 
-4. Difference between smoke and sanity testing 
+
+
+
 6. Can you tell about Defect life cycle 
 
 7. i have 50 test cases , you are doing Regression testing , SO you have only 2 days of time to complete the 
@@ -485,20 +440,9 @@ print(random.randint(1, 101))
 8. difference between list and dict 
 9. difference between .py and .pyc
 
-
-
-11. what are the keywords available in Python ?
-import, True, False, is, in, not, if, else, elif, def, for, while, lambda, global, nonlocal, break, continue, pass, 
-None, class, return, yield, try, except, finally, and, or, 
-
 12.How to combine data frames ?
 
-15.Explain OPP 
-16.what is polymerphism ?
-
-17.What is data Abstraction ? 
-18.What is data Encapsulation ?
-19.Explain Inheritance 
+15.Explain OOP 
 
 24.how you can going to sink the code from local repository to global repository ?
 25.How can you revert the codes ?
@@ -511,6 +455,22 @@ None, class, return, yield, try, except, finally, and, or,
 
 
 """
+
+""" 4. Difference between smoke and sanity testing """
+# “Testing the basic or critical features before we do through testing, is called as Smoke Testing.
+# Smoke Testing is also known as Sanity testing but there are some difference in between
+#
+# 1. Smoke Testing is done to check the basic & critical features of an application
+# It is done to check for the fixed defect & again defects for basic features.
+#
+# 2. Smoke Testing is documented
+# Sanity testing is not documented
+#
+# 3. Smoke can be done by developer & Test engineer
+# only Test Engineer
+#
+# 4. It is done on new builds
+# It is done on old build
 
 """ 3. what is API testing ? how you used  20.Explain about Postman. 21.How you test in Postman ? """
 # in previous project we were mainly focus on Python-Selenium, I didn't get any opportunity to work on Application
@@ -588,4 +548,284 @@ None, class, return, yield, try, except, finally, and, or,
 # Sprint review meeting: Demo of the product
 # Retrospect meeting:  discuss achievements & drawbacks or we can say that summary of the product.
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+"""16.what is polymorphism ?"""
+# Poly means 		=> 	Many
+# Morphs means 	    => 	forms
+# Polymorphism contains the topic like:
+#
+# 1) Overloading:
+# 	1) Operator Overloading
+# 	2) Method Overloading
+# 	3) Constructor Overloading
+
+# 2) Overriding:
+# 	1) Method Overriding
+# 	2) Constructor Overriding
+
+""" Method overloading VS method overriding,explain with example"""
+
+# Method Overloading
+# If two methods have the same name but different type of arguments then those methods are said to be overloaded methods.
+#
+# In Python, method overloading is not possible.
+#
+# If we are trying to declare multiple methods with same name and different number of arguments then python will always
+# consider only last method.
+
+# class demo:
+#     def m1(self):
+#         print("no argument method")
+#
+#     def m1(self,x):
+#         print("one argument method")
+#
+#     def m1(self,x,y):
+#         print("two argument method")
+#
+#
+# s=demo()
+# s.m1(2,7)
+
+
+# Method Overriding
+# Whatever members available in the parent class are by default available to the child class through inheritance.
+#
+# If the child class is not satisfied with parent class implementation, then, the  child class is allowed to redefine
+# that method in the child class based on its requirement. This concept is called overriding.
+
+
+# class Parent:
+#     def greet(self):
+#         print("Good Morning")
+#
+#
+# class Child(Parent):
+#     def greet(self):
+#         print("Hello Everyone, Have a great day")
+#
+#
+# s = Child()
+# s.greet()			# Hello Everyone, Have a great day
+
+""" Constructor Overloading VS Constructor Overriding"""
+# Constructor Overloading:
+# Constructor overloading is not possible in Python. If we define multiple constructors then the last constructor will
+# be considered.
+
+class demo:
+    def __init__(self):
+        print("no argument method")
+    def __init__(self,x):
+        print("one argument method")
+    def __init__(self,x,y):
+        print("two argument method")
+s = demo(2,3)
+
+
+# Constructor Overriding:
+# overriding concept is applicable for constructor overriding
+
+class Parent:
+    def __init__(self):
+        print("parent constructor")
+class Child(Parent):
+    def __init__(self):
+        print("child constructor")
+
+s = Child()
+
+
+""" Operator Overloading """
+# •	We can use the same operator for multiple purposes, which is nothing but operator overloading.
+# •	Python supports operator overloading.
+# •	java won't support operator overloading
+#
+# e.g 1: same + operator can be used for Arithmetic addition and String concatenation
+#  print(10 + 20)
+#  print('hello' + 'world')
+#
+# e.g 2: same * operator can be used for multiplication and string repetition purposes.
+#  print(10 * 20)
+#  print("hai" * 3)
+#
+# e.g 3: operator overloading can also be used in the object that is created from class:--->
+#
+# class Book:
+#     def __init__(self, pages):
+#         self.pages = pages
+#
+#
+# b1 = Book(200)
+# b2 = Book(300)
+#
+# print(b1 + b2)
+#
+# #TypeError: unsupported operand type(s) for +: 'book' and 'book'
+#
+# # How to overcome it
+#
+# Note:->
+# •	Python provides support for operator overloading using a Magic method
+# •	For every operator Magic Methods are available
+# •	Here in this example whenever the controller/interpreter sees print(b1+b2), automatically it calls ma agic method, here we have use magic method   __add__(self, other)
+#
+#
+# S.N.	Symbols	Syntax
+# 1.		+	object.__add__(self, other)
+# 2.		-	object.__sub__(self, other)
+# 3.		*	object.__mul__(self, other)
+# 4.		/	object.__div__(self, other)
+# 5.		//	object.__ floordiv __(self, other)
+# 6.		%	object.__ mod __(self, other)
+# 7.		**	object.__pow__(self, other)
+# 8.		+=	object.__iadd__(self, other)
+# 9.		-=	object.__isub__(self, other)
+# 10.		*=	object.__imul__(self, other)
+# 11.		/=	object.__idiv__(self, other)
+# 12.		//=	object.__ ifloordiv__(self, other)
+# 13.		%=	object.__ imod__(self, other)
+# 14.		**=	object.__ipow__(self, other)
+# 15.		<	object.__lt__(self, other)
+# 16.		<=	object.__le__(self, other)
+# 17.		>	object.__gt__(self, other)
+# 18.		>=	object.__ge__(self, other)
+# 19.		==	object.__eq__(self, other)
+# 20.		!=	object.__ne__(self, other)
+#
+#
+# class Book:
+#     def __init__(self, pages):
+#         self.pages = pages
+#
+#     def __add__(self, other):             # __add__ is a magic method to add two object that is created from class
+#         return self.pages + other.pages   # here self is nothing but b1 object & other is  nothing but b2 object
+#
+#
+# b1 = Book(200)
+# b2 = Book(300)
+#
+# print(b1+b2)            # 500
+#
+#
+# # employee Class Objects:---->
+#
+# class employee:
+#     def __init__(self,name,salary):
+#         self.name=name
+#         self.salary=salary
+#     def __ge__(self,other):
+#         return self.salary >= other.salary
+#
+#
+# e1=employee("Elon", 20000)
+# e2=employee("Steve", 20000)
+#
+# print(e1 >= e2)
+#
+#
+# # Overloading <= employee Class Objects:---->
+#
+# class employee:
+#     def __init__(self,name,salary):
+#         self.name=name
+#         self.salary=salary
+#     def __le__(self,other):
+#         return self.salary<=other.salary
+#
+#
+# e1=employee("Elon",20000)
+# e2=employee("Steve",30000)
+# print(e1<=e2)
+#
+# # Note:--> <= can also manage >= and vice versa
+#
+# Program to Overload Multiplication Operator to Work on employee salary Objects:
+#
+# class employee:
+#     def __init__(self,name,salary_per_day):
+#         self.name=name
+#         self.salary_per_day=salary_per_day
+#
+#
+#
+# class working_day:
+#     def __init__(self,no_of_working_days):
+#         self.no_of_working_days=no_of_working_days
+#
+#     def __mul__(self,other):
+#         return self.no_of_working_days * other.salary_per_day
+#
+#
+# e=employee("Mark",750)
+# s=working_day(27)
+# print(s*e)
+
+"""Que. What are magic methods?"""
+#
+# Magic methods are special methods which starts and ends with double underscores. It is internally called by python. We can customise the behaviour of an object or class using magic methods. They are also called as protocols.
+#
+# e.g. when you ask for the length of the list len(names) internally python will call _len_ method on list object.
+#
+# E.g. when you check for membership "apple" in names python internally triggers _contains_("apple")
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+"""17.What is data Abstraction ? """
+#
+
+
+
+"""18.What is data Encapsulation ?"""
+#
+
+
+"""19.Explain Inheritance """
+# What ever variables, methods and constructors available in the parent class by default available to the child classes
+# & we are not required to rewrite.
+
+#__________Advantages_of_inheritance______________:
+#    1.  Code reusability
+#    2.  Code extensibility
+
+#________________Types_of_Inheritance______________:
+#    1.  Single inheritance
+#    2.  Multi-level inheritance
+#    3.  Hierarchical inheritance
+#    4.  Multiple inheritance
+#    5.  Hybrid inheritance
+#    6.  Cyclic inheritance
+# Python as well as Java won't support cyclic inheritance.
+
+# Constructor overloading
+# Multiple constructor is possible in a single class
+# if we have multiple constructor (__init__) in a class then it will considered latest one.
+# by default constructor will return None
+# Multiple constructor is not possible in Python => to solve this problem by using default value => i.e. constructor overloading
+
+
+""" 11. what are the keywords available in Python ? """
+# Keywords are reserved words that have a specific meaning associated with them, we can't modify the meaning of
+# Keywords, we can only utilize the meaning as per our requirement in the program.
+#
+# Keywords are case-sensitive
+#
+# Total no of keywords, depends on Version of the software
+# e.g 33 keywords => before Python 3.7
+#     35 keywords =>  after Python 3.7
+#
+# Some keywords are:
+# import, True, False, is, in, not, if, else, elif, def, for, while, lambda, global, nonlocal, break, continue, pass,
+# None, class, return, yield, try, raise, with, except, finally, and, or, as, assert, await, from
+#
+# Que. How to get all keyword
+# 1. help("keywords)
+# 2. import keyword
+# keyword.kwlist
+#
+# To check whether a string is Keyword or not
+# keyword.iskeyword('string')
+#
+# Word in orange color    => Keywords
+# word in purple colour   => Built-in-function
