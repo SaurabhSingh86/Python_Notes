@@ -1,8 +1,10 @@
-from abc import ABC, abstractmethod     # abstractmethod is a decorator
+from abc import ABC, abstractmethod     # from abc module we have to import ABC class & also abc abstractionmethod
+# ABC is pre-defined abstract class in Python
+# abstractmethod is a decorator
 
-# class Shape(ABC):
-#     @abstractmethod
-#     def printarea(self):
+# class Shape(ABC):             # class Shape is abstract class because it is extended ABC (now it becomes abstract class bcz i've extended ABC into class Shape now Shape becomes a abstract class
+#     @abstractmethod           # if we are not decorating then it'll be a normal method if we want to this method as abstract method we have to specify one more qualifier i.e. noting but @abstractmethod
+#     def printarea(self):      # printarea is a abstract method bcz i used @abstractmethod and implemented any body this
 #         return 0
 #
 # class Rectangle(Shape):

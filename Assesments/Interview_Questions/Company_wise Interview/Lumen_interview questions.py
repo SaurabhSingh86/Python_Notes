@@ -19,31 +19,139 @@ Lumen first round Interview questions
 11. What are negative test scenario & where did you used in preious projects?
 12. Minor defects in your projects
 
-13. Python:
-13.1 How to check the current version of Python
-There are two ways:
-1. in Pycharm in terminal
+"""
 
-13.2 How to get the current time 
-13.3 How to generate random number
+# 13. Python:
+""" 13.1 How to check the current version of Python """
+# There are two ways:
+# 1. in Pycharm in terminal we write    =>  python --version
+# 2. in Command prompt                  =>  python --version
+# 3. in Pycharm                         =>  if we observe carefully right-bottom it is showing version of the Python
+
+""" 13.2 How to get the current time """
+# first we have to import some module
+
+# Method 1:
+# from datetime import datetime
+# print(datetime.now())
+# 2022-06-21 20:31:49.569863
+
+# from datetime import date
+# print(date.today())
+# 2022-06-21
+
+# Method 2:
+# import time
+# print(time.localtime(time.time()))
+# time.struct_time(tm_year=2022, tm_mon=6, tm_mday=21, tm_hour=20, tm_min=30, tm_sec=29, tm_wday=1, tm_yday=172, tm_isdst=0)
+
+
+""" 13.3 How to generate random number """
+# first we have to import
+# import random
+# print(random.randint(1, 101))
+
+""" 
 Take one string s = "Saurabh Singh"
 13.4 remove the duplicate items
 13.5 remove the spaces in between
 13.6 reversed the item i.e o/p should be Singh Saurabh
+"""
+s = "Saurabh Singh"
 
-14. How to read excel file
-15. what are Git & Jenkins & after this ask git command
-16. Why do you want to leave your company?
-17. What is the notice period?
-18. Are you only static on python or you can learn any other languages
-19. what is your current location?
-20. you are not from Karnataka, what is the reason behind staying here?
-21. What are the defects you get in previous projects? (Explain anyone)
-22. Explicit wait & implicit wait
-23. If a web element is present in the DOM but it is not going to click but you can see the element easily.
-24. robot framework
+# 13.4 remove the duplicate items
 
-Lumen interview questions asked in the final round
+
+# 13.5 remove the spaces in between
+
+
+# 13.6 reversed the item i.e o/p should be Singh Saurabh
+
+
+""" 14. How to read excel file"""
+# Step 1: First we have to import xlrd
+# Step 2: opening the excel file / workbook
+# Step 3: Opening the spreadsheet & getting its handle
+# Step 4: get the data in entire sheet
+# skip the headers
+# get each row
+
+# Step 1: First we have to import xlrd
+# import xlrd
+#
+# excel_file_path = r"C:\Users\Saurabh\Desktop\Mark_sheet.xlsx"
+#
+# # Step 2: opening the excel file / workbook
+# book = xlrd.open_workbook(excel_file_path)
+#
+# # Step 3: Opening the spreadsheet & getting its handle
+# sheet = book.sheet_by_name("Marks_Sheet1")
+#
+# # Step 4: get the data in entire sheet
+# data = sheet.get_rows()
+#
+# # skip the headers
+# header = next(data)
+#
+# # get each row
+# mark_sheets = {}
+# for row in data:
+#     mark_sheets[row[0].value] = (row[1].value, row[2].value)
+#
+# print(mark_sheets)
+
+
+""" 15. what are Git & Jenkins & after this ask git command """
+
+# Git & Git Commands
+# In previous project for version control we were using "Github" tool. I was working on Pycharm in this platform
+# there is an option commit, push, update-project, clone, merge etc. We used directly.
+
+# Jenkins
+# Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software
+# DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
+# Programming languages used: Java
+
+""" 16. Why do you want to leave your company? """
+# Currently, I'm in bench & looking for good projects. Test Yantra also provides me opportuninty that's why I'm here.
+
+"""17. What is the notice period?"""
+# Immediate join
+
+"""18. Are you only static on python or you can learn any other languages"""
+# I'm always willing to learn new language/skills. If I get an opportunity to work with any other languagae then I'll
+#  definitely learn & work on it.
+
+"""19. what is your current location?"""
+# Srinivas nagar, 9th main road, near Venkateshwara temple, Banashankari
+
+"""20. you are not from Karnataka, what is the reason behind staying here?"""
+# There are many reason
+# 1. Career wise => it is one of the best place for me where I can build my career
+# 2. Weather suits me (not too hot)
+# 3. People are very kind & helping in nature
+# 4. There are lots of place where I want to visit like Iskan temple etc
+
+# Suppose if they asked what types of difficulties you are facing here then
+# 1. food issues
+# 2. sometimes we face language problem
+# 3. sometime weather can't be predicted
+
+"""21. What are the defects you get in previous projects? (Explain anyone)"""
+#
+
+"""22. Explicit wait & implicit wait"""
+
+"""23. If a web element is present in the DOM but it is not going to click but you can see the element easily."""
+
+"""24. robot framework"""
+
+""" Do you have any questions """
+# Yes, I would like to know about if I get selected what will be my roles & responsibilities?
+
+
+
+""" Lumen interview questions asked in the final round
 1. Where are you from?
 2. Speciality of your hometown
 3. Current location
@@ -98,8 +206,6 @@ cc to development lead, test lead, test manager, B.A/P.O
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-4) Where did you use Abstract class in your Project
-
 
 # ---------------------------------------------------------------------------------------------------------------------
 """
@@ -124,8 +230,25 @@ cc to development lead, test lead, test manager, B.A/P.O
 #                           "airlines_name2":[no_of_stopage, durations, checkin_weight, meal]
 #                            }
 # ---------------------------------------------------------------------------------------------------------------------
+""" 8. difference between list and dict """
+# Both are built-in (collection value) data types in Python but there are some differences in between
 
+# 1. list is mutable data type & dictionary is also mutable data type but in dictionary key must be Immutable data type
+# value can be mutable.
+#
+# 2. List contains duplicates value whereas, in dictionary value can be duplicates but key must be unique or not be
+# duplicated otherwise it can be a data loss.
+
+# 3. Syntax wise: list collection is enclosed by Square braces [] & all the elements seperated by comma (,) operators,
+# while, dictionary collection is enclosed by curly braces {} & each pair is seperated by comma(,) operators & key &
+# value is seperated by colon (:).
+
+# 4. Indexing & slicing both are possible in List but in dictionary can't be supported. Dictionaries are indexed by keys
+
+# 5. some built-in-methods of list are => .append(), .insert(), .remove(), .index(), .count(), .clear(), .sort(), .reverse() etc
+# some buit-in-methods of Dictionary are => .keys(), .values(), .items(), .get(), .pop(), .popitem(), .clear(), .update({key: value})
 # ---------------------------------------------------------------------------------------------------------------------
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ remove spaces in between the sentence """
@@ -413,23 +536,12 @@ s1 = "python is simple language"
 # # print(s1[]
 # # print(s1[])
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-""" WAP to create random nummer """
-import time
-
-# current_time = time.localtime(time.time())
-# print(f"Current time is {current_time}")
-
-import random
-
-print(random.randint(1, 101))
 
 """
 1. self introduction 
 2. Tell me about your frame work which you used in your project 
-
-
-
 6. Can you tell about Defect life cycle 
 
 7. i have 50 test cases , you are doing Regression testing , SO you have only 2 days of time to complete the 
@@ -437,7 +549,6 @@ print(random.randint(1, 101))
   Tomorrow is the release and you only the QA in your team , and you have 50 test cases . So how you can complete
   regression testing with in the day 
   
-8. difference between list and dict 
 9. difference between .py and .pyc
 
 12.How to combine data frames ?
@@ -447,7 +558,6 @@ print(random.randint(1, 101))
 24.how you can going to sink the code from local repository to global repository ?
 25.How can you revert the codes ?
 
-
 27.what is sql ?
 28.Find the 2nd highest sal and details of the employee from employee dynamic table 
 
@@ -455,6 +565,8 @@ print(random.randint(1, 101))
 
 
 """
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """ 4. Difference between smoke and sanity testing """
 # “Testing the basic or critical features before we do through testing, is called as Smoke Testing.
@@ -472,6 +584,8 @@ print(random.randint(1, 101))
 # 4. It is done on new builds
 # It is done on old build
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 """ 3. what is API testing ? how you used  20.Explain about Postman. 21.How you test in Postman ? """
 # in previous project we were mainly focus on Python-Selenium, I didn't get any opportunity to work on Application
 # Programming Interface i.e. API, but I'm willing to work on that so I'm trying to learn myself till now I've some basic
@@ -485,15 +599,20 @@ print(random.randint(1, 101))
 #  Suppose I want to perform API on Github. We can't perform directly because it is secured website so what can I do.
 #  here I've an account on Github so I've can create "Barer Token" or "OAuth 2.0" then we can perform the operations.
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 """ 22.What you know about GIT ? 23.For what purpose we use GIT ? """
 # In previous project for version control we were using "Github" tool. I was working on Pycharm in this platform
 # there is an option commit, push, update-project, clone, merge etc. We used directly.
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """ 13.What is python path ?  """
 # It is an environment variable which is used when a module is imported. Whenever a module is imported, PYTHONPATH is
 # also looked up to check for the presence of the imported modules in various directories. The interpreter uses it to
 # determine which module to load.
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """ 29.how can you verify the log ? """
 # in my project I was using Assert: The assert statement in Python is meant to debug your code, not to handle run
@@ -502,6 +621,8 @@ print(random.randint(1, 101))
 # if assertion condition is True => Program continue to run it means doesn't do anything & continue the normal flow
 # of execution.
 # if assertion conditon is False => Assertion stops programs & give the AssertionError along with optional msg
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """ 5. Difference between Load testing and Stress testing """
 # These types of testing are done under performance testing:
@@ -518,6 +639,8 @@ print(random.randint(1, 101))
 # 3. Volume testing   => by transferring huge volume of data
 # 4. Soak testing     => for a particular period of time
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 """ 14.what is local and global variables in the python? """
 # Global variable: Variables declared outside a function or in global space are called global variables. These variables
 # can be accessed by any function in the program.
@@ -525,10 +648,10 @@ print(random.randint(1, 101))
 # Local Variable: Any variable declared inside a function is known as a local variable. This variable is present in the
 #  local space and not in the global space.
 
-""" 26.Tell about jenkins """
-# Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software
-# DevOps tool written in the Java programming language. It is used to implement CI/CD workflows, called pipelines.
-# Programming languages used: Java
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """ 30.Define agile methodology """
 # It is a model where we develop the software is an incremental & iterative manner.
@@ -614,27 +737,27 @@ print(random.randint(1, 101))
 # Constructor overloading is not possible in Python. If we define multiple constructors then the last constructor will
 # be considered.
 
-class demo:
-    def __init__(self):
-        print("no argument method")
-    def __init__(self,x):
-        print("one argument method")
-    def __init__(self,x,y):
-        print("two argument method")
-s = demo(2,3)
+# class demo:
+#     def __init__(self):
+#         print("no argument method")
+#     def __init__(self,x):
+#         print("one argument method")
+#     def __init__(self,x,y):
+#         print("two argument method")
+# s = demo(2,3)
 
 
 # Constructor Overriding:
 # overriding concept is applicable for constructor overriding
 
-class Parent:
-    def __init__(self):
-        print("parent constructor")
-class Child(Parent):
-    def __init__(self):
-        print("child constructor")
-
-s = Child()
+# class Parent:
+#     def __init__(self):
+#         print("parent constructor")
+# class Child(Parent):
+#     def __init__(self):
+#         print("child constructor")
+#
+# s = Child()
 
 
 """ Operator Overloading """
@@ -773,14 +896,14 @@ s = Child()
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """17.What is data Abstraction ? """
-#
+""" 4) Where did you use Abstract class in your Project """
 
 
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """18.What is data Encapsulation ?"""
 #
 
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """19.Explain Inheritance """
 # What ever variables, methods and constructors available in the parent class by default available to the child classes
 # & we are not required to rewrite.
@@ -804,7 +927,7 @@ s = Child()
 # by default constructor will return None
 # Multiple constructor is not possible in Python => to solve this problem by using default value => i.e. constructor overloading
 
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """ 11. what are the keywords available in Python ? """
 # Keywords are reserved words that have a specific meaning associated with them, we can't modify the meaning of
 # Keywords, we can only utilize the meaning as per our requirement in the program.
