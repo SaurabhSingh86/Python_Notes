@@ -260,3 +260,23 @@ for row in range(1, 5):
     for i in range(1, 5):
         if i == start_position:
             print("*", end=" ")
+"""
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+"""
+
+
+for row in range(1, 6):
+    print(f'{"* " * row:^10}')
+
+for row in range(4, 0, -1):
+    print(f'{"* " * row:^10}')
+
+print()
