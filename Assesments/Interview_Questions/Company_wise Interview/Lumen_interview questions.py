@@ -137,6 +137,7 @@ s = "Saurabh Singh"
 # 2. sometimes we face language problem
 # 3. sometime weather can't be predicted
 
+
 """21. What are the defects you get in previous projects? (Explain anyone)"""
 #
 
