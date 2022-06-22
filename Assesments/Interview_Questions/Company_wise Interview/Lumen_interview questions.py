@@ -3,14 +3,40 @@ Lumen first round Interview questions
 1. about yourself
 2. about project
 3. Roles & Responisbilties
-4. Current company name & position
+4. Current company name & position"""
 
-5. if you get the new features in between then 
-5.1 what are the procedures to follow
-5.2 what was your first expression when you get a new features
-5.3 How to resolve this type of problem
-5.4 Meetings
+"""5. if you get the new features in between then """
+"5.1 what are the procedures to follow"
+# you know changes are the part of the work. When I was working on previous company, we were working on Agile Environment
+# In Agile Environment, Where the objects & the application scenario flows are constantly changing.
+# you know if requirement changes => corresponding design changes => if the design changes the code has to be changed => because of which Testing approach will change because there will be lot of defects while testing.
 
+
+" 5.2 what was your first expression when you get a new features"
+# when I was new on that then I was worried later on I was familier with it.
+
+"5.3 How to resolve this type of problem"
+# As Automation Test Engineer first I've to understand the updated requirement if there is a problem to understand the requirement then discuss with Manual test engineer, Test lead, Project Manager even though I still have problem then discussed with BA.
+
+# If we get any changes then we discussed on meetings, in this meeting scrum master tells what are the procedures we have to follow.
+
+
+"5.4 Meetings"
+# Meetings coducted in Agile Enviroment
+# 1. Sprint planning meeting: Assign the task to each engg. & keep a track of it.
+#
+# 2. Stand-up meeting: here entire scrum team meets, this meeting is completely done by scrum master. In this meeting
+# each engg. Should tell
+# 2.1 What they have done yesterday
+# 2.2 What are the hurdles/problems they have faced yesterday’s task
+# 2.3 What activities are planning to do today?
+#
+# 3. Sprint review meeting: Demo of the product
+#
+# 4. Retrospect meeting:  discuss achievements & drawbacks or we can say that summary of the product.
+
+
+"""
 6. what type of challenges you have faced in your previous projects?
 7. How to prioties the defects?
 8. What types of defects you get in your projects?
@@ -143,9 +169,12 @@ s = "Saurabh Singh"
 
 """22. Explicit wait & implicit wait"""
 
+
 """23. If a web element is present in the DOM but it is not going to click but you can see the element easily."""
 
+
 """24. robot framework"""
+
 
 """ Do you have any questions """
 # Yes, I would like to know about if I get selected what will be my roles & responsibilities?
@@ -598,7 +627,7 @@ s1 = "python is simple language"
 #  While doing on Secured website we need authentication so here we use "Bearer Token", "OAuth 2.0".
 #  let us take one e.g.
 #  Suppose I want to perform API on Github. We can't perform directly because it is secured website so what can I do.
-#  here I've an account on Github so I've can create "Barer Token" or "OAuth 2.0" then we can perform the operations.
+#  here I've an account on Github so I can create "Barer Token" or "OAuth 2.0" then we can perform the operations.
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
