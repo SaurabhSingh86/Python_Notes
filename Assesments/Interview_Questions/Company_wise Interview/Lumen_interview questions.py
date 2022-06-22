@@ -37,12 +37,21 @@ Lumen first round Interview questions
 # 4. Retrospect meeting:  discuss achievements & drawbacks or we can say that summary of the product.
 
 
+"""6. what type of challenges you have faced in your previous projects? 7. How to prioties the defects?"""
+# We are Test Engineer & we have good knowledge on the s/w & we know how each features work so on the basic of knowledge we identify the severity & priority.
+
+# Note: Severity & Priority both are given by Test Engineers. (Test lead, Development lead also give the priority)
+# Developer will always fix the defect based on the priority given & not an severity.
+
+"""10. Give me some example of priority (what is priority or types)"""
+# P1  => high       => resolve immediately
+# P2  => Medium     => within 2-3 days
+# P3  => Low        => within a week
+
 """
-6. what type of challenges you have faced in your previous projects?
-7. How to prioties the defects?
 8. What types of defects you get in your projects?
 9. if you didn't get the confirmation messages how to reproduce it?
-10. Give me some example of priority (what is priority or types)
+
 11. What are negative test scenario & where did you used in preious projects?
 12. Minor defects in your projects
 
