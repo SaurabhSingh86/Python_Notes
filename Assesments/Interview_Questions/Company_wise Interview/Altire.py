@@ -52,3 +52,17 @@ linux commands
 33.what is method overloading? what is the purpose of that?
 34.some scenario based
 """
+
+l = "Hello everyone"
+res = l.split()
+
+#type cast
+print(list(enumerate(res)))
+
+# for loop
+res1 = []
+for word in res:
+    res1.append(word)
+
+print(res1)
+

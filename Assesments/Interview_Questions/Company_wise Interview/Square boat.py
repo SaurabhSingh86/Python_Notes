@@ -36,6 +36,52 @@ Square boat
 20.Which tool you are using for automation ?
 
 
+*Square-boat second-round questions*
+1. Tell me about your project
+2. Roles & responsibilities
+3. What is the major difference between list & set
+4. What is mutable & immutable data type
+5. Merge two lists into a dictionary
+6. what is zip?
+7. How to handle multiple windows in selenium?
+8. What's your project name is it a mobile application or web application?
+9. What is Python procedure?
+10. What is LEGB in Python?
+11. What is the major drawback of a dictionary
+12. What are 1 layer, 2 layer & 3 layers?
+13. Difference between css & xpath
+14. navigate web elements from a given website through a CSS selector
+15. if the page is reloaded the value of the class is going to change how to handle this
+16. What is API?
+17. Codes stand for 401, 403, and 204?
+18. What is get_window_handle?
+19. What is the difference between get_window_handle & get_window_handles?
+20. what type of library is used in Python?
+21. Asked many real-based scenario questions (e.g in google pay if anyone gets 100 rs cashback then that cashback is automatically credited in the user's account, what is the procedure behind this?
+22. what is a postman how does it works?
+23. many more real-based questions related to API
 
+
+1.Difference between selenium 3 and selenium4
+2.about project explanation
+3. Take Myntra website and Google website and ask what is the path and your mentioned in the website and why Myntra website is not secure and Google website is secure
+4. What is desktop testing
+5. What is mobile testing
+6. What is a agile methodology
+7. What you are going to automate in your project and how many scripts and test cases will you able to write  in one day
+8.explain binary search and he gave a one list and asked to explain
+9.scenario based questions all
+
+1) severity vs priority with example
+2) framework
+3) json to python dictionary to fetch data
+4) incase json file have duplicated keys without converting to dictionary find out duplicate keys
+5) difference between selector and locator
+6) which is faster
+7) difference between keyword and data-driven framework
+8)git commands
+9) project management tool
+10) how u raise bug in jira
+11) open web page click operation on check box
 
 """
