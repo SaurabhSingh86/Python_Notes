@@ -84,4 +84,61 @@ Square boat
 10) how u raise bug in jira
 11) open web page click operation on check box
 
+
+1.what did you work on in your project?
+2.what were the requirements from client in this duration?
+3.where did you store the images of the application in your project?
+4.How will you verify that image is correct or not?
+5.what are the different functionalities on login page apart of username, password and login button?
+
+6.how to declare the dictionary?
+7.(a) programming question - create dictionary of item and occurance pair from list.
+  (b) I did with one method, then he asked to do with another method, then asked to explain both the methods
+
+8.Have you worked on database?
+9.what is joins?
+10.give any example of join?
+11.on that example, he asked what if I give condition that salary is more than 10000?
+
+12.what are the different git commands?
+
+13.can we connect database through API?
+14.How to connect database through API?
+15.what are the rest API methods?
+16.what are the different status codes in API?
+17.what is the meaning of status code 404?
+18.write api automation script?
+19.what response is giving requests.get?
+20.what json.loads is doing?
+21.I have username and passowrd, after login button, if the username and password is correct, then I will get some ..... through API, if it is incorrect I will get error.
+  (a) write the test cases for this scenario
+  (b) he asked another qns on this, which I didnt understand
+
+No questions asked from manual and selenium, he didnt even ask, tell me about yourself
 """
+
+# l1 = [ 1, 2, 3]
+# l2 = ["Shrihari", "saurabh", "Rama"]
+#
+# d = {key: value for key, value in zip(l1, l2)}
+# print(d)
+
+
+""" Write a program to get a list, sorted in increasing order by the last element in each tuple from a given list of
+non-empty tuples. """
+
+l = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+
+# d = {i: j for i, j in l}
+#
+# res = sorted(d.items(), key=lambda item: item[-1])
+# print(res)
+
+
+def sort_(item):
+    item1, item2 = item
+    return item2
+
+
+res = sorted(l, key=sort_)
+print(res)
