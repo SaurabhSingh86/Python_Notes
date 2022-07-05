@@ -24,7 +24,18 @@
 
 """ 2. Write a program to reverse a string without using any inbuilt functions """
 # s = "dream big"
+# s = "unicorn"
 
+# ==> without using built-in-function
+
+# Method 1: by using concatenation
+# output = ""
+# for char in s:
+#     output = char + output
+#
+# print(output)
+
+# ==> by using built-in-function
 # Method 1: by using range
 # res = ""
 # for index in range(len(s)-1, -1, -1):
@@ -32,33 +43,17 @@
 #
 # print(res)                                # gib maerd
 
-# Method 2: by using concatenation
-# output = ""
-# for char in s:
-#     output = char + output
-#
-# print(output)
-
-
-# Method 3: by using function
-
-# def reverse(any_string):
-#     res = []
-#     for i in range(len(any_string)-1, -1, -1):
-#         res.append(any_string[i])
-#     output = "".join(res)
-#     return output
-#
-#
-# print(reverse("my galaxy"))                   # yxalag ym
+# Method 3: by using reversed
+# for char in reversed(s):
+#     print(char,end="")
 
 
 """ 3. Write a program to replace one string with another. e.g. "Hello World" replace "World" with "Universe". """
-# s = "Hello World"
-#
-# # Method 1:
-# res = s.replace("World", "Universe")
-# print(res)
+s = "Hello World"
+
+# Method 1:
+res = s.replace("World", "Universe")
+print(res)
 
 
 """ 4. How to convert a string to a list and vice-versa. """
@@ -71,7 +66,6 @@
 #
 # print(convert_into_list("love me like you do"))         # ['love', 'me', 'like', 'you', 'do']
 
-
 # => convert list into a string     ====>>>>  by using join() built-in-function
 
 
@@ -81,6 +75,8 @@
 #
 #
 # print(convert_into_string(["I", "am", "a", "foodie", "Person."]))    # I am a foodie Person.
+l = ["I", "am", "a", "foodie", "Person."]
+print(" ".join(l))
 
 
 """ 5. Convert the string "Hello welcome to Python" to a comma separated string. """

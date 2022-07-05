@@ -307,6 +307,7 @@ s = "Python is Programming Language"
 #         res += char
 # print(res)
 # print()
+
 # # Method 3: using join built in
 # res = "".join(s.split())
 # print(res)

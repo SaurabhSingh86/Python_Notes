@@ -207,7 +207,7 @@ repr or str method it will print the string that repr or str method """
 # ---------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------
-# """ 1. given two int a & b in one step you can add 2 to any num a or b
+""" 1. given two int a & b in one step you can add 2 to any num a or b
 # your have to """
 #
 #
@@ -654,7 +654,7 @@ From this point, use Ctrl+Shift+C to select the element.
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-"""  How to convert interger into string without using string methods?"""
+"""  How to convert integer into string without using string methods?"""
 # number = 9876
 #
 # # Method 1: using while method & concatenation
@@ -700,7 +700,7 @@ From this point, use Ctrl+Shift+C to select the element.
 # while num:
 #     s.append(chr(48 + num % 10))
 #     num = num // 10
-# a = "".join(reversed(s))                                  # ****** here no need to type case & for loop (reversed())
+# a = "".join(reversed(s))                                  # ****** here no need to type cast & for loop (reversed())
 #
 # print(a)
 # print(type(a))

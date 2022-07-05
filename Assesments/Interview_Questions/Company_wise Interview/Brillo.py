@@ -142,18 +142,21 @@ s = {10, 20, 30, 4}
 # Method 3:this method not work in all the conditions like l = [100, 20, 10, 5, 2, 1, 0] or s = [1000, 999, 2000,
 # 10, 5000, 0, 5000, 20, 10, 0] to avoid this problem we use one more condition that is inside a elif statement
 
-max_ = 0            # highest value
-max2_ = 0           # second-highest value
-for item in s:
-    if item > max_:
-        max2_ = max_
-        max_ = item
-    elif item > max2_:
-        max2_ = item
+# s = [100, 20, 10, 5, 2, 1, 0]
+# s = [1000, 999, 2000, 10, 5000, 0, 5000, 20, 10, 0]
 
-
-print(f'Maximum value {max_}')
-print(f'Second highest value {max2_}')
+# max_ = 0            # highest value
+# max2_ = 0           # second-highest value
+# for item in set(s):
+#     if item > max_:
+#         max2_ = max_
+#         max_ = item
+#     elif item > max2_:
+#         max2_ = item
+#
+#
+# print(f'Maximum value {max_}')
+# print(f'Second highest value {max2_}')
 # Maximum value 30
 # Second highest value 20
 
@@ -214,11 +217,11 @@ print(f'Second highest value {max2_}')
 
 
 # Validate Subsequence:
-Array = [5, 1, 22, 25, 6, -1, 8, 10]
-Sequence = [1, 6, -1, 10]
-Output: True
-Sequence = [1, 1]
-Output: False
+# Array = [5, 1, 22, 25, 6, -1, 8, 10]
+# Sequence = [1, 6, -1, 10]
+# Output: True
+# Sequence = [1, 1]
+# Output: False
 
 # def sequence(Array, Sequence):
 #     for num in Sequence:
@@ -274,26 +277,26 @@ Output: False
 
 #
 # ---------------------------------------------------------------------------------------------------------------------
-Array = [12, 3, 1, 2, -6, 5, -8, 6]
-targetSum = 0
-Output: [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
-res = []
-Array.sort()
-
-for num1 in Array:
-    for num2 in Array:
-        if num1 == num2:
-            continue
-        else:
-            for num3 in Array:
-                if num1 == num3 or num2 == num3:
-                    continue
-                else:
-                    if targetSum == num1 + num2 + num3:
-                        res.append([num1, num2, num3])
-
-print(res)
-print(len(res))
+# Array = [12, 3, 1, 2, -6, 5, -8, 6]
+# targetSum = 0
+# Output: [[-8, 2, 6], [-8, 3, 5], [-6, 1, 5]]
+# res = []
+# Array.sort()
+#
+# for num1 in Array:
+#     for num2 in Array:
+#         if num1 == num2:
+#             continue
+#         else:
+#             for num3 in Array:
+#                 if num1 == num3 or num2 == num3:
+#                     continue
+#                 else:
+#                     if targetSum == num1 + num2 + num3:
+#                         res.append([num1, num2, num3])
+#
+# print(res)
+# print(len(res))
 
 
 # ---------------------------------------------------------------------------------------------------------------------

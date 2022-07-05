@@ -1,49 +1,5 @@
 """ WAF sort the list without using built-in-method """
 
-
-""" find the second highest value in the given dictionary"""
-# d = {"a": 20, "b": 10, "c": 30, "d": 30}
-# l = []
-# for key, value in d.items():
-#     if value not in l:
-#         l.append(value)
-#
-# res = sorted(l)
-# print(res[-2])
-
-# d = {"a": 20, "b": 10, "c": 30, "d": 30}
-#
-# from collections import defaultdict
-# d1 = defaultdict(int)
-# # d1 = {}
-# for key, value in d.items():
-#     if d[key] not in d1.values():
-#         d1[key] = value
-#
-# res = sorted(d1.items(), key=lambda item: item[-1])
-# print(res[-2])
-
-
-""" """
-# input = 25
-# output = 425
-
-# Method 1: using concatenation
-# i = str(input)
-# res = ""
-# for num in i:
-#     res = res + str(int(num)**2)
-# print(res)
-
-# Method 2:
-# l = "623"
-# res = []
-# for i in l:
-#     res.append(str(int(i)**2))
-# output = "".join(res)
-# print(output)
-
-
 """ How to remove special character by using re"""
 # items = ['$123.53', '$177.75', '$7784.58']
 
@@ -92,23 +48,23 @@ s3 = "({[2()}}]"
 # Method 2:
 
 
-def equal_(s):
-    count = 0
-    for char in s:
-        if char in "({[":
-            count += 1
-        elif char in ")}]":             # else can also use but if we have int, float, alphabet then is will not work
-            count -= 1
-    return count
-
-
-# count_ = equal_(s1)
-# count_ = equal_(s2)
-count_ = equal_(s3)
-if count_ == 0:
-    print("equal")
-else:
-    print("Not equal")
+# def equal_(s):
+#     count = 0
+#     for char in s:
+#         if char in "({[":
+#             count += 1
+#         elif char in ")}]":             # else can also use but if we have int, float, alphabet then is will not work
+#             count -= 1
+#     return count
+#
+#
+# # count_ = equal_(s1)
+# # count_ = equal_(s2)
+# count_ = equal_(s3)
+# if count_ == 0:
+#     print("equal")
+# else:
+#     print("Not equal")
 
 
 
