@@ -49,11 +49,11 @@
 
 
 """ 3. Write a program to replace one string with another. e.g. "Hello World" replace "World" with "Universe". """
-s = "Hello World"
+# s = "Hello World"
 
 # Method 1:
-res = s.replace("World", "Universe")
-print(res)
+# res = s.replace("World", "Universe")
+# print(res)
 
 
 """ 4. How to convert a string to a list and vice-versa. """
@@ -75,8 +75,8 @@ print(res)
 #
 #
 # print(convert_into_string(["I", "am", "a", "foodie", "Person."]))    # I am a foodie Person.
-l = ["I", "am", "a", "foodie", "Person."]
-print(" ".join(l))
+# l = ["I", "am", "a", "foodie", "Person."]
+# print(" ".join(l))
 
 
 """ 5. Convert the string "Hello welcome to Python" to a comma separated string. """
@@ -105,9 +105,21 @@ print(" ".join(l))
 
 # def ascii_value(character):
 #     return ord(character)
-
-
+#
+#
 # print(ascii_value("P"))                 # 80
+# print(ascii_value("PS"))
+
+# def ascii_value(character):
+#     for char in character:
+#         print(ord(char), end=" ")
+#
+#
+# ascii_value("Sea")
+# print()
+# ascii_value("p")
+# print()
+# ascii_value(input("Enter a character: "))
 
 # Method 2:
 # user_input = input("Enter a character: ")
@@ -138,9 +150,9 @@ print(" ".join(l))
 #         elif temp >= 65 and temp <= 90:
 #             l.append(chr(temp + 32))
 #         else:
-#             l.append(chr)
-#     return l
-
+#             l.append(char)
+#     return "".join(l)
+#
 # print(convert("Ramta Jogi"))
 
 
