@@ -264,8 +264,10 @@
 #             print(f'Indexing position of {char} is {index}')
 #
 #
-# search_char("La ca sa da Papel", "P")
-
+# search_char("La ca sa da Papel", "P")           # Indexing position of P is 12
+# search_char("the vampire diary", " ")
+# Indexing position of   is 3
+# Indexing position of   is 11
 
 """ 16 Write a program to get the below output """
 # sentence = "hello world welcome to python programming hi there"
