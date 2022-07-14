@@ -98,34 +98,35 @@ s2 = "12hello how are you"      # "12hello How Are You"
 # if we use ".title()"   => "12Hello How Are You"
 
 
-def capital(s):
-    res = []
-    if 0 <= len(s) <= 1000:
-        for word in s.split():
-            if word.isalpha():
-                res.append(word.title())
-            else:
-                res.append(word)
-    return " ".join(res)
-
-
-print(capital(s1))
-print(capital(s2))
+# def capital(s):
+#     res = []
+#     if 0 <= len(s) <= 1000:
+#         for word in s.split():
+#             if word.isalpha():
+#                 res.append(word.title())
+#             else:
+#                 res.append(word)
+#     return " ".join(res)
+#
+#
+# print(capital(s1))
+# print(capital(s2))
 
 # above method is not valid for all test cases only pass 2/6
 # but normal title() method 5/6 except "12Hello How Are You"
 
 
-def capital(s):
-    res = ""
-    if 0 <= len(s) <= 1000:
-        for word in s.split():
-            if word.isalpha():
-                res += word.title() + " "
-            else:
-                res += word + " "
-    return res
+# def capital(s):
+#     res = ""
+#     if 0 <= len(s) <= 1000:
+#         for word in s.split():
+#             if word.isalpha():
+#                 res += word.title() + " "
+#             else:
+#                 res += word + " "
+#     return res
+#
+#
+# print(capital(s1))
+# print(capital(s2))
 
-
-print(capital(s1))
-print(capital(s2))
