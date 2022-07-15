@@ -355,36 +355,36 @@ from collections import defaultdict
 
 """ Phone Decorator """
 
-# numbers = [1234567890, 9876543210, 911234567890, 111234567890]
-#
-#
-# def add_prefix(number):
-#     str_number = str(number)
-#     if len(str_number) == 10:
-#         str_number = "+91-" + str_number
-#         return str_number
-#     elif len(str_number) == 12 and str_number.startswith("91"):
-#         str_number = "+" + str_number[:2] + "-" + str_number[2:]
-#         return str_number
-#     else:
-#         return str_number
-#
-#
-# def prefix_country_code(func):
-#     def wrapper(*args, **kwargs):
-#         temp = args[0]                           # args = [(1234567890, 9876543210, 911234567890, 111234567890),]
-#         processed_numbers = [add_prefix(number) for number in temp]
-#         return func(processed_numbers)
-#     return wrapper
-#
-#
-# @prefix_country_code
-# def print_numbers(phone_numbers):
-#     for num in phone_numbers:
-#         print(num)
-#
-#
-# print_numbers(numbers)
+numbers = [1234567890, 9876543210, 911234567890, 111234567890, 912345678]
+
+
+def add_prefix(number):
+    str_number = str(number)
+    if len(str_number) == 10:
+        str_number = "+91-" + str_number
+        return str_number
+    elif len(str_number) == 12 and str_number.startswith("91"):
+        str_number = "+" + str_number[:2] + "-" + str_number[2:]
+        return str_number
+    else:
+        return str_number
+
+
+def prefix_country_code(func):
+    def wrapper(*args, **kwargs):
+        temp = args[0]                           # args = [(1234567890, 9876543210, 911234567890, 111234567890),]
+        processed_numbers = [add_prefix(number) for number in temp]
+        return func(processed_numbers)
+    return wrapper
+
+
+@prefix_country_code
+def print_numbers(phone_numbers):
+    for num in phone_numbers:
+        print(num)
+
+
+print_numbers(numbers)
 
 
 """ validate """
