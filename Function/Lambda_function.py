@@ -44,6 +44,7 @@
 # print(number(49))
 # print(number(20))
 
+
 """ WALF to find greatest number between two numbers """
 
 # greatest = lambda num1, num2: f'{num1} is greater' if num1 > num2 else f'{num2} is greater'

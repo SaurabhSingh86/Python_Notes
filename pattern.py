@@ -119,12 +119,12 @@
 
 # for loop
 
-count = 1
-temp = ""
-while count < 5:
-    temp += str(count) + " "
-    print(temp)
-    count += 1
+# count = 1
+# temp = ""
+# while count < 5:
+#     temp += str(count) + " "
+#     print(temp)
+#     count += 1
 
 """
         1 
@@ -255,11 +255,11 @@ a b c d
 
 """
 
-start_position = 4
-for row in range(1, 5):
-    for i in range(1, 5):
-        if i == start_position:
-            print("*", end=" ")
+# start_position = 4
+# for row in range(1, 5):
+#     for i in range(1, 5):
+#         if i == start_position:
+#             print("*", end=" ")
 """
     *
    * *
@@ -273,10 +273,10 @@ for row in range(1, 5):
 """
 
 
-for row in range(1, 6):
-    print(f'{"* " * row:^10}')
-
-for row in range(4, 0, -1):
-    print(f'{"* " * row:^10}')
-
-print()
+# for row in range(1, 6):
+#     print(f'{"* " * row:^10}')
+#
+# for row in range(4, 0, -1):
+#     print(f'{"* " * row:^10}')
+#
+# print()
