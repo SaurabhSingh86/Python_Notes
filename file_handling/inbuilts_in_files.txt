@@ -1,0 +1,31 @@
+****** Normal slicing on an iterable ******
+l = [1, 2, 3, 4, 5]
+>>> l[1]
+2
+>>> l[1:2]
+[2]
+
+******  Slicing using islice ******
+>>> from itertools import islice
+
+>>> islice(l, 1, 2)
+<itertools.islice object at 0x000002983B7FC5E0>
+>>> list(_)
+[2]
+>>> l = [1, 2, 3, 4, 5]
+
+>>> l[0:3]
+[1, 2, 3]
+>>> islice(l, 0, 3)
+<itertools.islice object at 0x000002983B7FC590>
+>>> list(_)
+[1, 2, 3]
+
+>>> l[:3]
+[1, 2, 3]
+>>> islice(l, 3)
+<itertools.islice object at 0x000002983B7FC590>
+>>> list(_)
+[1, 2, 3]
+
+*********** Deque() *************
