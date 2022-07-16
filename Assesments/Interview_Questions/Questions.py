@@ -311,7 +311,6 @@
 
 """ 19 How to get the count of number of instances of a class that is being created. """
 
-
 """ 20 Write a function which takes a list of strings and integers. If the item is a string it should print as is and 
 if the item is integer or float it should reverse it. """
 # list_ = ['apple', 'yahoo', '1234', 100, 123.76, '26.23']
@@ -331,8 +330,6 @@ if the item is integer or float it should reverse it. """
 
 
 """ 21 Write a class named Simple and it should have iteration capability. """
-
-
 
 """ 22 Write a Custom class which can access the values of dictionaries using d['a'] and d.a """
 
@@ -363,6 +360,7 @@ if the item is integer or float it should reverse it. """
 """ 25 Write a lambda function to add two numbers (a, b) """
 # res = lambda a, b: a + b
 # print(res(2, 7))
+# print(res(2+5j, 10))
 
 
 """ 26 What is the output of the following """
@@ -374,16 +372,19 @@ if the item is integer or float it should reverse it. """
 
 
 """ 27 How to remove duplicates from the list without using inbuilt functions """
-# items = [1, 2, 3, 4, 1, 2, 3, 4, 5]
+
+# Method 1:
+items = [1, 2, 3, 4, 1, 2, 3, 4, 5]
 # l = []
 # for item in items:
 #     if item not in l:
 #         l.append(item)
 # print(l)
-#
-# print(set(items))           # {1, 2, 3, 4, 5} but we get the output in set collection => to avoid this => type cast
-# print(list(set(items)))     # [1, 2, 3, 4, 5]
 
+
+# Method 2:
+# print(set(items))           # {1, 2, 3, 4, 5} but we get the output in set collection => to avoid this => type cast
+# print(list(set(items)))  # [1, 2, 3, 4, 5]
 
 """ 28 Find the longest word in the sentence """
 # sentence = "Hello world. Welcome to Python"
@@ -406,8 +407,12 @@ if the item is integer or float it should reverse it. """
 """ 30 write a program to get 1234 """
 t = ('1', '2', '3', '4')
 # by using join function
-# res = "".join(t)
-# print(res)
+res = "".join(t)
+print(res)
+print(type(res))
+rest = int(res)
+print(rest)
+print(type(rest))
 
 # by using for loop
 # output = ""
@@ -433,7 +438,6 @@ t = ('1', '2', '3', '4')
 """ 32 A function takes variable number of positional arguments as input. How to check if the arguments that are 
 passed are more than 5 """
 
-
 # def count_arguments(*args):
 #     if len(args) > 5:
 #         print("Length of positional arguments are more than 5")
@@ -445,7 +449,7 @@ passed are more than 5 """
 # count_arguments(9, 8, 5, 26, 11, 31)        # Length of positional arguments are more than 5
 
 
-""" 33 Count the number of occurrences of "CRITICAL", "INFO" and "ERROR" lines in a log file. """ # ****************
+""" 33 Count the number of occurrences of "CRITICAL", "INFO" and "ERROR" lines in a log file. """  # ****************
 lines = """
 CRITICAL: Hello world
 INFO: This is an info
@@ -463,7 +467,6 @@ CRITICAL:Hello world
 INFO: This is an info
 ERROR: This is an error 
 CRITICAL: This is critical"""
-
 
 # from collections import defaultdict
 # res = defaultdict(int)
@@ -580,7 +583,6 @@ CRITICAL: This is critical"""
 
 
 """ 43 Write a function that accepts two strings and returns True if the two strings are anagrams of each other. """
-
 
 # def anagram(string1, string2):
 #     if sorted(string1) == sorted(string2):
@@ -845,7 +847,6 @@ point =  {'a': 1, 'b': 2}
 """ 66 Write a method that returns the last digit of an integer. For example, the call of get_last_digit(3572) 
 should return 2."""
 
-
 # def last_digit(num):
 #     s = str(num)
 #     return int(s[-1])
@@ -872,7 +873,6 @@ should return 2."""
 
 """ 68 Make a function named tail that takes a sequence (like a list, string, or tuple) and a number n and returns 
 the last n elements from the given sequence, as a list."""
-
 
 # def tail(sequence, n):
 #     return sequence[-n:]
@@ -935,9 +935,7 @@ False if it's not. """
 
 """ 71 Write a program to count the number of occurrences of each word in a file. """
 
-
 """ 72 Write a program to count the number of occurrences of vowels in a file. """
-
 
 """ 73 Write a program to print all numeric values in a list """
 # items = ['apple', 1.2, 'google', '12.6', 26, '100']
@@ -945,7 +943,6 @@ False if it's not. """
 # print(res)
 
 """ 74 Triangle Patterns """
-
 
 # Left Justified Triangle
 # for i in range(1, 6):
@@ -958,7 +955,6 @@ False if it's not. """
 * * * *   
 * * * * * 
 """
-
 
 # Right Justified Triangle
 # for i in range(1, 6):
@@ -995,7 +991,6 @@ False if it's not. """
  * * * * *
 """
 
-
 # Inverted Triangles (Left Justified)
 # for i in range(6, 0, -1):
 #     print(f"{'* ' * i: <6}")
@@ -1019,7 +1014,6 @@ False if it's not. """
         * * 
           * 
 """
-
 
 # Inverted Triangles (Centre)
 # for i in range(6, 0, -1):
@@ -1120,7 +1114,6 @@ a b c d
  a b c  
 a b c d 
 """
-
 
 """ 75 Write a program count the occurrence of a particular word in the file """
 
@@ -1238,14 +1231,13 @@ Where as in tuples, memory is not over allocated, as tuples does not support app
 # print(f'Total number of commented lines are: {count_commented_line}')
 
 
-""" 84 Write a program to check if the year is leap year or not """ # ****************************************
+""" 84 Write a program to check if the year is leap year or not """  # ****************************************
 # import calendar
 # print(calendar.isleap(2012))            # True
 # print(calendar.isleap(1816))            # True
 # print(calendar.isleap(2022))            # False
 
 """ 85 Liner Search """
-
 
 """ 86 Difference between xrange and range """
 """
@@ -1271,7 +1263,6 @@ python3- range
 
 4. range will accept integer of any size. But xrange objects accepts integer size equivalent to C long!
 """
-
 
 """ 87 Write a program to count no of capital letters in a string """
 # sentence = "Hi How are You WelCome to PytHon"
@@ -1372,7 +1363,7 @@ The list "a" is getting mutated each time when it is extended.
 #         print(f'first repeated character is: {char}')
 #         break
 
-""" 93 Write a program to find the index of nth occurrence of a sub-string in a string """ #???????????????????
+""" 93 Write a program to find the index of nth occurrence of a sub-string in a string """  # ???????????????????
 # sentence = "hello world welcome to python hello hi how are you hello there"
 
 
@@ -1401,7 +1392,6 @@ The list "a" is getting mutated each time when it is extended.
 >>> Start Index: 30, End Index: 35
 >>> index_nth_occurance(sentence, 'hello', 2)
 >>> Start Index: 0, End Index: 5"""
-
 
 """ 94 Write a program to print prime numbers from 1 to 50 """
 # prime_numbers = []
@@ -1525,6 +1515,7 @@ should be in ascending order and even numbers should be in descending order"""
 
 # Method 2: using Regular_Expression
 import re
+
 # l = re.findall(r'\b\w+', sentence.lower())
 # print(f'Total number of words are: {len(l)}')
 
@@ -1577,7 +1568,7 @@ import re
 # print(max_length)
 
 
-""" 105 Find the range from the following string """ # ************************************************************
+""" 105 Find the range from the following string """  # ************************************************************
 # sentence = '0-0, 4-8, 20-20, 43-45'
 # # Output Should be [0, 4, 5, 6, 7, 8, 20, 43, 44, 45, 46]
 # l = sentence.split(",")
@@ -1591,7 +1582,6 @@ import re
 
 
 """ 106 Can we override a static method in python? """
-
 
 # class Parent:
 #     @staticmethod
@@ -1612,7 +1602,6 @@ import re
 
 
 """ 107 Write a function which returns the sum of lengths of all the iterables """
-
 
 # def sum_of_length(*iterables):
 #     print(iterables)
@@ -1638,6 +1627,7 @@ import re
 
 # Method 2: use Regular Expression
 import re
+
 # res = re.sub(r'\s', '\n', sentence)         # \s => matches only whitespace, \n => next line
 # print(res)
 # Hello
@@ -1672,7 +1662,6 @@ import re
 
 
 """ 110 Replace all occurrences of "Java" with "Python" in a file """
-
 
 # import re
 # with open('java.txt', 'r') as java_file:
@@ -1826,7 +1815,7 @@ import re
 # print(res)
 
 
-""" 121 Write a program to remove duplicates from the list without using set or empty list """ # *******************
+""" 121 Write a program to remove duplicates from the list without using set or empty list """  # *******************
 # l1 = [1, 2, 3, 4, 1, 2, 3, 4, 3, 4, 4]
 # l2 = l1[::]          # or l2 = l1.copy()
 # for item in l2:
@@ -1864,13 +1853,12 @@ import re
 # res = [''.join((str(i), j)) for i in l1 for j in l2]
 # print(res)
 
-""" 124 Write a python program to get the below output """ # *****************************************
+""" 124 Write a python program to get the below output """  # *****************************************
 # word = "AAAAaaccYYY"
 # o/p : ['Y3', 'c2', 'A4', 'a2']
 
 
 """ 125 What is the output of the below function call """
-
 
 # class Demo:
 #     def greet(self):
@@ -1918,36 +1906,37 @@ import re
 
 # Method 2:
 
-numbers = [1234567890, 9876543210, 911234567890, 111234567890, 912345678]
-
-
-def add_prefix(number):
-    str_number = str(number)
-    if len(str_number) == 10:
-        str_number = "+91-" + str_number
-        return str_number
-    elif len(str_number) == 12 and str_number.startswith("91"):
-        str_number = "+" + str_number[:2] + "-" + str_number[2:]
-        return str_number
-    else:
-        return str_number
-
-
-def prefix_country_code(func):
-    def wrapper(*args, **kwargs):
-        temp = args[0]
-        processed_numbers = [add_prefix(number) for number in temp]
-        return func(processed_numbers)
-    return wrapper
-
-
-@prefix_country_code
-def print_numbers(numbers):
-    for item in numbers:
-        print(item)
-
-
-print_numbers(numbers)
+# numbers = [1234567890, 9876543210, 911234567890, 111234567890, 912345678]
+#
+#
+# def add_prefix(number):
+#     str_number = str(number)
+#     if len(str_number) == 10:
+#         str_number = "+91-" + str_number
+#         return str_number
+#     elif len(str_number) == 12 and str_number.startswith("91"):
+#         str_number = "+" + str_number[:2] + "-" + str_number[2:]
+#         return str_number
+#     else:
+#         return str_number
+#
+#
+# def prefix_country_code(func):
+#     def wrapper(*args, **kwargs):
+#         temp = args[0]
+#         processed_numbers = [add_prefix(number) for number in temp]
+#         return func(processed_numbers)
+#
+#     return wrapper
+#
+#
+# @prefix_country_code
+# def print_numbers(numbers):
+#     for item in numbers:
+#         print(item)
+#
+#
+# print_numbers(numbers)
 
 """ 128 Write a program to get the below output """
 # d = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
@@ -1963,7 +1952,6 @@ print_numbers(numbers)
 
 
 """ 129 Can we have multiple init methods in a class """
-
 
 # class Point:
 #     def __init__(self, a, b):
