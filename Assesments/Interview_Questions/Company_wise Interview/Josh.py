@@ -1,4 +1,24 @@
 """
+1. Tell me about yourself.
+2. What kind of automation you did in your project?
+3. What were the test scenarios in your automation?
+4. What challenges you faced in your project?
+5. What is synchronisation?
+6  What is pytest?
+7. find the response in Reqres site?
+8. What is risk management system
+9. What is sprint and backlog?
+10. programming qns
+
+1)Open one duppy webservice validate I'd value = 9
+2)5positive and negative what u can tell by seeing this webservice
+3) defect management tool
+4) defect life cycle
+5) about project he asked about payment gateway
+6) Which are modules u involved
+7)roles and responsibilities
+
+
 1)tell me about yourself and project explanation
 2) about webdriver
 3)how to write test cases in API testing
