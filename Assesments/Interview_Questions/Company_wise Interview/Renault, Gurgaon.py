@@ -106,3 +106,30 @@ if dd['Manchester United'][0] != dd['India'][0]:
 else:
     res = sorted(dd.items(), key=lambda item: item[-1][-1], reverse=True)
     print(res)
+
+
+# Method 2:
+res = {}
+
+
+def football(team_):
+    for i in team_:
+        total_points = 3 * i["wins"] + 0 * i["loss"] + 1 * i["draws"]
+        goal_difference = i["scored"] - i["conceded"]
+        res[i["name"]] = (total_points, goal_difference)
+
+
+football(team)
+print(res)
+
+if res["Manchester United"][0] != res["india"][0]:
+    if res["Manchester United"][0] > res["india"][0]:
+        print(f"Manchester United: {res.get('Manchester United')}")
+    else:
+        print(f"India: {res['india']} ")
+else:
+    if res["Manchester United"][-1] > res["india"][-1]:
+        print(f"Manchester United: {res.get('Manchester United')}")
+    else:
+        print(f"India: {res['india']} ")
+#
