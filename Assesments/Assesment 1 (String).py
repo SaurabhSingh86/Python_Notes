@@ -3,7 +3,7 @@
 # print("Bangalore"*10)
 # print("Bangalore\n"*10)
 
-
+# -------------------------------------------------------------------------------------------------------------------
 """ 2. WAP to count the number of digits & alphabets in the string """
 
 # string = "hai1234python23"
@@ -32,16 +32,16 @@
 # print(f'Total number of alphabets are {alp_count}')
 # print(f'Total number of digits are {dig_count}')
 
-
-""" WAP to create a string by swapping the cases of the characters without using built in method """
+# -------------------------------------------------------------------------------------------------------------------
+"""3 WAP to create a string by swapping the cases of the characters without using built in method """
 
 # string = "VS PytHon"
 # res = ""
 
-# Method 1
+# Method 1: by using ASCII value
 # for char in string:
 #     if 'a' <= char <= 'z':
-#         res += chr(ord(char)-32)
+#         res += chr(ord(char)-32)              # 'A' = 65,   'a' = 97    difference = 97 - 65
 #     elif "A" <= char <= "Z":
 #         res += chr(ord(char) + 32)
 #     else:
@@ -61,6 +61,7 @@
 #
 # print(res)
 
+# -------------------------------------------------------------------------------------------------------------------
 """ 4. WAP to create a string with only consonants presents in the string """
 
 # string = "Million Dollar Smile"
@@ -79,7 +80,7 @@
 #     if char.isalpha() and char not in 'aeiouAEIOU':
 #         print(char, end="")
 
-
+# -------------------------------------------------------------------------------------------------------------------
 """ 5. WAP to search for a character in the string & return its first occurrence position """
 
 # s = "programming"
@@ -105,24 +106,51 @@
 #         print(f'{char} is present at index {index}')
 #         break
 
+# m is present at index 6
 
+# Method 4: by using built-in-method
+# print(s.find(find_))            # 6
+# or
+# print(s.index(find_))           # 6
+
+# -------------------------------------------------------------------------------------------------------------------
 """ 6. WAP to print the character and its ascii value if the character is a vowel in the string """
 
 # s = "she sells sea shells on the sea shore"
 #
+# Method 1:
 # for char in s:
 #     if char.lower() in "aeiou":
 #         print(f"ASCII value of {char} is {ord(char)}")
 
 
+# Method 2: using dictionary comprehension
+# res = [(char, ord(char))for char in s if char in 'aeiouAEIOU']
+# print(res)
+
+# [('e', 101), ('e', 101), ('e', 101), ('a', 97), ('e', 101), ('o', 111), ('e', 101), ('e', 101), ('a', 97), ('o', 111), ('e', 101)]
+
+# Method 3  if order will not affect our result & avoid the repetition
+# res = [(char, ord(char)) for char in set(s) if char in 'aeiouAEIOU']
+# print(res)
+# [('o', 111), ('e', 101), ('a', 97)]
+
+# -------------------------------------------------------------------------------------------------------------------
 """ 7. WAP to print word & its length in string """
 
 # s = "she sells sea shells on the sea shore"
+
+# Method 1:
 # l = s.split()
 # for word in l:
 #     print(word, len(word))
 
+# Method 2: using comprehension
+# res = [(word, (len(word))) for word in s.split()]
+# print(res)
+# output = [('she', 3), ('sells', 5), ('sea', 3), ('shells', 6), ('on', 2), ('the', 3), ('sea', 3), ('shore', 5)]
 
+# -------------------------------------------------------------------------------------------------------------------
 """ 8. WAP to print the words that are starting with vowels in the string """
 
 # s = "She is very good actor"
@@ -133,36 +161,53 @@
 #         print(word)
 
 
-""" 9. WAP to count the number of characters in the string without using built-in-method """
+# Method 2: using list comprehension
+# res = [word for word in s.split() if word[0] in 'aeiouAEIOU']
+# print(res)
+# output = ['is', 'actor']
+
+# -------------------------------------------------------------------------------------------------------------------
+""" 9. WAP to count the number of characters in the string with & without using built-in-method """
 
 # s = "She is very beautiful"
+
+# Without built-in-method
 # count = 0
 # for _ in s:
 #     count += 1
 #
 # print(f'Total number of characters are: {count}')
+# output = Total number of characters are: 21
 
+# using built-in-method
+# print(len(s))
 
-""" 10. WAP to reverse a string without using slicing """
+# -------------------------------------------------------------------------------------------------------------------
+""" 10. WAP to reverse a string with & without using slicing """
 
-s = "Python is high level programming language"
-#
+# s = "Python is high level programming language"
+
+# using built-in-class
 # # Method 1: by using reversed()
 # for char in reversed(s):
 #     print(char, end="")
 #
 # print()
-#
+
 # # Method 2: by using range()
 # for index in range(len(s)-1, -1, -1):
 #     print(s[index], end="")
 #
 # print()
 
-# Method 3: by using concatenation  **********************************************************
+# Method 3: by using concatenation
 # res = ""
 # for char in s:
 #     res = char + res
 #
+# print(res)
+
+# Method 4: using slicing
+# res = s[::-1]
 # print(res)
 
