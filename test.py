@@ -27,6 +27,7 @@ Print methods
 # print ("Reversing the given number using reversed is : ",end="")
 # print (reverse(my_number))
 
+
 """
 # l = [1, 2, 3, 4, 5]
 # a = 7
@@ -40,6 +41,7 @@ Print methods
 # for i in range(len(l)-1):
 # 	if l[i] + l[i+1] == a:
 # 		print(l[i], l[i+1])
+
 
 """ Fetch which is the common character in the list 
 In all the 4 strings g is common so have to fetch g """

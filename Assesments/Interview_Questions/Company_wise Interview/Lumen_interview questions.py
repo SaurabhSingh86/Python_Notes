@@ -280,15 +280,17 @@ cc to development lead, test lead, test manager, B.A/P.O
 # duplicated otherwise it can be a data loss.
 
 # 3. Syntax wise: list collection is enclosed by Square braces [] & all the elements seperated by comma (,) operators,
-# while, dictionary collection is enclosed by curly braces {} & each pair is seperated by comma(,) operators & key &
+# while, dictionary collection is enclosed by curly braces {} & each pair is separated by comma(,) operators & key &
 # value is seperated by colon (:).
 
 # 4. Indexing & slicing both are possible in List but in dictionary can't be supported. Dictionaries are indexed by keys
 
 # 5. some built-in-methods of list are => .append(), .insert(), .remove(), .index(), .count(), .clear(), .sort(), .reverse() etc
 # some buit-in-methods of Dictionary are => .keys(), .values(), .items(), .get(), .pop(), .popitem(), .clear(), .update({key: value})
-# ---------------------------------------------------------------------------------------------------------------------
 
+# 6. Empty of weightless value of list => list(), []
+# Empty of weightless value of dictionary => {}, dict()
+# ---------------------------------------------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------------------------------------------
 """ remove spaces in between the sentence """

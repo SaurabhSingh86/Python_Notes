@@ -21,7 +21,7 @@
 # print(f'Total number of alphabets are: {alp_count}')
 # print(f'Total number of digits are: {dig_count}')
 
-
+# _____________________________________________________________
 # Method 2:
 # for char in string:
 #     if 'a' <= char <= 'z' or "A" <= char <= "Z":
@@ -49,6 +49,7 @@
 #
 # print(res)
 
+# _____________________________________________________________
 # (Method 2: by using built-in method)
 
 # for char in string:
@@ -74,6 +75,7 @@
 #
 # print(res)
 #
+# _____________________________________________________________
 # # Method 2:
 #
 # for char in string:
@@ -93,12 +95,14 @@
 #         print(f'{char} is present at index {s.index(char)}')
 #         break                                         ## we use break keyword because we need only first occurrence
 #
+# _____________________________________________________________
 # # Method 2: by using range()
 # for index in range(len(s)):
 #     if find_ == s[index]:
 #         print(f'{s[index]} is present at index {index}')
 #         break
 #
+# _____________________________________________________________
 # # Method 3: by using enumerate()
 #
 # for index, char in enumerate(s):
@@ -108,6 +112,7 @@
 
 # m is present at index 6
 
+# _____________________________________________________________
 # Method 4: by using built-in-method
 # print(s.find(find_))            # 6
 # or
@@ -123,13 +128,14 @@
 #     if char.lower() in "aeiou":
 #         print(f"ASCII value of {char} is {ord(char)}")
 
-
+# _____________________________________________________________
 # Method 2: using dictionary comprehension
 # res = [(char, ord(char))for char in s if char in 'aeiouAEIOU']
 # print(res)
 
 # [('e', 101), ('e', 101), ('e', 101), ('a', 97), ('e', 101), ('o', 111), ('e', 101), ('e', 101), ('a', 97), ('o', 111), ('e', 101)]
 
+# _____________________________________________________________
 # Method 3  if order will not affect our result & avoid the repetition
 # res = [(char, ord(char)) for char in set(s) if char in 'aeiouAEIOU']
 # print(res)
@@ -144,6 +150,8 @@
 # l = s.split()
 # for word in l:
 #     print(word, len(word))
+
+# _____________________________________________________________
 
 # Method 2: using comprehension
 # res = [(word, (len(word))) for word in s.split()]
@@ -160,7 +168,7 @@
 #     if word[0] in "aeiouAEIOU":
 #         print(word)
 
-
+# _____________________________________________________________
 # Method 2: using list comprehension
 # res = [word for word in s.split() if word[0] in 'aeiouAEIOU']
 # print(res)
@@ -178,14 +186,14 @@
 #
 # print(f'Total number of characters are: {count}')
 # output = Total number of characters are: 21
-
+# _____________________________________________________________
 # using built-in-method
 # print(len(s))
 
 # -------------------------------------------------------------------------------------------------------------------
 """ 10. WAP to reverse a string with & without using slicing """
 
-# s = "Python is high level programming language"
+s = "Python is high level programming language"
 
 # using built-in-class
 # # Method 1: by using reversed()
@@ -193,13 +201,20 @@
 #     print(char, end="")
 #
 # print()
+# _____________________________________________________________
+# Method 1.1
+# res = "".join(reversed(s))
+# print(res)
+# output = egaugnal gnimmargorp level hgih si nohtyP
 
+# _____________________________________________________________
 # # Method 2: by using range()
 # for index in range(len(s)-1, -1, -1):
 #     print(s[index], end="")
 #
 # print()
 
+# _____________________________________________________________
 # Method 3: by using concatenation
 # res = ""
 # for char in s:
@@ -207,6 +222,7 @@
 #
 # print(res)
 
+# _____________________________________________________________
 # Method 4: using slicing
 # res = s[::-1]
 # print(res)
