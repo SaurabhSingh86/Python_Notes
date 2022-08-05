@@ -67,8 +67,8 @@ print(indexofmax)
 
 # ---------------------------------------------------------------------------------------------------------------------
 # 7. partition
-s = 'abcdefcdgh'
-print(list(s.partition('cd')))
+# s = 'abcdefcdgh'
+# print(list(s.partition('cd')))
 # ['ab', 'cd', 'efcdgh']
 
 # print(s.split('cd'))
@@ -135,8 +135,8 @@ print(a, b)
 """
 15. What is the output of this program
 """
-l = []
-print(l.append("hello"))
+# l = []
+# print(l.append("hello"))
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -146,7 +146,7 @@ print('for'.isidentifier())
 """
 # Output => True
 
-print('True'.isidentifier())
+# print('True'.isidentifier())
 
 # ---------------------------------------------------------------------------------------------------------------------
 """
@@ -177,3 +177,59 @@ print('True'.isidentifier())
 """
 
 # ---------------------------------------------------------------------------------------------------------------------
+
+s1 = 'hello'
+s2 = 'hello everyone'
+s3 = 'hello everyone hello there'
+s4 = 'It is red and that is green'
+
+print(s1.partition('l'))  # ('he', 'l', 'lo')
+print(s2.partition(" "))  # ('hello', ' ', 'everyone')
+print(s3.partition("hello"))  # ('', 'hello', ' everyone hello there')
+print(s4.partition("is"))  # ('It ', 'is', ' red and that is green')
+print(s4.partition("Saurabh"))  # ('It is red and that is green', '', '')
+
+
+
+# Second Round interview questions
+
+"""1. brief introduction """
+
+"""2. programming questions"""
+""" 2.1 find the second highest value"""
+# by using sorted()
+# res = sorted(set(l))
+# *e, smax, max_ = res
+# print(f'The second highest value is {smax}')
+
+
+"""2.2 squares of each element"""
+# using list comprehension
+# res = [element ** 2 for element in l]
+# print(res)
+
+"""2.3 what is the lambda function & solved by above question by using lambda"""
+# lambda function
+# res = list(map(lambda item: item**2, l))
+# print(res)
+
+
+
+"""3. What is the difference between a dictionary & JSON"""
+"""4. difference between list & tuple"""
+"""5. can we add or delete element from the tuple"""
+"""6. Have you any knowledge of DataBase"""
+"""7. Why did you switch your career in the IT field?"""
+"""8. Can we use a break & continue at a time"""
+
+
+
+
+
+
+
+
+
+
+
+

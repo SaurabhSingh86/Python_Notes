@@ -24,3 +24,4 @@ print Total 3 distinct values
 [1, 2, 3]           => 1
 [6, 5, 4, 7]        => 3
 """
+

@@ -133,3 +133,32 @@ else:
     else:
         print(f"India: {res['india']} ")
 #
+
+# Method 3
+
+team_a = {"name":"Ajmer", "W":30, "L":3, "D":5, "S":98, "C":20}
+team_b = {"name":"Bhopal", "W":28, "L":3, "D":3, "S":99, "C":10}
+team_c = {"name":"Chennai", "W":25, "L":2, "D":2, "S":66, "C":5}
+team_d = {"name":"Delhi", "W":30, "L":2, "D":5, "S":99, "C":18}
+team_e = {"name":"Electronic", "W":30, "L":3, "D":5, "S":97, "C":20}
+
+
+def rank(*args):
+    l = []
+    for i in args:
+        total_points = 3 * i['W'] + 0*i['L'] + 1*i['D']
+        l.append((i['name'], total_points, i['S']-i['C']))
+    s = sorted(l, key=lambda i: i[-2])
+    if s[-1][-2] == s[-2][-2]:
+        p = set()
+        for j in range(len(s)-1):
+            if s[j][-2] == s[j+1][-2]:
+                p.add(s[j])
+                p.add(s[j+1])
+        y = sorted(p, key=lambda i: i[-1])
+        print((y[-1][0], y[-1][-1]))
+    else:
+        print((s[-1][0], s[-1][-1]))
+
+
+rank(team_a, team_b, team_c, team_d, team_e)
