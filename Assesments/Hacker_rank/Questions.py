@@ -130,3 +130,4 @@ s2 = "12hello how are you"      # "12hello How Are You"
 # print(capital(s1))
 # print(capital(s2))
 
+

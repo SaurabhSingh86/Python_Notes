@@ -143,17 +143,20 @@ output = [11, 2, 12, 9] """
 # input:
 s = 'AABBCCCDAACDA'
 # output: 2A2B3C1D2A1C1D
-i = 0
-res = s
-op = ""
+# i = 0
+# res = s
+# op = ""
+#
+# while i < len(s):
+#     res = res.lstrip(s[i])
+#     count = len(s) - len(res) - i
+#     op += str(count) + s[i]
+#     i += count
+#
+# print(op)
 
-while i < len(s):
-    res = res.lstrip(s[i])
-    count = len(s) - len(res) - i
-    op += str(count) + s[i]
-    i += count
-
-print(op)
+from itertools import groupby
+# for
 
 
 """ 14. output should be:
