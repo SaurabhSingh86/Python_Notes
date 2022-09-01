@@ -41,9 +41,10 @@
 # print(sorted(set_, reverse=True))                       # ['ruby', 'python', 'perl', 'java', 'c']
 
 # => Dictionary :-
-# d = {"gmail": 5, "apple": 3, "walmart": 7, "flipkart": 8}
-# print(sorted(d))                                        # ['apple', 'flipkart', 'gmail', 'walmart']  visible layer
-# print(sorted(d, reverse=True))                          # ['walmart', 'gmail', 'flipkart', 'apple']
+d = {"gmail": 5, "apple": 3, "walmart": 7, "flipkart": 8}
+# print(sorted(d))                                      # ['apple', 'flipkart', 'gmail', 'walmart']  visible layer
+# print(sorted(d, reverse=True))                        # ['walmart', 'gmail', 'flipkart', 'apple']
+# print(sorted(d.items()))                              # [('apple', 3), ('flipkart', 8), ('gmail', 5), ('walmart', 7)]
 
 
 # <<==~~~~~~~~~~~~~~~~ Custom Sorting  ~~~~~~~~~~~~~~~==>>
@@ -142,8 +143,8 @@
 
 """ WAP to short the above list based on the temperature """
 
-# temperatures = [("Delhi", 32), ("Mumbai", 27), ("Kolkata", 30), ("Chennai", 35)]
-# print(sorted(temperatures, key=lambda item: item[-1]))
+temperatures = [("Delhi", 32), ("Mumbai", 27), ("Kolkata", 30), ("Chennai", 35)]
+print(sorted(temperatures, key=lambda item: item[-1]))
 ## [('Mumbai', 27), ('Kolkata', 30), ('Delhi', 32), ('Chennai', 35)]
 
 
@@ -194,3 +195,4 @@
 # print(sorted(l, key=lambda item: item["name"], reverse=True))
 # print(sorted(l, key=lambda item: item["class"], reverse=True))
 # print(sorted(l, key=lambda item: item["age"], reverse=True))
+
