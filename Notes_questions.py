@@ -397,7 +397,7 @@ s = {10, 20, 30, 4}
 
 
 # ---------------------------------------------------------------------------------------------------------------------
-""" """
+""" sum each number """
 # num = 14345
 # number = str(num)
 # sum_ = 0
@@ -409,11 +409,31 @@ s = {10, 20, 30, 4}
 # ---------------------------------------------------------------------------------------------------------------------
 """ """
 # s = "python"
-#
+# output should be = yphtno
 # res = ""
 # for i in range(0, len(s)-1, 2):
 #     res += s[i+1] + s[i]
-# print(res)
+# print(res)                  # yphtno
+
+# the drawback of above method is if the length of the string is odd then the last char will not be taken means 
+input = "abcdefg"
+# output = "badcfe"
+# to overcome this method we'll use below method
+
+s = "abcdefg"
+print(s)
+res = ""
+
+if len(s) % 2 == 0:
+    for i in range(0, len(s)-1, 2):
+        res += s[i+1]+ s[i]
+else:
+    for i in range(0, len(s)-1, 2):
+        res += s[i+1] + s[i]
+    else:
+        res += s[-1]
+
+print(res)                  # badcfeg
 
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -423,8 +443,6 @@ s = {10, 20, 30, 4}
 """ 14. Write a program to check if the given string is Palindrome or not """
 
 # Method 1: using for loop & concatenation
-
-
 # def palindrome(string):
 #     res = ""
 #     for char in string:
@@ -439,8 +457,7 @@ s = {10, 20, 30, 4}
 # palindrome("python")        # python is not Palindrome
 
 
-# Method: by using slicing
-
+# Method 2: by using slicing
 # def is_palindrome(any_string):
 #     res = any_string[::-1]
 #     if res == any_string:
@@ -451,9 +468,8 @@ s = {10, 20, 30, 4}
 # print(is_palindrome("radar"))           # radar is palindrome
 # print(is_palindrome("india"))           # india is not palindrome
 
+
 # Method 3: by using reversed method:
-
-
 # def palindrome(any_string):
 #     res = ""
 #     for char in reversed(any_string):
@@ -468,8 +484,6 @@ s = {10, 20, 30, 4}
 
 
 # Method 4: by using range
-
-
 # def palindrome(string):
 #     res = ""
 #     for index in range(len(string)-1, -1, -1):
@@ -507,7 +521,7 @@ s = {10, 20, 30, 4}
 
 
 # ---------------------------------------------------------------------------------------------------------------------
-""" 17 Write a program to replace all the characters with - if the character occurs more than once in a string """
+""" 17 Write a program to replace all the characters with '-' if the character occurs more than once in a string """
 # s = "google"
 # res = ""
 # for char in s:
@@ -516,7 +530,15 @@ s = {10, 20, 30, 4}
 #     else:
 #         res += char
 #
-# print(res)
+# print(res)                  # ----le
+
+res = ""
+for char in s:
+    if char in res:
+        res += '-'
+    else:
+        res += char
+print(res)                    # go--le
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -578,7 +600,7 @@ s = {10, 20, 30, 4}
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-""" 20 Write a function which takes a list of strings and integers. If the item is a string it should print as is and 
+""" 20 Write a function which takes a list of strings and integers. If the item is a string it should print as it is and 
 if the item is integer or float it should reverse it. """
 # list_ = ['apple', 'yahoo', '1234', 100, 99.61, '20.1']
 #
@@ -601,6 +623,11 @@ sentence = "Hi How are you"
 # o/p should be "uoy era woH iH"
 
 # Method 1: by using reversed function
+# res= ""
+# for char in reversed(sentence):
+#     res += char
+# print(res)
+
 # l = sentence.split()
 # for word in reversed(l):
 #     print(word[::-1], end=" ")
@@ -613,10 +640,16 @@ sentence = "Hi How are you"
 #
 # print()
 
-# Method 2: by using range
+# Method 3: by using range
 # for index in range(len(l)-1, -1, -1):
 #     print(l[index][::-1], end=" ")
 
+# method 4: using concatenation
+# res= ""
+# for char in sentence:
+#     res = char + res
+
+# print(res)
 # ---------------------------------------------------------------------------------------------------------------------
 """ 25 Write a lambda function to add two numbers (a, b) """
 # res = lambda a, b: a + b
@@ -722,12 +755,21 @@ print(result)
 # d = {word: len(word) for word in l}
 # print(max(d.items(), key=lambda item: item[-1]))            # ('Welcome', 7)
 
+print(sorted(d.items(), key=lambda item: item[-1])[-1])       # ('Welcome', 7)
+
 # ---------------------------------------------------------------------------------------------------------------------
 """ 29 write a program to reverse the values in the dictionary if the value is of type String """
 d = {'a': 'hello', 'b': 100, 'c': 10.1, 'd': 'world'}
 dictionary = {key: value[::-1] for key, value in d.items() if isinstance(value, str)}
 print(dictionary)
 
+# {'a': 'olleh', 'd': 'dlrow'}
+
+
+res2 = {key: value[::-1] if isinstance(value, str) else value for key, value in d.items()}
+print(res2)
+
+# {'a': 'olleh', 'b': 100, 'c': 10.1, 'd': 'dlrow'}
 
 # ---------------------------------------------------------------------------------------------------------------------
 
