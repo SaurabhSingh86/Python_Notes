@@ -241,7 +241,21 @@ s = {10, 20, 30, 4}
 # ---------------------------------------------------------------------------------------------------------------------
 "  How to convert integer into string without using string methods?"""
 
-# Method 1: by using concatenation
+# Method 0: preferred first (once check) first convert that no into str then travese through it (Method 3 is almost same)
+num = 12345
+print(f"Initially the type of {num} is {type(num)}")
+
+store = str(num)
+res = []
+for i in store:
+    r = chr(48 + int(i))
+    res.append(r)
+
+out = "".join(res)
+
+print(f'After execution of the code type of {out} is {type(out)}')
+
+# Method 1: by using concatenation if we don't want to convert that no into string directly deal with integer
 # number = 9876
 # num = number
 # res = ""
