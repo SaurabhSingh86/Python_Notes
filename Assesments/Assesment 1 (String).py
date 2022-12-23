@@ -21,6 +21,22 @@
 # print(f'Total number of alphabets are: {alp_count}')
 # print(f'Total number of digits are: {dig_count}')
 
+
+string = "@hai&1234python23 "
+a_count = 0
+d_count = 0
+s_count = 0
+
+for char in string:
+    if char.isdigit():
+        d_count += 1
+    elif char.isalpha():
+        a_count += 1
+    else:
+        s_count += 1
+print(f" Alphabets are: {a_count} \n Digits are: {d_count} \n special characters are: {s_count}")
+
+
 # _____________________________________________________________
 # Method 2:
 # for char in string:
